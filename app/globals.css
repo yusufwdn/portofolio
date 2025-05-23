@@ -19,3 +19,57 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.animate-in {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus {
+  outline: none;
+}
+
+/* Custom container */
+.container {
+  max-width: 1200px;
+}
+
+/* Theme toggle button animation */
+button[aria-label="Toggle theme"] {
+  position: relative;
+  overflow: hidden;
+}
+
+button[aria-label="Toggle theme"]:hover {
+  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.15);
+}
+
+button[aria-label="Toggle theme"] svg {
+  transition: transform 0.3s ease;
+}
+
+button[aria-label="Toggle theme"]:hover svg {
+  transform: rotate(180deg);
+}
+
+/* Enhanced focus styles for accessibility */
+button[aria-label="Toggle theme"]:focus {
+  outline: 2px solid rgba(147, 51, 234, 0.5);
+  outline-offset: 2px;
+}
