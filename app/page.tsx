@@ -23,28 +23,37 @@ export default function Portofolio() {
   const [theme, setTheme] = useState("light");
   const observerRefs = useRef<IntersectionObserver[]>([]);
 
+	const sections = [
+		"about",
+		"skills",
+		"experiences",
+		"projects",
+		"educations",
+		"contact",
+	];
+
   const skills = {
     frontend: [
       "HTML",
       "CSS",
       "Javascript",
-      "TailwindCSS",
+      "Typescript",
       "Bootstrap",
+      "TailwindCSS",
       "React",
       "Next.js",
     ],
     backend: [
       "Node.js",
       "Express.js",
-			"PHP",
+      "PHP",
       "Laravel",
       "Go",
-      "MySQL",
-      "PostgreSQL",
+      "Java",
       "REST API",
       "Microservices",
     ],
-    tools: ["Git", "GitHub", "Docker", "VS Code", "Postman"],
+    tools: ["Git", "GitHub", "Docker", "VS Code", "MySQL", "PostgreSQL", "Microsoft SQL Server", "Postman"],
     soft: [
       "Problem Solving",
       "Communication",
@@ -63,6 +72,62 @@ export default function Portofolio() {
     tools: <Palette className="h-5 w-5" />,
     soft: <Brain className="h-5 w-5" />,
   };
+
+  const workExperiences = [
+    {
+      title: "Full Stack Developer",
+      company: "PT Elistec Informatika Utama",
+      period: "Nov 2023 - Present",
+			description_list: [
+				"Design and develop web applications and RESTful APIs using Laravel and Next.js.",
+				"Build modular application systems with K2 by Nintex, covering database design, form creation, and workflow automation.",
+				"Optimize dynamic workflows to streamline and automate complex business processes.",
+				"Conduct thorough testing and validation to ensure modules are functional, reliable, and meet client expectations.",
+				"Work closely with clients to deliver tailored solutions aligned with specific business goals.",
+				"Maintain, enhance, and adapt applications to support ongoing business growth and evolving requirements."
+			],
+      technologies: ["Next.js", "Javascript", "Typescript", "Laravel", "PHP", "TailwindCSS", "Nintex K2 Workflow", "PostgreSQL", "Microsoft SQL Server"],
+    },
+    {
+      title: "Backend Developer",
+      company: "PT WAN Teknologi Internasional",
+      period: "Sep 2021 - Nov 2023",
+			description_list: [
+				"Analyzing client system requirements to deliver optimal solutions.",
+				"Designing and developing web applications based on defined business flows, and building and maintaining API services for both web and mobile platforms.",
+				"Ensure application performance through regular maintenance and bug fixes.",
+				"Collaborate closely with cross-functional teams and have led multiple projects as a team leader.",
+			],
+      technologies: [
+        "PHP",
+        "Laravel",
+        "Lumen",
+        "CodeIgniter",
+        "Bootstrap",
+        "TailwindCSS",
+        "Javascript",
+        "AJAX",
+        "JQuery",
+      ],
+    },
+    {
+      title: "ETL Developer",
+      company: "PT Madani Intelsysdata",
+      period: "Sep 2020 - Aug 2021",
+			description_list: [
+				"Develop reporting application for monthly financial report in Bank Fama International and Bank Woori Saudara.",
+				"Maintenance existing SLIK application (including bug fixes and feature additions).",
+				"Become a consultant to assist finance companies in working on monthly financial report.",
+			],
+      technologies: [
+        "Extract Transform Load",
+        "Microsoft SQL Server",
+        "SQL Server Data Tools",
+        "SQL Server Integration Service",
+        "SQL Server Reporting Service",
+      ],
+    },
+  ];
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -125,15 +190,6 @@ export default function Portofolio() {
   };
 
   useEffect(() => {
-    const sections = [
-      "about",
-      "skills",
-      "experiences",
-      "projects",
-      "educations",
-      "contact",
-    ];
-
     // Clean up previous observers
     observerRefs.current.forEach((observer) => observer.disconnect());
     observerRefs.current = [];
@@ -245,14 +301,7 @@ export default function Portofolio() {
             Yusuf Wandana
           </div>
           <nav className="hidden md:flex gap-8">
-            {[
-              "about",
-              "skills",
-              "experiences",
-              "projects",
-              "educations",
-              "contact",
-            ].map((section) => (
+            {sections.map((section) => (
               <Link
                 key={section}
                 href={`#${section}`}
@@ -299,7 +348,7 @@ export default function Portofolio() {
             <div className="inline-block relative">
               <div className="absolute -inset-1 bg-purple-500/20 rounded-lg blur-md"></div>
               <h1 className="relative text-4xl md:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-400">
-                {`I'm, Yusuf Wandana`}
+                {`Hello, It's Yusuf Wandana`}
               </h1>
             </div>
             <div className="h-1 w-32 bg-purple-500"></div>
@@ -331,7 +380,7 @@ export default function Portofolio() {
                     <span className="text-green-400">{`"Go"`}</span>],
                     <br />
                     {"  "}passion:{" "}
-                    <span className="text-green-400">{`"Solving real-world problem & build systems through code and coffee"`}</span>
+                    <span className="text-green-400">{`"Solving real-world problem & build systems through code with a cup of coffee ☕︎"`}</span>
                     <br />
                     {"}"};
                   </code>
@@ -423,7 +472,7 @@ export default function Portofolio() {
             </h2>
             <div className="h-1 w-1/3 bg-purple-500"></div>
           </div>
-          <div className="w-full mt-10 border-b border-gray-200 dark:border-gray-700/50">
+          <div className="w-full mt-10">
             <div className="flex overflow-x-auto hide-scrollbar" id="skill-tab">
               {Object.keys(skills).map((tab) => (
                 <button
@@ -441,7 +490,7 @@ export default function Portofolio() {
                 </button>
               ))}
             </div>
-            <div className="mt-6 mb-20">
+            <div className="mt-6">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 {skills[activeTab as keyof typeof skills].map((skill, i) => (
                   <Card
@@ -465,6 +514,59 @@ export default function Portofolio() {
             </div>
           </div>
         </section>
+
+        {/* Work Experiences Section */}
+        <section
+          id="experiences"
+          className="py-20 border-t border-gray-200 dark:border-gray-700/50 opacity-0 transition-all duration-1000 translate-y-10"
+        >
+					<div className="inline-block">
+						<h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Work Experience</h2>
+            <div className="h-1 w-1/3 bg-purple-500"></div>
+					</div>
+					<div className="space-y-10 mt-10 relative">
+						{/* Timeline */}
+						<div className="absolute left-[7px] md:left-1/2 top-0 bottom-0 w-1 bg-purple-200 dark:bg-purple-900/50 transform md:translate-x-[-0.5px]"></div>
+						{workExperiences.map((experince, key) => (
+							<div key={key} className={`relative md:flex ${key % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
+                {/* Timeline dot */}
+                <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-purple-500 transform md:translate-x-[-8px] mt-6"></div>
+
+                <div className="md:w-1/2 md:px-10">
+                  <Card className={`ml-8 md:ml-0 ${key % 2 === 0 ? "md:mr-5" : "md:ml-5"}`}>
+                    <div className="p-6">
+                      <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                          <h3 className="text-xl font-bold text-purple-600 dark:text-purple-400">{experince.title}</h3>
+                          <p className="font-bold mt-2 text-gray-600 dark:text-gray-400">{experince.company}</p>
+                        </div>
+                        <span className="text-sm text-gray-500 dark:text-gray-500 mt-2 md:mt-0">{experince.period}</span>
+                      </div>
+                      {/* <p className="mb-4 text-gray-600 dark:text-gray-400">{experince.description}</p> */}
+											<ul className="list-disc space-y-2 px-3 py-1 mb-4 text-gray-600 dark:text-gray-400">
+												{experince.description_list.map((desc, key) => (
+													<li key={key}>{desc}</li>
+												))}
+											</ul>
+
+                      <div className="flex flex-wrap gap-2">
+                        {experince.technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-3 py-1 text-sm rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 transition-all duration-300 hover:scale-105"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+                <div className="md:w-1/2"></div>
+              </div>
+						))}
+					</div>
+				</section>
       </main>
     </div>
   );
