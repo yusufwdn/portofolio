@@ -129,6 +129,54 @@ export default function Portofolio() {
     },
   ];
 
+  const educations = [
+    {
+      degree: "Bachelor of Computer Science",
+      institution: "Institut Teknologi dan Bisnis Swadharma",
+      period: "2022 - 2026",
+      description: "Currently pursuing a bachelor's degree with a focus on software development, web technologies, and system design.",
+      icon: "🎓",
+    },
+    {
+      degree: "Vocational High School in Software Engineering",
+      institution: "SMK Wikrama Bogor",
+      period: "2017 - 2020",
+      description: "Focused on software development fundamentals including web and desktop applications. Completed several practical projects and internships.",
+      icon: "💻",
+    },
+  ]
+
+  const certificates = [
+    {
+      name: "Master Class : React.js and Tailwind Web Development",
+      issuer: "BuildWithAngga",
+      date: "Oct 2023",
+      url: "https://drive.google.com/file/d/1m_9_AEoFuSuh2t4y1zHviL3gsmtmSuL7/view",
+      icon: "🏆",
+    },
+    {
+      name: "Node.js : Pemula Sampai Mahir",
+      issuer: "Udemy - Programmer Zaman Now",
+      date: "Aug 2023",
+      url: "https://www.udemy.com/certificate/UC-5eddc9ea-f8a7-4588-bfef-799231035a97/",
+      icon: "🏆",
+    },
+    {
+      name: "Website Developer : E-commerce",
+      issuer: "BuildWithAngga",
+      date: "Nov 2021",
+      url: "https://drive.google.com/file/d/1XKwcWJu5-AY1LVh2inOWjGn9WpddBrZa/view",
+      icon: "🏆",
+    },
+    {
+      name: "Mahir Membuat Website dengan Laravel",
+      issuer: "Coding Studio",
+      date: "Apr 2021",
+      url: "https://drive.google.com/file/d/15azwuFcCBFj8Zv3W87DckOFpEtBzHS6k/view",
+      icon: "🏆",
+    },
+  ]
+
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
@@ -567,6 +615,80 @@ export default function Portofolio() {
 						))}
 					</div>
 				</section>
+
+        {/* Education & Certificates Section */}
+        <section
+          id="educations"
+          className="py-20 border-t border-gray-200 dark:border-gray-700/50 opacity-0 transition-all duration-1000 translate-y-10"
+        >
+          <div className="inline-block">
+            <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Education & Certificates</h2>
+            <div className="h-1 w-1/3 bg-purple-500"></div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-10 mt-10">
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-purple-600 dark:text-purple-400">Education</h3>
+              <div className="space-y-6">
+                {educations.map((edu, index) => (
+                  <Card
+                    key={index}
+                    className="overflow-hidden"
+                    style={{
+                      animationDelay: `${index * 150}ms`,
+                      animationDuration: "500ms",
+                    }}
+                  >
+                    <div className="p-6 relative">
+                      <div className="absolute top-0 left-0 w-16 h-16 bg-purple-100 dark:bg-purple-900/20 opacity-20 rounded-br-full"></div>
+                      <div className="flex items-start gap-4">
+                        <div className="text-3xl">{edu.icon}</div>
+                        <div className="flex-1">
+                          <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <h4 className="font-bold text-purple-600 dark:text-purple-400">{edu.degree}</h4>
+                            <span className="text-right text-sm text-gray-500 dark:text-gray-500 mt-1 md:mt-0 md:w-[85px]">{edu.period}</span>
+                          </div>
+                          <p className="font-bold text-gray-600 dark:text-gray-400 mb-2">{edu.institution}</p>
+                          <p className="text-gray-600 dark:text-gray-400">{edu.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-purple-600 dark:text-purple-400">Certificates</h3>
+              <div className="space-y-6">
+                {certificates.map((cert, index) => (
+                  <Card
+                    key={index}
+                    className="overflow-hidden"
+                    style={{
+                      animationDelay: `${index * 150}ms`,
+                      animationDuration: "500ms",
+                    }}
+                  >
+                    <div className="p-6 relative">
+                      <div className="absolute top-0 right-0 w-16 h-16 bg-purple-100 dark:bg-purple-900/20 opacity-20 rounded-bl-full"></div>
+                      <div className="flex items-start gap-4">
+                        <div className="text-3xl">{cert.icon}</div>
+                        <div className="flex-1">
+                          <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <Link href={cert.url} target="_blank">
+                              <h4 className="font-bold text-purple-600 dark:text-purple-400">{cert.name}</h4>
+                            </Link>
+                            <span className="text-right text-sm text-gray-500 dark:text-gray-500 mt-1 md:mt-0 md:w-[85px]">{cert.date}</span>
+                          </div>
+                          <p className="text-gray-600 dark:text-gray-400 mb-2">{cert.issuer}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
