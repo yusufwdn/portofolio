@@ -305,7 +305,7 @@ export default function Portofolio() {
               <Link
                 key={section}
                 href={`#${section}`}
-                className={`text-sm font-medium transition-all duration-300 hover:text-purple-600 dark:hover:text-purple-400 ${
+                className={`text-md font-medium transition-all duration-300 hover:text-purple-600 dark:hover:text-purple-400 ${
                   activeSection === section
                     ? "text-purple-600 dark:text-purple-400 border-b-2 border-purple-600 dark:border-purple-400"
                     : "text-gray-600 dark:text-gray-300"
@@ -342,7 +342,7 @@ export default function Portofolio() {
         {/* Hero Section */}
         <section
           id="about"
-          className="py-20 md:py-32 flex flex-col md:flex-row gap-10 items-center opacity-0 transition-all duration-1000 translate-y-10"
+          className="py-14 md:py-32 flex flex-col md:flex-row gap-10 items-center opacity-0 transition-all duration-1000 translate-y-10"
         >
           <div className="flex-1 space-y-6 max-w-2xl mx-auto md:mx-0">
             <div className="inline-block relative">
@@ -464,7 +464,7 @@ export default function Portofolio() {
         {/* Skills Section */}
         <section
           id="skills"
-          className="py-20 border-t border-gray-200 dark:border-gray-700/50 opacity-0 transition-all duration-1000 translate-y-10"
+          className="py-14 border-t border-gray-200 dark:border-gray-700/50 opacity-0 transition-all duration-1000 translate-y-10"
         >
           <div className="inline-block">
             <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">
@@ -518,7 +518,7 @@ export default function Portofolio() {
         {/* Work Experiences Section */}
         <section
           id="experiences"
-          className="py-20 border-t border-gray-200 dark:border-gray-700/50 opacity-0 transition-all duration-1000 translate-y-10"
+          className="py-14 border-t border-gray-200 dark:border-gray-700/50 opacity-0 transition-all duration-1000 translate-y-10"
         >
 					<div className="inline-block">
 						<h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Work Experience</h2>
@@ -543,7 +543,7 @@ export default function Portofolio() {
                         <span className="text-sm text-gray-500 dark:text-gray-500 mt-2 md:mt-0">{experince.period}</span>
                       </div>
                       {/* <p className="mb-4 text-gray-600 dark:text-gray-400">{experince.description}</p> */}
-											<ul className="list-disc space-y-2 px-3 py-1 mb-4 text-gray-600 dark:text-gray-400">
+											<ul className="list-disc space-y-3 px-3 py-1 mb-4 text-gray-600 dark:text-gray-400">
 												{experince.description_list.map((desc, key) => (
 													<li key={key}>{desc}</li>
 												))}
