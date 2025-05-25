@@ -13,7 +13,6 @@ import {
   Sun,
 } from "lucide-react";
 import Link from "next/link";
-// import { Moon, Sun } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 export default function Portofolio() {
@@ -23,14 +22,14 @@ export default function Portofolio() {
   const [theme, setTheme] = useState("light");
   const observerRefs = useRef<IntersectionObserver[]>([]);
 
-	const sections = [
-		"about",
-		"skills",
-		"experiences",
-		"projects",
-		"educations",
-		"contact",
-	];
+  const sections = [
+    "about",
+    "skills",
+    "experiences",
+    "projects",
+    "educations",
+    "contact",
+  ];
 
   const skills = {
     frontend: [
@@ -53,7 +52,16 @@ export default function Portofolio() {
       "REST API",
       "Microservices",
     ],
-    tools: ["Git", "GitHub", "Docker", "VS Code", "MySQL", "PostgreSQL", "Microsoft SQL Server", "Postman"],
+    tools: [
+      "Git",
+      "GitHub",
+      "Docker",
+      "VS Code",
+      "MySQL",
+      "PostgreSQL",
+      "Microsoft SQL Server",
+      "Postman",
+    ],
     soft: [
       "Problem Solving",
       "Communication",
@@ -78,26 +86,36 @@ export default function Portofolio() {
       title: "Full Stack Developer",
       company: "PT Elistec Informatika Utama",
       period: "Nov 2023 - Present",
-			description_list: [
-				"Design and develop web applications and RESTful APIs using Laravel and Next.js.",
-				"Build modular application systems with K2 by Nintex, covering database design, form creation, and workflow automation.",
-				"Optimize dynamic workflows to streamline and automate complex business processes.",
-				"Conduct thorough testing and validation to ensure modules are functional, reliable, and meet client expectations.",
-				"Work closely with clients to deliver tailored solutions aligned with specific business goals.",
-				"Maintain, enhance, and adapt applications to support ongoing business growth and evolving requirements."
-			],
-      technologies: ["Next.js", "Javascript", "Typescript", "Laravel", "PHP", "TailwindCSS", "Nintex K2 Workflow", "PostgreSQL", "Microsoft SQL Server"],
+      description_list: [
+        "Design and develop web applications and RESTful APIs using Laravel and Next.js.",
+        "Build modular application systems with K2 by Nintex, covering database design, form creation, and workflow automation.",
+        "Optimize dynamic workflows to streamline and automate complex business processes.",
+        "Conduct thorough testing and validation to ensure modules are functional, reliable, and meet client expectations.",
+        "Work closely with clients to deliver tailored solutions aligned with specific business goals.",
+        "Maintain, enhance, and adapt applications to support ongoing business growth and evolving requirements.",
+      ],
+      technologies: [
+        "Next.js",
+        "Javascript",
+        "Typescript",
+        "Laravel",
+        "PHP",
+        "TailwindCSS",
+        "Nintex K2 Workflow",
+        "PostgreSQL",
+        "Microsoft SQL Server",
+      ],
     },
     {
       title: "Backend Developer",
       company: "PT WAN Teknologi Internasional",
       period: "Sep 2021 - Nov 2023",
-			description_list: [
-				"Analyzing client system requirements to deliver optimal solutions.",
-				"Designing and developing web applications based on defined business flows, and building and maintaining API services for both web and mobile platforms.",
-				"Ensure application performance through regular maintenance and bug fixes.",
-				"Collaborate closely with cross-functional teams and have led multiple projects as a team leader.",
-			],
+      description_list: [
+        "Analyzing client system requirements to deliver optimal solutions.",
+        "Designing and developing web applications based on defined business flows, and building and maintaining API services for both web and mobile platforms.",
+        "Ensure application performance through regular maintenance and bug fixes.",
+        "Collaborate closely with cross-functional teams and have led multiple projects as a team leader.",
+      ],
       technologies: [
         "PHP",
         "Laravel",
@@ -114,11 +132,11 @@ export default function Portofolio() {
       title: "ETL Developer",
       company: "PT Madani Intelsysdata",
       period: "Sep 2020 - Aug 2021",
-			description_list: [
-				"Develop reporting application for monthly financial report in Bank Fama International and Bank Woori Saudara.",
-				"Maintenance existing SLIK application (including bug fixes and feature additions).",
-				"Become a consultant to assist finance companies in working on monthly financial report.",
-			],
+      description_list: [
+        "Develop reporting application for monthly financial report in Bank Fama International and Bank Woori Saudara.",
+        "Maintenance existing SLIK application (including bug fixes and feature additions).",
+        "Become a consultant to assist finance companies in working on monthly financial report.",
+      ],
       technologies: [
         "Extract Transform Load",
         "Microsoft SQL Server",
@@ -134,17 +152,19 @@ export default function Portofolio() {
       degree: "Bachelor of Computer Science",
       institution: "Institut Teknologi dan Bisnis Swadharma",
       period: "2022 - 2026",
-      description: "Currently pursuing a bachelor's degree with a focus on software development, web technologies, and system design.",
+      description:
+        "Currently pursuing a bachelor's degree with a focus on software development, web technologies, and system design.",
       icon: "🎓",
     },
     {
       degree: "Vocational High School in Software Engineering",
       institution: "SMK Wikrama Bogor",
       period: "2017 - 2020",
-      description: "Focused on software development fundamentals including web and desktop applications. Completed several practical projects and internships.",
+      description:
+        "Focused on software development fundamentals including web and desktop applications. Completed several practical projects and internships.",
       icon: "💻",
     },
-  ]
+  ];
 
   const certificates = [
     {
@@ -175,7 +195,7 @@ export default function Portofolio() {
       url: "https://drive.google.com/file/d/15azwuFcCBFj8Zv3W87DckOFpEtBzHS6k/view",
       icon: "🏆",
     },
-  ]
+  ];
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -237,6 +257,25 @@ export default function Portofolio() {
     );
   };
 
+  const handleSendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const subject = (form.elements.namedItem("subject") as HTMLInputElement)
+      .value;
+    const body = (form.elements.namedItem("body") as HTMLTextAreaElement).value;
+
+    const to = "yusuf.wandana1@gmail.com";
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      to
+    )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\n${body}`
+    )}`;
+
+    window.open(gmailUrl, "_blank");
+  };
+
   useEffect(() => {
     // Clean up previous observers
     observerRefs.current.forEach((observer) => observer.disconnect());
@@ -252,7 +291,7 @@ export default function Portofolio() {
               element.classList.add("animate-in");
             }
           },
-          { threshold: 0.3 }
+          { threshold: 0.1 }
         );
 
         observer.observe(element);
@@ -422,6 +461,7 @@ export default function Portofolio() {
                     <span className="text-green-400">{`"Cupsky"`}</span>,
                     <br />
                     {"  "}skills: [
+                    <span className="text-green-400">{`"PHP"`}</span>,{" "}
                     <span className="text-green-400">{`"Laravel"`}</span>,{" "}
                     <span className="text-green-400">{`"Node.js"`}</span>,{" "}
                     <span className="text-green-400">{`"Next.js"`}</span>,{" "}
@@ -437,11 +477,17 @@ export default function Portofolio() {
             </div>
 
             <div className="flex gap-4 pt-6">
-              <Button>
+              <Button onClick={() => {
+                const contactSection = document.getElementById("contact")
+                contactSection?.scrollIntoView({behavior: "smooth"})
+              }}>
                 Contact Me
                 <ArrowUpRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline">View Projects</Button>
+              <Button variant="outline" onClick={() => {
+                const projectSection = document.getElementById("project")
+                projectSection?.scrollIntoView({behavior: "smooth"})
+              }}>View Projects</Button>
             </div>
 
             <div className="flex gap-4 pt-6">
@@ -568,34 +614,51 @@ export default function Portofolio() {
           id="experiences"
           className="py-14 border-t border-gray-200 dark:border-gray-700/50 opacity-0 transition-all duration-1000 translate-y-10"
         >
-					<div className="inline-block">
-						<h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Work Experience</h2>
+          <div className="inline-block">
+            <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">
+              Work Experience
+            </h2>
             <div className="h-1 w-1/3 bg-purple-500"></div>
-					</div>
-					<div className="space-y-10 mt-10 relative">
-						{/* Timeline */}
-						<div className="absolute left-[7px] md:left-1/2 top-0 bottom-0 w-1 bg-purple-200 dark:bg-purple-900/50 transform md:translate-x-[-0.5px]"></div>
-						{workExperiences.map((experince, key) => (
-							<div key={key} className={`relative md:flex ${key % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
+          </div>
+          <div className="space-y-10 mt-10 relative">
+            {/* Timeline */}
+            <div className="absolute left-[7px] md:left-1/2 top-0 bottom-0 w-1 bg-purple-200 dark:bg-purple-900/50 transform md:translate-x-[-0.5px]"></div>
+            {workExperiences.map((experince, key) => (
+              <div
+                key={key}
+                className={`relative md:flex ${
+                  key % 2 === 1 ? "md:flex-row-reverse" : ""
+                }`}
+              >
                 {/* Timeline dot */}
                 <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-purple-500 transform md:translate-x-[-8px] mt-6"></div>
 
                 <div className="md:w-1/2 md:px-10">
-                  <Card className={`ml-8 md:ml-0 ${key % 2 === 0 ? "md:mr-5" : "md:ml-5"}`}>
+                  <Card
+                    className={`ml-8 md:ml-0 ${
+                      key % 2 === 0 ? "md:mr-5" : "md:ml-5"
+                    }`}
+                  >
                     <div className="p-6">
                       <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                         <div>
-                          <h3 className="text-xl font-bold text-purple-600 dark:text-purple-400">{experince.title}</h3>
-                          <p className="font-bold mt-2 text-gray-600 dark:text-gray-400">{experince.company}</p>
+                          <h3 className="text-xl font-bold text-purple-600 dark:text-purple-400">
+                            {experince.title}
+                          </h3>
+                          <p className="font-bold mt-2 text-gray-600 dark:text-gray-400">
+                            {experince.company}
+                          </p>
                         </div>
-                        <span className="text-sm text-gray-500 dark:text-gray-500 mt-2 md:mt-0">{experince.period}</span>
+                        <span className="text-sm text-gray-500 dark:text-gray-500 mt-2 md:mt-0">
+                          {experince.period}
+                        </span>
                       </div>
                       {/* <p className="mb-4 text-gray-600 dark:text-gray-400">{experince.description}</p> */}
-											<ul className="list-disc space-y-3 px-3 py-1 mb-4 text-gray-600 dark:text-gray-400">
-												{experince.description_list.map((desc, key) => (
-													<li key={key}>{desc}</li>
-												))}
-											</ul>
+                      <ul className="list-disc space-y-3 px-3 py-1 mb-4 text-gray-600 dark:text-gray-400">
+                        {experince.description_list.map((desc, key) => (
+                          <li key={key}>{desc}</li>
+                        ))}
+                      </ul>
 
                       <div className="flex flex-wrap gap-2">
                         {experince.technologies.map((tech) => (
@@ -612,9 +675,9 @@ export default function Portofolio() {
                 </div>
                 <div className="md:w-1/2"></div>
               </div>
-						))}
-					</div>
-				</section>
+            ))}
+          </div>
+        </section>
 
         {/* Education & Certificates Section */}
         <section
@@ -622,12 +685,16 @@ export default function Portofolio() {
           className="py-20 border-t border-gray-200 dark:border-gray-700/50 opacity-0 transition-all duration-1000 translate-y-10"
         >
           <div className="inline-block">
-            <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Education & Certificates</h2>
+            <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">
+              Education & Certificates
+            </h2>
             <div className="h-1 w-1/3 bg-purple-500"></div>
           </div>
           <div className="grid md:grid-cols-2 gap-10 mt-10">
             <div>
-              <h3 className="text-xl font-bold mb-6 text-purple-600 dark:text-purple-400">Education</h3>
+              <h3 className="text-xl font-bold mb-6 text-purple-600 dark:text-purple-400">
+                Education
+              </h3>
               <div className="space-y-6">
                 {educations.map((edu, index) => (
                   <Card
@@ -644,11 +711,19 @@ export default function Portofolio() {
                         <div className="text-3xl">{edu.icon}</div>
                         <div className="flex-1">
                           <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                            <h4 className="font-bold text-purple-600 dark:text-purple-400">{edu.degree}</h4>
-                            <span className="text-right text-sm text-gray-500 dark:text-gray-500 mt-1 md:mt-0 md:w-[85px]">{edu.period}</span>
+                            <h4 className="font-bold text-purple-600 dark:text-purple-400">
+                              {edu.degree}
+                            </h4>
+                            <span className="md:text-right text-sm text-gray-500 dark:text-gray-500 mt-1 md:mt-0 md:w-[85px]">
+                              {edu.period}
+                            </span>
                           </div>
-                          <p className="font-bold text-gray-600 dark:text-gray-400 mb-2">{edu.institution}</p>
-                          <p className="text-gray-600 dark:text-gray-400">{edu.description}</p>
+                          <p className="font-bold text-gray-600 dark:text-gray-400 mb-2">
+                            {edu.institution}
+                          </p>
+                          <p className="text-gray-600 dark:text-gray-400">
+                            {edu.description}
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -657,7 +732,9 @@ export default function Portofolio() {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-6 text-purple-600 dark:text-purple-400">Certificates</h3>
+              <h3 className="text-xl font-bold mb-6 text-purple-600 dark:text-purple-400">
+                Certificates
+              </h3>
               <div className="space-y-6">
                 {certificates.map((cert, index) => (
                   <Card
@@ -675,11 +752,17 @@ export default function Portofolio() {
                         <div className="flex-1">
                           <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
                             <Link href={cert.url} target="_blank">
-                              <h4 className="font-bold text-purple-600 dark:text-purple-400">{cert.name}</h4>
+                              <h4 className="font-bold text-purple-600 dark:text-purple-400">
+                                {cert.name}
+                              </h4>
                             </Link>
-                            <span className="text-right text-sm text-gray-500 dark:text-gray-500 mt-1 md:mt-0 md:w-[85px]">{cert.date}</span>
+                            <span className="align-top md:text-right text-sm text-gray-500 dark:text-gray-500 mt-1 md:mt-0 md:w-[85px]">
+                              {cert.date}
+                            </span>
                           </div>
-                          <p className="text-gray-600 dark:text-gray-400 mb-2">{cert.issuer}</p>
+                          <p className="text-gray-600 dark:text-gray-400 mb-2">
+                            {cert.issuer}
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -689,7 +772,192 @@ export default function Portofolio() {
             </div>
           </div>
         </section>
+
+        {/* Contact Section */}
+        <section
+          id="contact"
+          className="py-20 border-t border-gray-200 dark:border-gray-700/50 opacity-0 transition-all duration-1000 translate-y-10"
+        >
+          <div className="inline-block">
+            <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">
+              Get In Touch
+            </h2>
+            <div className="h-1 w-1/3 bg-purple-500"></div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-10 mt-10">
+            <Card className="overflow-hidden relative group">
+              <div className="absolute -inset-0.5 bg-purple-300 dark:bg-purple-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              <div className="p-6 relative bg-white dark:bg-gray-800 rounded-lg">
+                <form className="space-y-4" onSubmit={handleSendEmail}>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="name"
+                        className="text-sm font-medium text-gray-700 dark:text-gray-300"
+                      >
+                        Name
+                      </label>
+                      <input
+                        id="name"
+                        className="flex h-10 w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400 focus:border-transparent"
+                        placeholder="Your name"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="email"
+                        className="text-sm font-medium text-gray-700 dark:text-gray-300"
+                      >
+                        Email
+                      </label>
+                      <input
+                        id="email"
+                        type="email"
+                        className="flex h-10 w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400 focus:border-transparent"
+                        placeholder="Your email"
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="subject"
+                      className="text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >
+                      Subject
+                    </label>
+                    <input
+                      id="subject"
+                      className="flex h-10 w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400 focus:border-transparent"
+                      placeholder="Subject"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="body"
+                      className="text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >
+                      Message
+                    </label>
+                    <textarea
+                      id="body"
+                      className="flex min-h-[120px] w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-sm text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400 focus:border-transparent"
+                      placeholder="Your message"
+                    />
+                  </div>
+                  <Button className="w-full">Send Message</Button>
+                </form>
+              </div>
+            </Card>
+            <div className="space-y-6">
+              <Card className="overflow-hidden">
+                <div className="p-6 flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                    <Mail className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">Email</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      yusuf.wandana1@gmail.com
+                    </p>
+                  </div>
+                </div>
+              </Card>
+              <Card className="overflow-hidden">
+                <div className="p-6 flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                    <Linkedin className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">LinkedIn</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      linkedin.com/in/yusuf-wandana
+                    </p>
+                  </div>
+                </div>
+              </Card>
+              <Card className="overflow-hidden">
+                <div className="p-6 flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                    <Github className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">GitHub</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      github.com/yusufwdn
+                    </p>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Creative contact decoration */}
+              <div className="relative h-40 mt-6 rounded-lg overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-100 to-purple-50 dark:from-purple-900/30 dark:to-purple-800/20"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-4xl mb-2">👋</div>
+                    <p className="text-purple-600 dark:text-purple-400 font-medium">
+                      {`Let's work together!`}
+                    </p>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1440 320"
+                    className="text-purple-500/10"
+                  >
+                    <path
+                      fill="currentColor"
+                      fillOpacity="1"
+                      d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-gray-200 dark:border-gray-700/50 py-10 bg-gray-50 dark:bg-gray-800/50 backdrop-blur-sm">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col items-center md:items-start">
+            <div className="font-bold text-xl mb-2 text-purple-600 dark:text-purple-400">
+              Yusuf Wandana
+            </div>
+            <p className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-left">
+              Software Engineer & Full-Stack Developer
+            </p>
+          </div>
+          <div className="flex gap-6">
+            <Link
+              href="#"
+              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110"
+            >
+              <Github className="h-5 w-5" />
+              <span className="sr-only">GitHub</span>
+            </Link>
+            <Link
+              href="#"
+              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110"
+            >
+              <Linkedin className="h-5 w-5" />
+              <span className="sr-only">LinkedIn</span>
+            </Link>
+            <Link
+              href="#"
+              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110"
+            >
+              <Mail className="h-5 w-5" />
+              <span className="sr-only">Email</span>
+            </Link>
+          </div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">
+            © {new Date().getFullYear()} Yusuf Wandana. All rights reserved.
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
