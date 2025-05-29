@@ -33,44 +33,144 @@ export default function Portofolio() {
 
   const skills = {
     frontend: [
-      "HTML",
-      "CSS",
-      "Javascript",
-      "Typescript",
-      "Bootstrap",
-      "TailwindCSS",
-      "React",
-      "Next.js",
+      {
+        name: "HTML",
+        icon: "icons8/icons8-html-5-96.png",
+      },
+      {
+        name: "CSS",
+        icon: "icons8/icons8-css3-96.png",
+      },
+      {
+        name: "Javascript",
+        icon: "icons8/icons8-javascript-96.png",
+      },
+      {
+        name: "Typescript",
+        icon: "icons8/icons8-typescript-96.png",
+      },
+      {
+        name: "Bootstrap",
+        icon: "icons8/icons8-bootstrap-96.png",
+      },
+      {
+        name: "TailwindCSS",
+        icon: "icons8/icons8-tailwindcss-96.png",
+      },
+      {
+        name: "React.js",
+        icon: "icons8/icons8-react-native-96.png",
+      },
+      {
+        name: "Next.js",
+        icon: "icons8/icons8-next.js-96.png",
+      },
     ],
     backend: [
-      "Node.js",
-      "Express.js",
-      "PHP",
-      "Laravel",
-      "Go",
-      "Java",
-      "REST API",
-      "Microservices",
+      {
+        name: "Node.js",
+        icon: "icons8/icons8-nodejs-96.png",
+      },
+      {
+        name: "Express.js",
+        icon: "icons8/icons8-express-js-96.png",
+      },
+      {
+        name: "PHP",
+        icon: "icons8/icons8-php-96.png",
+      },
+      {
+        name: "Laravel",
+        icon: "icons8/icons8-laravel-96.png",
+      },
+      {
+        name: "Go",
+        icon: "icons8/icons8-golang-96.png",
+      },
+      {
+        name: "Java",
+        icon: "icons8/icons8-java-96.png",
+      },
+      {
+        name: "REST API",
+        icon: "icons8/icons8-api-64.png",
+      },
+      {
+        name: "Microservices",
+        icon: "icons8/icons8-microservice-60.png",
+      },
     ],
     tools: [
-      "Git",
-      "GitHub",
-      "Docker",
-      "VS Code",
-      "MySQL",
-      "PostgreSQL",
-      "Microsoft SQL Server",
-      "Postman",
+      {
+        name: "Git",
+        icon: "icons8/icons8-git-96.png",
+      },
+      {
+        name: "GitHub",
+        icon: "icons8/icons8-github-96.png",
+      },
+      {
+        name: "Gitlab",
+        icon: "icons8/icons8-gitlab-96.png",
+      },
+      {
+        name: "Docker",
+        icon: "icons8/icons8-docker-96.png",
+      },
+      {
+        name: "VS Code",
+        icon: "icons8/icons8-visual-studio-code-2019-96.png",
+      },
+      {
+        name: "MySQL",
+        icon: "icons8/icons8-mysql-logo-96.png",
+      },
+      {
+        name: "PostgreSQL",
+        icon: "icons8/icons8-postgresql-96.png",
+      },
+      {
+        name: "Microsoft SQL Server",
+        icon: "icons8/icons8-microsoft-sql-server-96.png",
+      },
+      {
+        name: "Postman",
+        icon: "icons8/icons8-postman-inc-96.png",
+      },
     ],
     soft: [
-      "Problem Solving",
-      "Communication",
-      "Teamwork",
-      "Adaptability",
-      "Leadership",
-      "Critical Thinking",
-      "Creativity",
-      "Fast Learning",
+      {
+        name: "Problem Solving",
+        icon: "icons8/icons8-problem-solving-skills-100.png",
+      },
+      {
+        name: "Communication",
+        icon: "icons8/icons8-communication-100.png",
+      },
+      {
+        name: "Teamwork",
+        icon: "icons8/icons8-teamwork-100.png",
+      },
+      {
+        name: "Adaptability",
+        icon: "icons8/icons8-adaptable-64.png",
+      },
+      {
+        name: "Leadership",
+        icon: "icons8/icons8-leadership-100.png",
+      },
+      {
+        name: "Critical Thinking",
+        icon: "icons8/icons8-critical-thinking-100.png",
+      },
+      {
+        name: "Creativity",
+        icon: "icons8/icons8-creativity-64.png",
+      },
+      {
+        name: "Fast Learning",
+        icon: "icons8/icons8-rocket-100.png",
+      },
     ],
   };
 
@@ -681,7 +781,7 @@ export default function Portofolio() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 {skills[activeTab as keyof typeof skills].map((skill, i) => (
                   <Card
-                    key={skill}
+                    key={skill.name}
                     className="overflow-hidden group"
                     style={{
                       animationDelay: `{${i} * 100}ms`,
@@ -690,10 +790,16 @@ export default function Portofolio() {
                   >
                     <div className="p-6 flex items-center gap-4 relative overflow-hidden">
                       <div className="absolute -right-6 -bottom-6 w-12 h-12 bg-purple-500/10 rounded-full group-hover:scale-150 transition-all duration-500"></div>
-                      <div className="w-10 h-10 rounded bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold relative z-10">
-                        {skill.charAt(0)}
-                      </div>
-                      <span className="font-medium relative z-10">{skill}</span>
+                        {skill.icon && skill.icon !== '' ? (
+                        <div className="w-8 h-8 rounded flex items-center justify-center">
+                          <img src={skill.icon} alt={skill.name} />
+                        </div>
+                        ) : (
+                        <div className="w-10 h-10 rounded bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold relative z-10">
+                          <span>{skill.name.charAt(0)}</span>
+                        </div>
+                        )}
+                      <span className="font-medium text-gray-600 dark:text-gray-400 relative z-10">{skill.name}</span>
                     </div>
                   </Card>
                 ))}
@@ -805,7 +911,11 @@ export default function Portofolio() {
                     <div className="absolute top-0 left-0 right-0 h-10 bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700"></div>
                   </div>
                   <div className="mt-8 mb-4 md:h-72 rounded-lg bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark-to-purple-800/20 flex items-center justify-center overflow-hidden group-hover:scale-[1.02] transition-all duration-500 relative">
-                    <img className="w-full object-cover" src={project.image} alt={project.title} />
+                    <img
+                      className="w-full object-cover"
+                      src={project.image}
+                      alt={project.title}
+                    />
                   </div>
 
                   <div className="absolute top-0 right-0 w-20 h-20 bg-purple-100 dark:bg-purple-900/20 opacity-20 rounded-bl-full -mt-6 -mr-6"></div>
@@ -1113,8 +1223,13 @@ export default function Portofolio() {
               <span className="sr-only">Email</span>
             </Link>
           </div>
-          <div className="text-sm text-gray-600 dark:text-gray-400">
-            © {new Date().getFullYear()} Yusuf Wandana. All rights reserved.
+          <div className="flex flex-col text-sm text-gray-600 dark:text-gray-400">
+            <div className="inline-block">
+              © {new Date().getFullYear()} Yusuf Wandana. All rights reserved.
+            </div>
+            <div className="inline-block">
+              Icons by <a href="https://icons8.com" target="_blank" className="underline hover:text-purple-400">Icons8</a>
+            </div>
           </div>
         </div>
       </footer>
