@@ -147,6 +147,85 @@ export default function Portofolio() {
     },
   ];
 
+  const projects = [
+    {
+      title: "Bundapedia",
+      description:
+        "A platform offering educational content and products for pregnancy, childbirth, and early parenting.",
+      image: "/projects/bundapedia.19dae19c47d9b6563bb9.jpg",
+      technologies: [
+        "PHP",
+        "Laravel",
+        "Bootstrap",
+        "Javascript",
+        "JQuery",
+        "MySQL",
+      ],
+      link: "https://bundapedia.co.id/",
+    },
+    // {
+    //   title: "Spazie",
+    //   description:
+    //     "It is a web and mobile based application built for hotel accommodation booking needs.",
+    //   image: "/projects/spazie.d38d10afa843d34029b5.jpg",
+    //   technologies: [
+    //     "PHP",
+    //     "Laravel",
+    //     "Bootstrap",
+    //     "Javascript",
+    //     "JQuery",
+    //     "MySQL",
+    //   ],
+    //   link: "#",
+    // },
+    {
+      title: "SIN Indonesia",
+      description:
+        "A mobile-based online store application built specifically to sell SIN Indonesia's products.",
+      image: "/projects/sin-indonesia.34213054db1fbdae4a60.png",
+      technologies: ["Lumen", "PHP", "REST API", "MySQL"],
+      link: "https://sinindonesia.co.id/",
+    },
+    {
+      title: "PEPI SIAKAD",
+      description:
+        "A web-based academic and learning management system (LMS) to support lecturers and students at Politeknik Enjiniring Pertanian Indonesia (PEPI).",
+      image: "/projects/pepi-dashboard.a565ddcb6c580a6f607a.png",
+      technologies: [
+        "Laravel",
+        "Livewire",
+        "Bootstrap",
+        "Javascript",
+        "JQuery",
+        "MySQL",
+      ],
+      link: "https://siakad.pepi.ac.id",
+    },
+    {
+      title: "Beliyuu",
+      description:
+        "A web and mobile-based marketplace application system built to sell products from local micro-medium entrepreneurs.",
+      image: "/projects/beliyuu.c5df70f3d958f8fda490.jpg",
+      technologies: ["Lumen", "CodeIgniter", "MySQL", "REST API"],
+      link: "https://beliyuu.com",
+    },
+    {
+      title: "BUMDES KITA",
+      description:
+        "A marketplace application that sells products and rents services related to the fields of agriculture, plantations, and animal husbandry created for farmers and similar entrepreneurs.",
+      image: "/projects/bumdes.5d8d4793179c8587f7ad.jpg",
+      technologies: [
+        "PHP",
+        "Laravel",
+        "Lumen",
+        "Bootstrap",
+        "Javascript",
+        "MySQL",
+      ],
+      link: "https://bumdeskita.com/",
+    },
+  ];
+
   const educations = [
     {
       degree: "Bachelor of Computer Science",
@@ -193,6 +272,13 @@ export default function Portofolio() {
       issuer: "Coding Studio",
       date: "Apr 2021",
       url: "https://drive.google.com/file/d/15azwuFcCBFj8Zv3W87DckOFpEtBzHS6k/view",
+      icon: "🏆",
+    },
+    {
+      name: "Internship Certificate",
+      issuer: "PT Madani Intelsysdata",
+      date: "Mar 2020",
+      url: "https://drive.google.com/file/d/1syOaKbiNSAe4jFpRkktQAcf4URSz8FyJ/view",
       icon: "🏆",
     },
   ];
@@ -415,9 +501,9 @@ export default function Portofolio() {
                 <Sun className="h-4 w-4" />
               )}
             </button>
-            <Button variant="outline" className="hidden md:flex">
+            {/* <Button variant="outline" className="hidden md:flex">
               Download CV
-            </Button>
+            </Button> */}
             <Button variant="outline" className="hidden">
               Menu
             </Button>
@@ -477,17 +563,24 @@ export default function Portofolio() {
             </div>
 
             <div className="flex gap-4 pt-6">
-              <Button onClick={() => {
-                const contactSection = document.getElementById("contact")
-                contactSection?.scrollIntoView({behavior: "smooth"})
-              }}>
+              <Button
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  contactSection?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 Contact Me
                 <ArrowUpRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" onClick={() => {
-                const projectSection = document.getElementById("project")
-                projectSection?.scrollIntoView({behavior: "smooth"})
-              }}>View Projects</Button>
+              <Button
+                variant="outline"
+                onClick={() => {
+                  const projectSection = document.getElementById("projects");
+                  projectSection?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                View Projects
+              </Button>
             </div>
 
             <div className="flex gap-4 pt-6">
@@ -675,6 +768,73 @@ export default function Portofolio() {
                 </div>
                 <div className="md:w-1/2"></div>
               </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Project section */}
+        <section
+          id="projects"
+          className="py-20 border-t border-gray-200 dark:border-gray-700/50 opacity-0 transition-all duration-1000 translate-y-10"
+        >
+          <div className="inline-block">
+            <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">
+              Featured Projects
+            </h2>
+            <div className="h-1 w-1/3 bg-purple-500"></div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 mt-10">
+            {projects.map((project, key) => (
+              <Card
+                key={key}
+                className="overflow-hidden group"
+                style={{
+                  animationDelay: `${key * 150}ms`,
+                  animationDuration: "500ms",
+                }}
+              >
+                <div className="p-6 relative">
+                  <div className="absolute inset-0">
+                    {/* <span className="absolute top-1 left-2 z-10 text-[14px]">Project X</span> */}
+                    <div className="absolute top-2 left-2 z-10 text-md font-bold mb-2 text-purple-600 dark:text-purple-400">
+                      {project.title}
+                    </div>
+                    <div className="absolute top-[14px] right-2 w-[9px] h-[9px] rounded-full bg-red-400 z-10"></div>
+                    <div className="absolute top-[14px] right-6 w-[9px] h-[9px] rounded-full bg-yellow-400 z-10"></div>
+                    <div className="absolute top-[14px] right-10 w-[9px] h-[9px] rounded-full bg-green-400 z-10"></div>
+                    <div className="absolute top-0 left-0 right-0 h-10 bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700"></div>
+                  </div>
+                  <div className="mt-8 mb-4 md:h-72 rounded-lg bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark-to-purple-800/20 flex items-center justify-center overflow-hidden group-hover:scale-[1.02] transition-all duration-500 relative">
+                    <img className="w-full object-cover" src={project.image} alt={project.title} />
+                  </div>
+
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-purple-100 dark:bg-purple-900/20 opacity-20 rounded-bl-full -mt-6 -mr-6"></div>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 text-sm rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 transition-all duration-300 hover:scale-105"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-400 mb-4">
+                    {project.description}
+                  </div>
+                  <Link
+                    href={project.link}
+                    className="group inline-flex items-center text-purple-600 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-all duration-300"
+                    target="_blank"
+                  >
+                    <span className="relative">
+                      View Project
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 dark:bg-purple-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                    </span>
+                    <ArrowUpRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </Link>
+                </div>
+              </Card>
             ))}
           </div>
         </section>
