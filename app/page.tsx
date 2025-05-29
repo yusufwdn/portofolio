@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import BoxRotating from "@/components/BoxRotating";
 
 export default function Portofolio() {
   const [isClient, setIsClient] = useState(false);
@@ -872,7 +873,11 @@ export default function Portofolio() {
                     </div>
                   </Card>
                 </div>
-                <div className="md:w-1/2"></div>
+                <div className="hidden md:flex items-center justify-center md:w-1/2">
+                  <div className="relative w-full">
+                    <BoxRotating />
+                  </div>
+                </div>
               </div>
             ))}
           </div>
