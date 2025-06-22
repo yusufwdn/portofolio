@@ -1,5 +1,19 @@
-import { ProjectType, ProjectTypeCode } from "@/types/types";
-import { Brain, Code, Palette, Server } from "lucide-react";
+import {
+  Certificate,
+  Education,
+  Project,
+  ProjectType,
+  ProjectTypeCode,
+  WorkExperience,
+} from "@/types/types";
+import {
+  Brain,
+  Code,
+  LampDesk,
+  Palette,
+  PersonStanding,
+  Server,
+} from "lucide-react";
 import { JSX } from "react";
 
 export const sections = [
@@ -163,23 +177,23 @@ export const skillIcons = {
 
 export const projectTypes: ProjectType[] = [
   {
-    code: "ps",
-    name: "Personal",
+    code: "personal",
+    label: "Personal",
     icon: "icons8/icons8-html-5-96.png",
   },
   {
-    code: "wo",
-    name: "Work",
+    code: "professional",
+    label: "Professional",
     icon: "icons8/icons8-html-5-96.png",
   },
 ];
 
 export const projectTypeIcons: Record<ProjectTypeCode, JSX.Element> = {
-  ps: <Code className="h-5 w-5" />,
-  wo: <Server className="h-5 w-5" />,
+  personal: <PersonStanding className="h-5 w-5" />,
+  professional: <LampDesk className="h-5 w-5" />,
 };
 
-export const workExperiences = [
+export const workExperiences: WorkExperience[] = [
   {
     title: "Full Stack Developer",
     company: "PT Elistec Informatika Utama",
@@ -245,9 +259,10 @@ export const workExperiences = [
   },
 ];
 
-export const projects = [
+export const projects: Project[] = [
   {
     title: "Bundapedia",
+    type: "professional",
     description:
       "A platform offering educational content and products for pregnancy, childbirth, and early parenting.",
     image: "/projects/bundapedia.19dae19c47d9b6563bb9.jpg",
@@ -263,6 +278,7 @@ export const projects = [
   },
   // {
   //   title: "Spazie",
+  //   type: "professional",
   //   description:
   //     "It is a web and mobile based application built for hotel accommodation booking needs.",
   //   image: "/projects/spazie.d38d10afa843d34029b5.jpg",
@@ -278,6 +294,7 @@ export const projects = [
   // },
   {
     title: "SIN Indonesia",
+    type: "professional",
     description:
       "A mobile-based online store application built specifically to sell SIN Indonesia's products.",
     image: "/projects/sin-indonesia.34213054db1fbdae4a60.png",
@@ -286,6 +303,7 @@ export const projects = [
   },
   {
     title: "PEPI SIAKAD",
+    type: "professional",
     description:
       "A web-based academic and learning management system (LMS) to support lecturers and students at Politeknik Enjiniring Pertanian Indonesia (PEPI).",
     image: "/projects/pepi-dashboard.a565ddcb6c580a6f607a.png",
@@ -301,6 +319,7 @@ export const projects = [
   },
   {
     title: "Beliyuu",
+    type: "professional",
     description:
       "A web and mobile-based marketplace application system built to sell products from local micro-medium entrepreneurs.",
     image: "/projects/beliyuu.c5df70f3d958f8fda490.jpg",
@@ -309,6 +328,7 @@ export const projects = [
   },
   {
     title: "BUMDES KITA",
+    type: "professional",
     description:
       "A marketplace application that sells products and rents services related to the fields of agriculture, plantations, and animal husbandry created for farmers and similar entrepreneurs.",
     image: "/projects/bumdes.5d8d4793179c8587f7ad.jpg",
@@ -322,9 +342,36 @@ export const projects = [
     ],
     link: "https://bumdeskita.com/",
   },
+  {
+    title: "jadipintar",
+    type: "personal",
+    description:
+      "jadipintar is an interactive quiz app that presents questions from various categories. Users can choose a category, answer questions one by one, and view their final score upon completion. The app is built with Next.js and Tailwind CSS, and currently uses static JSON data. A backend built with Golang is in progress to support dynamic data and scalability.",
+    image: "/projects/jadipintar.218xd8asas28d3u0288ox.png",
+    technologies: [
+      "Next.js",
+      "TailwindCSS",
+    ],
+    link: "https://jadipintar.vercel.app/",
+  },
+  {
+    title: "Mini Store",
+    type: "personal",
+    description:
+      "This is a simple online store web application I built during a hands-on course project (in 2021). It features a role-based system for admins and customers, including product management, order processing, and payment integration using Midtrans. This project helped me deepen my understanding of Laravel, Bootstrap, a bit of Vue.js, and third-party service integration.",
+    image: "/projects/store.d39hfkslv4ppqweiza9.png",
+    technologies: [
+      "Laravel",
+      "Livewire",
+      "Bootstrap",
+      "JQuery",
+      "Vue.js"
+    ],
+    link: "https://github.com/yusufwdn/mini-store",
+  },
 ];
 
-export const educations = [
+export const educations: Education[] = [
   {
     degree: "Bachelor of Computer Science",
     institution: "Institut Teknologi dan Bisnis Swadharma",
@@ -343,7 +390,7 @@ export const educations = [
   },
 ];
 
-export const certificates = [
+export const certificates: Certificate[] = [
   {
     name: "Master Class : React.js and Tailwind Web Development",
     issuer: "BuildWithAngga",

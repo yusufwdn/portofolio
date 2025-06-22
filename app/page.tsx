@@ -1,22 +1,26 @@
 "use client";
 
-import {
-  ArrowUpRight,
-  Github,
-  Linkedin,
-  Mail,
-  Moon,
-  Sun,
-} from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail, Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import BoxRotating from "@/components/BoxRotating";
-import { certificates, educations, projects, sections, skillIcons, skills, workExperiences } from "@/lib/static-data";
+import {
+  certificates,
+  educations,
+  projects,
+  projectTypeIcons,
+  projectTypes,
+  sections,
+  skillIcons,
+  skills,
+  workExperiences,
+} from "@/lib/static-data";
 
 export default function Portofolio() {
   const [isClient, setIsClient] = useState(false);
   const [activeSection, setActiveSection] = useState("about");
-  const [activeTab, setActiveTab] = useState("frontend");
+  const [activeSkillTab, setActiveSkillTab] = useState("frontend");
+  const [activeProjectTypeTab, setActiveProjectTypeTab] = useState("personal");
   const [theme, setTheme] = useState("light");
   const observerRefs = useRef<IntersectionObserver[]>([]);
 
@@ -402,9 +406,9 @@ export default function Portofolio() {
                 <button
                   key={tab}
                   type="button"
-                  onClick={() => setActiveTab(tab)}
+                  onClick={() => setActiveSkillTab(tab)}
                   className={`px-4 py-2 font-medium text-sm transition-all duration-300 border-b-2 flex items-center gap-2 ${
-                    activeTab === tab
+                    activeSkillTab === tab
                       ? "border-purple-500 text-purple-600 dark:text-purple-400"
                       : "border-transparent text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
                   }`}
@@ -416,32 +420,34 @@ export default function Portofolio() {
             </div>
             <div className="mt-6">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                {skills[activeTab as keyof typeof skills].map((skill, i) => (
-                  <Card
-                    key={skill.name}
-                    className="overflow-hidden group"
-                    style={{
-                      animationDelay: `{${i} * 100}ms`,
-                      animationDuration: "500ms",
-                    }}
-                  >
-                    <div className="p-6 flex items-center gap-4 relative overflow-hidden">
-                      <div className="absolute -right-6 -bottom-6 w-12 h-12 bg-purple-500/10 rounded-full group-hover:scale-150 transition-all duration-500"></div>
-                      {skill.icon && skill.icon !== "" ? (
-                        <div className="w-8 h-8 rounded flex items-center justify-center">
-                          <img src={skill.icon} alt={skill.name} />
-                        </div>
-                      ) : (
-                        <div className="w-10 h-10 rounded bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold relative z-10">
-                          <span>{skill.name.charAt(0)}</span>
-                        </div>
-                      )}
-                      <span className="font-medium text-gray-600 dark:text-gray-400 relative z-10">
-                        {skill.name}
-                      </span>
-                    </div>
-                  </Card>
-                ))}
+                {skills[activeSkillTab as keyof typeof skills].map(
+                  (skill, i) => (
+                    <Card
+                      key={skill.name}
+                      className="overflow-hidden group"
+                      style={{
+                        animationDelay: `{${i} * 100}ms`,
+                        animationDuration: "500ms",
+                      }}
+                    >
+                      <div className="p-6 flex items-center gap-4 relative overflow-hidden">
+                        <div className="absolute -right-6 -bottom-6 w-12 h-12 bg-purple-500/10 rounded-full group-hover:scale-150 transition-all duration-500"></div>
+                        {skill.icon && skill.icon !== "" ? (
+                          <div className="w-8 h-8 rounded flex items-center justify-center">
+                            <img src={skill.icon} alt={skill.name} />
+                          </div>
+                        ) : (
+                          <div className="w-10 h-10 rounded bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold relative z-10">
+                            <span>{skill.name.charAt(0)}</span>
+                          </div>
+                        )}
+                        <span className="font-medium text-gray-600 dark:text-gray-400 relative z-10">
+                          {skill.name}
+                        </span>
+                      </div>
+                    </Card>
+                  )
+                )}
               </div>
             </div>
           </div>
@@ -532,8 +538,26 @@ export default function Portofolio() {
             </h2>
             <div className="h-1 w-1/3 bg-purple-500"></div>
           </div>
+          <div className="flex items-center justify-center w-full mt-5">
+            {projectTypes.map((type) => (
+              <button
+                key={type.code}
+                type="button"
+                onClick={() => setActiveProjectTypeTab(type.code)}
+                className={`px-4 py-2 font-medium text-sm transition-all duration-300 border-b-2 flex items-center gap-2 
+                  ${
+                    activeProjectTypeTab === type.code
+                      ? "border-purple-500 text-purple-600 dark:text-purple-400"
+                      : "border-transparent text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
+                  }`}
+              >
+                {projectTypeIcons[type.code]}
+                {type.label}
+              </button>
+            ))}
+          </div>
           <div className="grid md:grid-cols-2 gap-6 mt-10">
-            {projects.map((project, key) => (
+            {projects.filter(project => project.type === activeProjectTypeTab).map((project, key) => (
               <Card
                 key={key}
                 className="overflow-hidden group"
@@ -542,50 +566,56 @@ export default function Portofolio() {
                   animationDuration: "500ms",
                 }}
               >
-                <div className="p-6 relative">
-                  <div className="absolute inset-0">
-                    {/* <span className="absolute top-1 left-2 z-10 text-[14px]">Project X</span> */}
-                    <div className="absolute top-2 left-2 z-10 text-md font-bold mb-2 text-purple-600 dark:text-purple-400">
-                      {project.title}
-                    </div>
-                    <div className="absolute top-[14px] right-2 w-[9px] h-[9px] rounded-full bg-red-400 z-10"></div>
-                    <div className="absolute top-[14px] right-6 w-[9px] h-[9px] rounded-full bg-yellow-400 z-10"></div>
-                    <div className="absolute top-[14px] right-10 w-[9px] h-[9px] rounded-full bg-green-400 z-10"></div>
-                    <div className="absolute top-0 left-0 right-0 h-10 bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700"></div>
-                  </div>
-                  <div className="mt-8 mb-4 md:h-72 rounded-lg bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark-to-purple-800/20 flex items-center justify-center overflow-hidden group-hover:scale-[1.02] transition-all duration-500 relative">
-                    <img
-                      className="w-full object-cover"
-                      src={project.image}
-                      alt={project.title}
-                    />
-                  </div>
+                <div className="relative h-full p-6">
+                  <div className="flex flex-col justify-between h-full">
+                    <div>
+                      <div className="absolute inset-0">
+                        {/* <span className="absolute top-1 left-2 z-10 text-[14px]">Project X</span> */}
+                        <div className="absolute top-2 left-2 z-10 text-md font-bold mb-2 text-purple-600 dark:text-purple-400">
+                          {project.title}
+                        </div>
+                        <div className="absolute top-[14px] right-2 w-[9px] h-[9px] rounded-full bg-red-400 z-10"></div>
+                        <div className="absolute top-[14px] right-6 w-[9px] h-[9px] rounded-full bg-yellow-400 z-10"></div>
+                        <div className="absolute top-[14px] right-10 w-[9px] h-[9px] rounded-full bg-green-400 z-10"></div>
+                        <div className="absolute top-0 left-0 right-0 h-10 bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700"></div>
+                      </div>
+                      <div className="mt-8 mb-4 md:h-72 rounded-lg bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark-to-purple-800/20 flex items-center justify-center overflow-hidden group-hover:scale-[1.02] transition-all duration-500 relative">
+                        <img
+                          className="w-full object-cover"
+                          src={project.image}
+                          alt={project.title}
+                        />
+                      </div>
 
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-purple-100 dark:bg-purple-900/20 opacity-20 rounded-bl-full -mt-6 -mr-6"></div>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 text-sm rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 transition-all duration-300 hover:scale-105"
+                      <div className="absolute top-0 right-0 w-20 h-20 bg-purple-100 dark:bg-purple-900/20 opacity-20 rounded-bl-full -mt-6 -mr-6"></div>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-3 py-1 text-sm rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 transition-all duration-300 hover:scale-105"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="text-gray-600 dark:text-gray-400 mb-4 text-justify">
+                        {project.description}
+                      </div>
+                    </div>
+                    <div className="mt-3">
+                      <Link
+                        href={project.link}
+                        className="group inline-flex items-center text-purple-600 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-all duration-300"
+                        target="_blank"
                       >
-                        {tech}
-                      </span>
-                    ))}
+                        <span className="relative bottom-0">
+                          View Project
+                          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 dark:bg-purple-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                        </span>
+                        <ArrowUpRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      </Link>
+                    </div>
                   </div>
-                  <div className="text-gray-600 dark:text-gray-400 mb-4">
-                    {project.description}
-                  </div>
-                  <Link
-                    href={project.link}
-                    className="group inline-flex items-center text-purple-600 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-all duration-300"
-                    target="_blank"
-                  >
-                    <span className="relative">
-                      View Project
-                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 dark:bg-purple-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                    </span>
-                    <ArrowUpRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-                  </Link>
                 </div>
               </Card>
             ))}
