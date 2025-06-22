@@ -348,10 +348,7 @@ export const projects: Project[] = [
     description:
       "jadipintar is an interactive quiz app that presents questions from various categories. Users can choose a category, answer questions one by one, and view their final score upon completion. The app is built with Next.js and Tailwind CSS, and currently uses static JSON data. A backend built with Golang is in progress to support dynamic data and scalability.",
     image: "/projects/jadipintar.218xd8asas28d3u0288ox.png",
-    technologies: [
-      "Next.js",
-      "TailwindCSS",
-    ],
+    technologies: ["Next.js", "TailwindCSS"],
     link: "https://jadipintar.vercel.app/",
   },
   {
@@ -360,13 +357,7 @@ export const projects: Project[] = [
     description:
       "This is a simple online store web application I built during a hands-on course project (in 2021). It features a role-based system for admins and customers, including product management, order processing, and payment integration using Midtrans. This project helped me deepen my understanding of Laravel, Bootstrap, a bit of Vue.js, and third-party service integration.",
     image: "/projects/store.d39hfkslv4ppqweiza9.png",
-    technologies: [
-      "Laravel",
-      "Livewire",
-      "Bootstrap",
-      "JQuery",
-      "Vue.js"
-    ],
+    technologies: ["Laravel", "Livewire", "Bootstrap", "JQuery", "Vue.js"],
     link: "https://github.com/yusufwdn/mini-store",
   },
 ];

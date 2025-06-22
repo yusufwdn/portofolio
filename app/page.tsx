@@ -401,7 +401,10 @@ export default function Portofolio() {
             <div className="h-1 w-1/3 bg-purple-500"></div>
           </div>
           <div className="w-full mt-10">
-            <div className="flex overflow-x-auto hide-scrollbar" id="skill-tab">
+            <div
+              className="flex items-center md:justify-center overflow-x-auto hide-scrollbar"
+              id="skill-tab"
+            >
               {Object.keys(skills).map((tab) => (
                 <button
                   key={tab}
@@ -538,7 +541,7 @@ export default function Portofolio() {
             </h2>
             <div className="h-1 w-1/3 bg-purple-500"></div>
           </div>
-          <div className="flex items-center justify-center w-full mt-5">
+          <div className="flex items-center md:justify-center w-full overflow-x-auto hide-scrollbar mt-10">
             {projectTypes.map((type) => (
               <button
                 key={type.code}
@@ -557,68 +560,70 @@ export default function Portofolio() {
             ))}
           </div>
           <div className="grid md:grid-cols-2 gap-6 mt-10">
-            {projects.filter(project => project.type === activeProjectTypeTab).map((project, key) => (
-              <Card
-                key={key}
-                className="overflow-hidden group"
-                style={{
-                  animationDelay: `${key * 150}ms`,
-                  animationDuration: "500ms",
-                }}
-              >
-                <div className="relative h-full p-6">
-                  <div className="flex flex-col justify-between h-full">
-                    <div>
-                      <div className="absolute inset-0">
-                        {/* <span className="absolute top-1 left-2 z-10 text-[14px]">Project X</span> */}
-                        <div className="absolute top-2 left-2 z-10 text-md font-bold mb-2 text-purple-600 dark:text-purple-400">
-                          {project.title}
+            {projects
+              .filter((project) => project.type === activeProjectTypeTab)
+              .map((project, key) => (
+                <Card
+                  key={key}
+                  className="overflow-hidden group"
+                  style={{
+                    animationDelay: `${key * 150}ms`,
+                    animationDuration: "500ms",
+                  }}
+                >
+                  <div className="relative h-full p-6">
+                    <div className="flex flex-col justify-between h-full">
+                      <div>
+                        <div className="absolute inset-0">
+                          {/* <span className="absolute top-1 left-2 z-10 text-[14px]">Project X</span> */}
+                          <div className="absolute top-2 left-2 z-10 text-md font-bold mb-2 text-purple-600 dark:text-purple-400">
+                            {project.title}
+                          </div>
+                          <div className="absolute top-[14px] right-2 w-[9px] h-[9px] rounded-full bg-red-400 z-10"></div>
+                          <div className="absolute top-[14px] right-6 w-[9px] h-[9px] rounded-full bg-yellow-400 z-10"></div>
+                          <div className="absolute top-[14px] right-10 w-[9px] h-[9px] rounded-full bg-green-400 z-10"></div>
+                          <div className="absolute top-0 left-0 right-0 h-10 bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700"></div>
                         </div>
-                        <div className="absolute top-[14px] right-2 w-[9px] h-[9px] rounded-full bg-red-400 z-10"></div>
-                        <div className="absolute top-[14px] right-6 w-[9px] h-[9px] rounded-full bg-yellow-400 z-10"></div>
-                        <div className="absolute top-[14px] right-10 w-[9px] h-[9px] rounded-full bg-green-400 z-10"></div>
-                        <div className="absolute top-0 left-0 right-0 h-10 bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700"></div>
-                      </div>
-                      <div className="mt-8 mb-4 md:h-72 rounded-lg bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark-to-purple-800/20 flex items-center justify-center overflow-hidden group-hover:scale-[1.02] transition-all duration-500 relative">
-                        <img
-                          className="w-full object-cover"
-                          src={project.image}
-                          alt={project.title}
-                        />
-                      </div>
+                        <div className="mt-8 mb-4 md:h-72 rounded-lg bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark-to-purple-800/20 flex items-center justify-center overflow-hidden group-hover:scale-[1.02] transition-all duration-500 relative">
+                          <img
+                            className="w-full object-cover"
+                            src={project.image}
+                            alt={project.title}
+                          />
+                        </div>
 
-                      <div className="absolute top-0 right-0 w-20 h-20 bg-purple-100 dark:bg-purple-900/20 opacity-20 rounded-bl-full -mt-6 -mr-6"></div>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {project.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-3 py-1 text-sm rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 transition-all duration-300 hover:scale-105"
-                          >
-                            {tech}
+                        <div className="absolute top-0 right-0 w-20 h-20 bg-purple-100 dark:bg-purple-900/20 opacity-20 rounded-bl-full -mt-6 -mr-6"></div>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {project.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-3 py-1 text-sm rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 transition-all duration-300 hover:scale-105"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="text-gray-600 dark:text-gray-400 mb-4 text-justify">
+                          {project.description}
+                        </div>
+                      </div>
+                      <div className="mt-3">
+                        <Link
+                          href={project.link}
+                          className="group inline-flex items-center text-purple-600 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-all duration-300"
+                          target="_blank"
+                        >
+                          <span className="relative bottom-0">
+                            View Project
+                            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 dark:bg-purple-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                           </span>
-                        ))}
+                          <ArrowUpRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                        </Link>
                       </div>
-                      <div className="text-gray-600 dark:text-gray-400 mb-4 text-justify">
-                        {project.description}
-                      </div>
-                    </div>
-                    <div className="mt-3">
-                      <Link
-                        href={project.link}
-                        className="group inline-flex items-center text-purple-600 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-all duration-300"
-                        target="_blank"
-                      >
-                        <span className="relative bottom-0">
-                          View Project
-                          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 dark:bg-purple-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                        </span>
-                        <ArrowUpRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-                      </Link>
                     </div>
                   </div>
-                </div>
-              </Card>
-            ))}
+                </Card>
+              ))}
           </div>
         </section>
 
