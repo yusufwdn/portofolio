@@ -20,6 +20,14 @@
 
 @font-face {
   font-family: "Poppins";
+  src: url("/fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
   src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
@@ -35,64 +43,83 @@
 }
 
 @layer base {
+  /* Tokens are raw HSL channels — Tailwind wraps them in hsl() so that
+     opacity modifiers (bg-surface/60) keep working. */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 270 70% 60%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 270 70% 95%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 270 70% 60%;
+    /* Tells the browser which canvas colour to paint before our CSS applies.
+       Without it a navigation flashes white on the way into a dark page. */
+    color-scheme: light;
+
+    --background: 255 40% 99%;
+    --foreground: 255 25% 11%;
+
+    --surface: 0 0% 100%;
+    --surface-raised: 0 0% 100%;
+    --surface-sunken: 255 30% 97%;
+
+    --line: 255 20% 91%;
+    --line-strong: 255 18% 82%;
+    /* Boundary of an actual control (input, icon button, outline button).
+       WCAG 1.4.11 wants 3:1 for these; --line is decorative and sits at
+       ~1.2:1, which left form fields nearly invisible until focus. */
+    --control: 255 15% 58%;
+
+    --muted: 255 10% 44%;
+
+    --primary: 265 72% 55%;
+    --primary-soft: 265 80% 96%;
+    --primary-contrast: 0 0% 100%;
+
+    --coffee: 28 85% 48%;
+
+    --term-bg: 258 28% 11%;
+    --term-chrome: 258 24% 16%;
+    --term-text: 255 20% 90%;
+    --term-dim: 255 12% 58%;
+
+    --shadow: 258 40% 20%;
+
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 240 10% 4%;
-    --foreground: 0 0% 95%;
-    --card: 240 10% 8%;
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 270 70% 60%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 270 70% 15%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 270 70% 60%;
+    color-scheme: dark;
+
+    --background: 258 24% 7%;
+    --foreground: 255 20% 96%;
+
+    --surface: 258 22% 10%;
+    --surface-raised: 258 20% 13%;
+    --surface-sunken: 258 26% 8%;
+
+    --line: 258 16% 19%;
+    --line-strong: 258 14% 28%;
+    --control: 258 12% 46%;
+
+    --muted: 255 12% 64%;
+
+    --primary: 265 85% 72%;
+    --primary-soft: 265 40% 19%;
+    --primary-contrast: 258 30% 9%;
+
+    --coffee: 32 92% 62%;
+
+    --term-bg: 258 30% 9%;
+    --term-chrome: 258 24% 14%;
+    --term-text: 255 20% 90%;
+    --term-dim: 255 12% 55%;
+
+    --shadow: 258 60% 2%;
   }
 }
 
 @layer base {
   body {
-    @apply bg-background text-foreground;
-    @apply font-sans;
+    @apply bg-background text-foreground font-sans;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-}
-
+/* Reveal-on-scroll used by the current page */
 .animate-in {
   animation: fadeInUp 0.8s ease forwards;
 }
@@ -147,26 +174,6 @@ body {
   }
 }
 
-@keyframes float-delay {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes float-delay-2 {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
 .animate-spin-slow {
   animation: spin-slow 20s linear infinite;
 }
@@ -184,12 +191,12 @@ body {
 }
 
 .animate-float-delay {
-  animation: float-delay 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
   animation-delay: 2s;
 }
 
 .animate-float-delay-2 {
-  animation: float-delay-2 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
   animation-delay: 4s;
 }
 
@@ -198,35 +205,32 @@ body {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500;
 }
 
+/* Fine dot grid — replaces the 65 randomly positioned divs. One element,
+   no repaint, and it actually reads as depth instead of noise. */
+.dot-grid {
+  background-image: radial-gradient(
+    hsl(var(--foreground) / 0.16) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.05);
+  background: hsl(var(--foreground) / 0.04);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(147, 51, 234, 0.3);
+  background: hsl(var(--primary) / 0.35);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(147, 51, 234, 0.5);
-}
-
-/* Dark mode scrollbar */
-.dark ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: rgba(147, 51, 234, 0.3);
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: rgba(147, 51, 234, 0.5);
+  background: hsl(var(--primary) / 0.55);
 }
 
 /* Smooth scrolling */
@@ -234,20 +238,18 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Focus styles */
-*:focus {
-  outline: none;
-}
-
 /* Custom container */
 .container {
   max-width: 1200px;
 }
 
-/* Theme transition */
-* {
-  transition: background-color 0.3s ease, border-color 0.3s ease,
-    color 0.3s ease;
+/* Theme transition — only while the theme is actually switching, instead of a
+   blanket `* { transition }` that made every hover feel laggy. */
+html.theme-switching *,
+html.theme-switching *::before,
+html.theme-switching *::after {
+  transition: background-color 0.28s ease, border-color 0.28s ease,
+    color 0.28s ease, fill 0.28s ease;
 }
 
 /* Prevent transition on page load */
@@ -255,7 +257,6 @@ html {
   transition: none !important;
 }
 
-/* global.css atau di style tag */
 .hide-scrollbar {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE 10+ */
@@ -271,10 +272,6 @@ button[aria-label="Toggle theme"] {
   overflow: hidden;
 }
 
-button[aria-label="Toggle theme"]:hover {
-  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.15);
-}
-
 button[aria-label="Toggle theme"] svg {
   transition: transform 0.3s ease;
 }
@@ -283,8 +280,23 @@ button[aria-label="Toggle theme"]:hover svg {
   transform: rotate(180deg);
 }
 
-/* Enhanced focus styles for accessibility */
-button[aria-label="Toggle theme"]:focus {
-  outline: 2px solid rgba(147, 51, 234, 0.5);
+/* Visible focus for keyboard users only, on every interactive element */
+:focus-visible {
+  outline: 2px solid hsl(var(--primary));
   outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
