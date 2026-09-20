@@ -1,40 +1,47 @@
 export type ProjectTypeCode = "personal" | "professional";
 
-export type ProjectType = {
-  code: ProjectTypeCode;
-  label: string;
+export type SkillGroup = "frontend" | "backend" | "tools" | "soft";
+
+/** Every skill label reads the same in both locales, so it lives in data. */
+export type Skill = {
+  name: string;
   icon: string;
 };
 
 export type Project = {
-  title: string;
+  id: string;
   type: ProjectTypeCode;
-  description: string;
-  image: string;
+  /** Internal work often has nothing public to show, so this is optional. */
+  image?: string;
   technologies: string[];
-  link: string;
+  /** Absent when the project has no public URL. */
+  link?: string;
 };
 
-export type WorkExperience = {
-  title: string;
-  company: string;
-  period: string;
-  description_list: string[];
+export type Role = {
+  id: string;
   technologies: string[];
+};
+
+/**
+ * Grouped by employer, not by role. Two titles at the same company is a
+ * promotion, and flattening them would read as job hopping.
+ */
+export type WorkExperience = {
+  id: string;
+  company: string;
+  roles: Role[];
 };
 
 export type Education = {
-  degree: string;
+  id: string;
   institution: string;
-  period: string;
-  description: string;
-  icon: string;
 };
 
 export type Certificate = {
+  id: string;
   name: string;
   issuer: string;
   date: string;
   url: string;
-  icon: string;
 };
