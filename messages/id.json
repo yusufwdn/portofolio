@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "title": "Yusuf Wandana | Software Engineer & Full-Stack Developer",
+    "description": "Software engineer asal Indonesia dengan pengalaman lebih dari lima tahun di sistem backend dan alur bisnis yang rumit. Laravel, Nest.js, Next.js, dan layanan di baliknya."
+  },
+  "nav": {
+    "about": "Tentang",
+    "skills": "Keahlian",
+    "experiences": "Pengalaman",
+    "projects": "Proyek",
+    "educations": "Pendidikan",
+    "contact": "Kontak",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu",
+    "toggleTheme": "Ganti tema",
+    "language": "Bahasa",
+    "switchToIndonesian": "Ganti ke Bahasa Indonesia",
+    "switchToEnglish": "Ganti ke Bahasa Inggris"
+  },
+  "hero": {
+    "eyebrow": "Software Engineer · Indonesia",
+    "headlineBefore": "Hancurkan",
+    "headlineAccent": "masalahnya.",
+    "headlineAfter": "Bangun sistemnya.",
+    "pitch": "Lebih dari lima tahun menjadi seorang Software Engineer. Memiliki pengalaman dalam memberikan solusi yang sesuai dengan kebutuhan bisnis, mulai dari kebutuhan bisnis yang sederhana hingga kompleks sekalipun.",
+    "viewProjects": "Lihat proyek",
+    "getInTouch": "Hubungi saya"
+  },
+  "availability": {
+    "open": {
+      "pill": "Terbuka untuk peluang baru",
+      "cta": "Hubungi saya"
+    },
+    "freelance": {
+      "pill": "Tersedia untuk freelance",
+      "cta": "Mulai proyek"
+    },
+    "employed": {
+      "pill": "Sedang fokus di pekerjaan saat ini",
+      "cta": "Kirim pesan"
+    }
+  },
+  "capabilities": {
+    "eyebrow": "Yang saya kerjakan",
+    "title": "Tiga hal yang paling sering saya tangani",
+    "backend": {
+      "kicker": "Arsitektur",
+      "title": "Membangun sistem yang rapi dan mudah dikembangkan",
+      "body": "Telah berpengalaman dalam membangun sistem monolith hingga microservices, baik itu dimulai dari nol atau melanjutkan sistem yang sudah berjalan."
+    },
+    "product": {
+      "kicker": "Logika bisnis",
+      "title": "Aturan yang bisnis yang sering berubah",
+      "body": "Saya terbiasa menangani kebutuhan alur bisnis yang rumit dan dinamis. Maka dari itu, saya membangun sistem yang mudah diubah tanpa membongkar ulang sistemnya dari awal."
+    },
+    "systems": {
+      "kicker": "Eksekusi",
+      "title": "Dari analisis kebutuhan sampai rilis",
+      "body": "Selalu terlibat dalam pembahasan kebutuhan bersama klien, desain sistem dan database juga. Kalau dibutuhkan, sisi frontend dan testing-nya saya bisa kerjakan juga."
+    }
+  },
+  "stack": {
+    "eyebrow": "Teknologi",
+    "title": "Yang biasa saya pakai",
+    "lead": "Yang rutin saya pakai, bukan semua yang pernah saya coba.",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools",
+      "soft": "Soft Skill"
+    },
+    "notes": {
+      "frontend": "Yang dipakai untuk membangun antarmuka",
+      "backend": "Yang dipakai untuk membangun alur bisnis dan sistem di baliknya",
+      "tools": "Yang dipakai untuk mendukung pengembangan software",
+      "soft": "Yang dipakai untuk memastikan software yang dibangun bisa digunakan dan dikembangkan"
+    }
+  },
+  "experience": {
+    "eyebrow": "Pengalaman",
+    "title": "Tempat saya bekerja dan apa yang saya kerjakan",
+    "items": {
+      "elistec": {
+        "span": "Nov 2023 - Sekarang",
+        "type": "Full-time",
+        "roles": {
+          "softwareEngineer": {
+            "role": "Software Engineer",
+            "period": "Nov 2023 - Sekarang",
+            "location": "Kemayoran, Jakarta · Hybrid",
+            "points": [
+              "Merancang dan membangun arsitektur microservices dari nol, sekaligus mengambil alih service yang sudah berjalan: autentikasi, order, pembayaran, dan klaim.",
+              "Membangun platform asuransi digital untuk anak perusahaan BUMN, menerjemahkan aturan bisnis yang padat menjadi sistem untuk penjualan digital, hitung premi, dan pengelolaan klaim lewat REST API.",
+              "Menangani seluruh proses klaim asuransi, dari frontend, backend, sampai testing, untuk sepuluh lini produk yang masing-masing punya aturan sendiri.",
+              "Membangun service inti untuk proyek transformasi sistem internal, dengan komunikasi antar service memakai RPC berbasis NATS.",
+              "Merancang struktur database menyesuaikan pembagian service: database sendiri untuk service yang berdiri sendiri, model relasional bersama kalau konsistensi datanya lebih penting.",
+              "Menemukan masalah struktural di database lama sejak awal proyek dan mengusulkan penataan ulang. Terbukti belakangan, saat developer lain menemui kendala yang sudah saya perkirakan.",
+              "Memiliki tanggung jawab sebagai penasihat teknis di proyek Insurance dan CRM: desain sistem, keputusan arsitektur, dan code review."
+            ]
+          },
+          "k2Developer": {
+            "role": "K2 Developer",
+            "period": "Nov 2023 - Mar 2025",
+            "location": "Bandung, Jawa Barat · Onsite",
+            "points": [
+              "Memimpin desain dan pembangunan sistem approval dinamis di atas Nintex K2, dipakai di seluruh modul Eiger, menggantikan approval manual dengan alur berlapis otomatis sesuai nilai transaksi dan aturan tiap modul.",
+              "Mendigitalkan form internal perusahaan sampai tuntas: Payment Request, approval legal, permintaan akomodasi, dan proses enterprise lain di sekitarnya.",
+              "Memimpin implementasi teknis modul paling rumit, Payment Request dan Audit Request, terlibat dari desain sistem, skema database, sampai logika bisnisnya sejak awal."
+            ]
+          }
+        }
+      },
+      "wan": {
+        "span": "Sep 2021 - Nov 2023",
+        "type": "Full-time",
+        "roles": {
+          "backendDeveloper": {
+            "role": "Backend Developer",
+            "period": "Sep 2021 - Nov 2023",
+            "location": "Kota Bogor, Jawa Barat · Onsite",
+            "points": [
+              "Memimpin tim 3 sampai 4 engineer di berbagai proyek klien: e-commerce, marketplace hasil tani, sistem akuntansi, dan platform manajemen properti untuk pengembang perumahan ternama di Bogor.",
+              "Dipercaya memimpin tim sejak awal karier karena kecepatan kerja, cara berkomunikasi dengan klien, dan kualitas solusi yang konsisten.",
+              "Membangun dan merawat API untuk web dan mobile dengan Laravel, Livewire, Bootstrap, dan jQuery.",
+              "Mengintegrasikan layanan pihak ketiga seperti API kurir dan payment gateway agar proses bisnisnya berjalan utuh.",
+              "Menjadi konsultan teknis yang berhadapan langsung dengan klien: presentasi di kantor mereka, analisis kebutuhan, dan perawatan setelah rilis."
+            ]
+          }
+        }
+      },
+      "madani": {
+        "span": "Sep 2020 - Agu 2021",
+        "type": "Kontrak",
+        "roles": {
+          "etlDeveloper": {
+            "role": "ETL Developer",
+            "period": "Sep 2020 - Agu 2021",
+            "location": "Tanah Abang, Jakarta · Onsite",
+            "points": [
+              "Merancang dan membangun alur ETL dengan Microsoft SSIS untuk pelaporan keuangan, mengolah data bank dan perusahaan pembiayaan untuk laporan ke Bank Indonesia.",
+              "Membangun aplikasi pelaporan untuk laporan keuangan bulanan di Bank Fama International dan Bank Woori Saudara.",
+              "Merawat dan mengembangkan aplikasi pelaporan SLiK: perbaikan bug, fitur baru, dan peningkatan performa."
+            ]
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Proyek",
+    "title": "Yang sudah saya kerjakan",
+    "types": {
+      "professional": "Profesional",
+      "personal": "Pribadi"
+    },
+    "visit": "Kunjungi {name}",
+    "empty": "Belum ada apa-apa di sini.",
+    "screenshotAlt": "Tangkapan layar {name}",
+    "items": {
+      "bundapedia": {
+        "title": "Bundapedia",
+        "description": "Platform konten edukasi dan produk seputar kehamilan, persalinan, dan pengasuhan anak usia dini."
+      },
+      "sinIndonesia": {
+        "title": "SIN Indonesia",
+        "description": "Aplikasi toko online berbasis mobile, dibangun khusus untuk menjual produk SIN Indonesia."
+      },
+      "pepiSiakad": {
+        "title": "PEPI SIAKAD",
+        "description": "Sistem informasi akademik dan pembelajaran berbasis web untuk dosen dan mahasiswa Politeknik Enjiniring Pertanian Indonesia."
+      },
+      "beliyuu": {
+        "title": "Beliyuu",
+        "description": "Marketplace web dan mobile untuk menjual produk pelaku usaha mikro dan menengah lokal."
+      },
+      "bumdesKita": {
+        "title": "BUMDES KITA",
+        "description": "Marketplace untuk jual produk dan sewa jasa di bidang pertanian, perkebunan, dan peternakan, dibuat untuk petani dan pelaku usaha sejenis."
+      },
+      "jadipintar": {
+        "title": "jadipintar",
+        "description": "Aplikasi kuis interaktif dengan soal dari berbagai kategori. Pilih kategori, jawab satu per satu, lihat skor akhirnya. Dibangun dengan Next.js dan Tailwind di atas data JSON statis; backend Go-nya masih dikerjakan untuk data dinamis."
+      },
+      "miniStore": {
+        "title": "Mini Store",
+        "description": "Toko online sederhana dari kursus praktik tahun 2021. Ada hak akses per peran untuk admin dan pelanggan, manajemen produk, pemrosesan pesanan, dan pembayaran lewat Midtrans. Di sinilah saya mulai terbiasa dengan Laravel dan integrasi layanan pihak ketiga."
+      },
+      "tces": {
+        "title": "TCES",
+        "description": "Platform asuransi digital untuk anak perusahaan BUMN, dari pembelian polis sampai pengajuan dan penyelesaian klaim. Sepuluh lini produk, dan tiap produk punya aturan serta perhitungan preminya sendiri."
+      }
+    },
+    "internal": "Proyek internal",
+    "pagination": "Navigasi halaman proyek",
+    "previous": "Halaman sebelumnya",
+    "next": "Halaman berikutnya",
+    "goToPage": "Ke halaman {page}"
+  },
+  "credentials": {
+    "eyebrow": "Pendidikan & Sertifikat",
+    "title": "Awal mulanya dari sini",
+    "lead": "Setiap sertifikat di bawah tertaut ke dokumen aslinya.",
+    "education": "Pendidikan",
+    "certificates": "Sertifikat",
+    "items": {
+      "swadharma": {
+        "degree": "Sarjana Teknik Informatika",
+        "period": "Sep 2022 - Sep 2026",
+        "description": "Kuliah sambil bekerja penuh waktu, lulus dengan IPK 3.8 dari 4.0."
+      },
+      "wikrama": {
+        "degree": "SMK Rekayasa Perangkat Lunak",
+        "period": "Jul 2017 - Jul 2020",
+        "description": "Tiga tahun belajar membangun software dari dasar sampai standar kerja: logika pemrograman, beberapa bahasa, desain database, sampai aplikasi web dan desktop."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Kontak",
+    "title": "Ceritakan proyek Anda",
+    "lead": "Gambaran kasarnya saja sudah cukup untuk mulai. Biasanya saya balas dalam sehari.",
+    "name": "Nama",
+    "namePlaceholder": "Nama Anda",
+    "email": "Email",
+    "emailPlaceholder": "anda@perusahaan.com",
+    "subject": "Subjek",
+    "subjectPlaceholder": "Soal apa?",
+    "message": "Pesan",
+    "messagePlaceholder": "Beberapa baris soal proyeknya, targetnya kapan, dan apa yang Anda butuhkan dari saya.",
+    "submit": "Buka di aplikasi email",
+    "disclaimer": "Pesannya dibuka sebagai draf di aplikasi email Anda. Tidak ada yang dikirim lewat situs ini.",
+    "copyEmail": "Salin alamat email",
+    "channels": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "terminalHintBefore": "Lebih suka keyboard? Gulir ke atas, lalu jalankan",
+    "terminalHintAfter": "di terminal."
+  },
+  "footer": {
+    "tagline": "Software Engineer & Full-Stack Developer",
+    "rights": "© {year} Yusuf Wandana.",
+    "iconsBy": "Ikon oleh"
+  },
+  "terminal": {
+    "windowTitle": "yusuf@portfolio : zsh",
+    "placeholder": "ketik perintah…",
+    "inputLabel": "Input terminal, ketik perintah lalu tekan Enter",
+    "outputLabel": "Output terminal",
+    "complete": "lengkapi",
+    "history": "riwayat",
+    "live": "aktif, ketik apa saja",
+    "hint": "Coba: ls · cat about.md · skills backend · projects · coffee",
+    "help": [
+      "whoami            siapa yang ada di balik situs ini",
+      "ls                daftar file",
+      "cat <file>        baca sebuah file",
+      "skills [grup]     frontend · backend · tools · soft",
+      "projects          apa saja yang sudah saya kerjakan",
+      "contact           cara menghubungi saya",
+      "theme             ganti terang / gelap",
+      "clear             bersihkan layar"
+    ],
+    "whoami": [
+      "Yusuf Wandana, software engineer, Indonesia.",
+      "Berpengalaman lebih dari lima tahun dalam menerjemahkan alur bisnis menjadi sistem aplikasi yang berjalan."
+    ],
+    "about": [
+      "# Yusuf Wandana",
+      "",
+      "Software engineer, lebih dari lima tahun mengerjakan backend untuk",
+      "asuransi, approval, marketplace, sampai pelaporan keuangan.",
+      "",
+      "Biasanya saya ikut dari analisis kebutuhan sampai rilis. Laravel dan",
+      "PHP rumah saya, Node dan Next keseharian, Go buat proyek sampingan."
+    ],
+    "coffee": [
+      "Hitam, tanpa gula. Isi ulang sekitar jam 2 siang, yang kebetulan",
+      "jam munculnya bug-bug menarik."
+    ],
+    "contact": [
+      "email      yusuf.wandana1@gmail.com",
+      "github     github.com/yusufwdn",
+      "linkedin   linkedin.com/in/yusuf-wandana"
+    ],
+    "contactHint": "Atau pakai formulir di bagian bawah halaman.",
+    "themeFlipped": "Tema diganti.",
+    "catMissing": "cat: nama file belum diisi. Jalankan `ls` untuk lihat daftarnya.",
+    "catNoFile": "cat: {name}: file tidak ditemukan",
+    "skillsUnknown": "skills: grup \"{group}\" tidak dikenal. {groups}",
+    "notFound": "perintah tidak ditemukan: {cmd}",
+    "didYouMean": "Maksud Anda `{guess}`?",
+    "runHelp": "Jalankan `help` untuk lihat daftarnya.",
+    "sudo": "yusuf tidak ada di file sudoers. Kejadian ini sudah dilaporkan. ☕"
+  }
+}

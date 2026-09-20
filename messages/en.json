@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "title": "Yusuf Wandana | Software Engineer & Full-Stack Developer",
+    "description": "Software engineer from Indonesia with over five years on backend systems and complex business workflows. Laravel, Nest.js, Next.js, and the services behind them."
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experiences": "Experience",
+    "projects": "Projects",
+    "educations": "Education",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleTheme": "Toggle theme",
+    "language": "Language",
+    "switchToIndonesian": "Switch to Indonesian",
+    "switchToEnglish": "Switch to English"
+  },
+  "hero": {
+    "eyebrow": "Software Engineer · Indonesia",
+    "headlineBefore": "Break the",
+    "headlineAccent": "Problems.",
+    "headlineAfter": "Build the Systems.",
+    "pitch": "Over five years of experience as a Software Engineer. Skilled in delivering solutions tailored to business needs, ranging from simple to complex requirements.",
+    "viewProjects": "View projects",
+    "getInTouch": "Get in touch"
+  },
+  "availability": {
+    "open": {
+      "pill": "Open to new roles",
+      "cta": "Get in touch"
+    },
+    "freelance": {
+      "pill": "Available for freelance",
+      "cta": "Start a project"
+    },
+    "employed": {
+      "pill": "Heads-down on current work",
+      "cta": "Send a message"
+    }
+  },
+  "capabilities": {
+    "eyebrow": "What I do",
+    "title": "Three things I get asked for most",
+    "backend": {
+      "kicker": "Architecture",
+      "title": "Building systems that are clean and maintainable",
+      "body": "I have experience building systems from monoliths to microservices, both from scratch and taking over existing systems. I usually determine the service boundaries so that each part can be worked on without interfering with the others."
+    },
+    "product": {
+      "kicker": "Business logic",
+      "title": "Frequently changing business rules",
+      "body": "I am accustomed to handling complex and dynamic business workflow requirements. Therefore, I build systems that are easily modifiable without having to rebuild them from scratch."
+    },
+    "systems": {
+      "kicker": "Delivery",
+      "title": "From requirement analysis to release",
+      "body": "I am always involved in requirement discussions with clients, system and database design as well. If needed, I can also handle the frontend and testing side of things."
+    }
+  },
+  "stack": {
+    "eyebrow": "Tech Stack",
+    "title": "What I reach for",
+    "lead": "The things I actually reach for, not everything I have ever touched.",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools",
+      "soft": "Soft Skills"
+    },
+    "notes": {
+      "frontend": "The part that users see and interact with",
+      "backend": "The part that runs the business logic and stores the data",
+      "tools": "The part that makes the work easier, faster, and more reliable",
+      "soft": "The part that makes the work more effective, and the team more productive"
+    }
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Where I have worked and what I have done",
+    "items": {
+      "elistec": {
+        "span": "Nov 2023 - Present",
+        "type": "Full-time",
+        "roles": {
+          "softwareEngineer": {
+            "role": "Software Engineer",
+            "period": "Nov 2023 - Present",
+            "location": "Kemayoran, Jakarta · Hybrid",
+            "points": [
+              "Designed and built microservice architectures from scratch, and took over existing ones, across authentication, ordering, payments and claims processing.",
+              "Engineered a digital insurance platform for a state owned enterprise subsidiary, turning dense business rules into working systems for digital sales, premium calculation and claims management over REST APIs.",
+              "Owned claim processing end to end, frontend, backend and testing, across 10 product lines, each with its own rules and edge cases.",
+              "Built core services for an enterprise wide internal system transformation, with inter service communication over RPC on NATS.",
+              "Designed database structures to fit the service boundaries: isolated stores for standalone services, shared relational models where consistency mattered more.",
+              "Flagged structural problems in a legacy database early and proposed a restructure. It was borne out later, when other developers hit the bottlenecks I had predicted.",
+              "Acted as technical advisor on the Insurance and CRM projects: system design, architecture decisions, and code reviews."
+            ]
+          },
+          "k2Developer": {
+            "role": "K2 Developer",
+            "period": "Nov 2023 - Mar 2025",
+            "location": "Bandung, West Java · On-site",
+            "points": [
+              "Led the design and build of a dynamic approval system on Nintex K2, used across every module at Eiger, replacing manual sign off with automated multi layer routing based on transaction value and module specific rules.",
+              "Digitised internal enterprise forms end to end: Payment Request, legal approval, accommodation requests and the processes around them.",
+              "Led the technical implementation of the most complex modules, Payment Request and Audit Request, involved in system design, database schema and business logic from day one."
+            ]
+          }
+        }
+      },
+      "wan": {
+        "span": "Sep 2021 - Nov 2023",
+        "type": "Full-time",
+        "roles": {
+          "backendDeveloper": {
+            "role": "Backend Developer",
+            "period": "Sep 2021 - Nov 2023",
+            "location": "Kota Bogor, West Java · On-site",
+            "points": [
+              "Led teams of 3 to 4 engineers across e-commerce platforms, an agricultural trade marketplace, an accounting system, and a property management platform for a well known housing developer in Bogor.",
+              "Given team leadership early, on the strength of delivery speed, client communication and consistent solution quality.",
+              "Built and maintained API services for web and mobile with Laravel, Livewire, Bootstrap and jQuery.",
+              "Integrated third party services, courier APIs and payment gateways, to close end to end business processes.",
+              "Acted as technical consultant directly to clients: on site presentations, requirement analysis and post deployment maintenance."
+            ]
+          }
+        }
+      },
+      "madani": {
+        "span": "Sep 2020 - Aug 2021",
+        "type": "Contract",
+        "roles": {
+          "etlDeveloper": {
+            "role": "ETL Developer",
+            "period": "Sep 2020 - Aug 2021",
+            "location": "Tanah Abang, Jakarta · On-site",
+            "points": [
+              "Designed and built ETL workflows in Microsoft SSIS for financial reporting, processing data from banks and finance companies for regulatory submission to Bank Indonesia.",
+              "Built reporting applications for the monthly financial reports at Bank Fama International and Bank Woori Saudara.",
+              "Maintained and extended the SLiK reporting application: bug fixes, new features and performance work."
+            ]
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "Things I have shipped",
+    "types": {
+      "professional": "Professional",
+      "personal": "Personal"
+    },
+    "visit": "Visit {name}",
+    "empty": "Nothing here yet.",
+    "screenshotAlt": "{name} screenshot",
+    "items": {
+      "bundapedia": {
+        "title": "Bundapedia",
+        "description": "A platform offering educational content and products for pregnancy, childbirth, and early parenting."
+      },
+      "sinIndonesia": {
+        "title": "SIN Indonesia",
+        "description": "A mobile-based online store application built specifically to sell SIN Indonesia's products."
+      },
+      "pepiSiakad": {
+        "title": "PEPI SIAKAD",
+        "description": "A web-based academic and learning management system to support lecturers and students at Politeknik Enjiniring Pertanian Indonesia."
+      },
+      "beliyuu": {
+        "title": "Beliyuu",
+        "description": "A web and mobile marketplace built to sell products from local micro and medium entrepreneurs."
+      },
+      "bumdesKita": {
+        "title": "BUMDES KITA",
+        "description": "A marketplace selling products and renting services across agriculture, plantations and animal husbandry, built for farmers and similar entrepreneurs."
+      },
+      "jadipintar": {
+        "title": "jadipintar",
+        "description": "An interactive quiz app with questions across categories. Pick a category, answer one by one, and see your final score. Built with Next.js and Tailwind on static JSON, with a Go backend in progress for dynamic data."
+      },
+      "miniStore": {
+        "title": "Mini Store",
+        "description": "A simple online store built during a hands-on course in 2021. Role-based access for admins and customers, product management, order processing, and Midtrans payments, where I got comfortable with Laravel and third-party integration."
+      },
+      "tces": {
+        "title": "TCES",
+        "description": "A digital insurance platform for a state owned enterprise subsidiary, covering everything from buying a policy to filing and settling a claim. Ten product lines, each with its own rules and premium calculation."
+      }
+    },
+    "internal": "Internal project",
+    "pagination": "Project pagination",
+    "previous": "Previous page",
+    "next": "Next page",
+    "goToPage": "Go to page {page}"
+  },
+  "credentials": {
+    "eyebrow": "Education & Certificates",
+    "title": "Where the fundamentals came from",
+    "lead": "Every certificate below links to the document itself.",
+    "education": "Education",
+    "certificates": "Certificates",
+    "items": {
+      "swadharma": {
+        "degree": "Bachelor of Engineering, Computer Software Engineering",
+        "period": "Sep 2022 - Sep 2026",
+        "description": "Graduated with a 3.8 out of 4.0 GPA, earned alongside full time work."
+      },
+      "wikrama": {
+        "degree": "Vocational High School, Software Engineering",
+        "period": "Jul 2017 - Jul 2020",
+        "description": "Three years learning to build software from the ground up to a professional standard: programming fundamentals, several languages, database design, and both web and desktop applications."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Tell me what you are building",
+    "lead": "A rough idea is enough to start. I usually reply within a day.",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "What is this about?",
+    "message": "Message",
+    "messagePlaceholder": "A few lines about the project, the timeline, and what you need from me.",
+    "submit": "Open in my mail app",
+    "disclaimer": "This drafts the message in your own mail client. Nothing is sent through this site.",
+    "copyEmail": "Copy email address",
+    "channels": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "terminalHintBefore": "Prefer the keyboard? Scroll back up and run",
+    "terminalHintAfter": "in the terminal."
+  },
+  "footer": {
+    "tagline": "Software Engineer & Full-Stack Developer",
+    "rights": "© {year} Yusuf Wandana.",
+    "iconsBy": "Icons by"
+  },
+  "terminal": {
+    "windowTitle": "yusuf@portfolio : zsh",
+    "placeholder": "type a command…",
+    "inputLabel": "Terminal input, type a command and press Enter",
+    "outputLabel": "Terminal output",
+    "complete": "complete",
+    "history": "history",
+    "live": "live, type anything",
+    "hint": "Try: ls · cat about.md · skills backend · projects · coffee",
+    "help": [
+      "whoami            who is behind this site",
+      "ls                list files",
+      "cat <file>        read a file",
+      "skills [group]    frontend · backend · tools · soft",
+      "projects          what I have shipped",
+      "contact           how to reach me",
+      "theme             flip light / dark",
+      "clear             wipe the screen"
+    ],
+    "whoami": [
+      "Yusuf Wandana, software engineer, Indonesia.",
+      "Over five years of experience translating business workflows into working systems."
+    ],
+    "about": [
+      "# Yusuf Wandana",
+      "",
+      "Software engineer with over five years building backend systems and",
+      "the business workflows that run on them: insurance, approval chains,",
+      "marketplaces, financial reporting.",
+      "",
+      "I usually come in at requirement analysis and stay until it ships.",
+      "Laravel and PHP are home, Node and Next are daily, and Go is what I",
+      "build with on the side."
+    ],
+    "coffee": [
+      "Black, no sugar. Refilled around 2pm, which is when the",
+      "interesting bugs tend to show up."
+    ],
+    "contact": [
+      "email      yusuf.wandana1@gmail.com",
+      "github     github.com/yusufwdn",
+      "linkedin   linkedin.com/in/yusuf-wandana"
+    ],
+    "contactHint": "Or use the form further down the page.",
+    "themeFlipped": "Theme flipped.",
+    "catMissing": "cat: missing file name. Run `ls` to see what exists.",
+    "catNoFile": "cat: {name}: no such file",
+    "skillsUnknown": "skills: unknown group \"{group}\". {groups}",
+    "notFound": "command not found: {cmd}",
+    "didYouMean": "Did you mean `{guess}`?",
+    "runHelp": "Run `help` for the list.",
+    "sudo": "yusuf is not in the sudoers file. This incident has been reported. ☕"
+  }
+}
