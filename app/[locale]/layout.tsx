@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { homeJsonLd } from "@/lib/structured-data";
 import { isTheme, THEME_COOKIE, THEME_SCRIPT } from "@/lib/theme";
 import "../globals.css";
 
@@ -28,26 +29,35 @@ export async function generateMetadata({
     applicationName: SITE_NAME,
     authors: [{ name: SITE_NAME, url: SITE_URL }],
     creator: SITE_NAME,
+    // Google ignores this tag; Bing and a few smaller crawlers still read it.
+    // Kept in step with the stack the page actually lists.
     keywords: [
       "Yusuf Wandana",
       "software engineer",
       "full stack developer",
       "backend developer",
       "Laravel",
-      "Node.js",
+      "Nest.js",
       "Next.js",
-      "Go",
+      "Node.js",
+      "PHP",
+      "TypeScript",
+      "microservices",
       "Indonesia",
+      "portfolio",
     ],
     // Tells search engines these two URLs are the same page in two languages
     // rather than duplicate content.
     alternates: {
       canonical: locale === routing.defaultLocale ? "/" : `/${locale}`,
-      languages: { en: "/", id: "/id" },
+      // x-default is the fallback a crawler serves to visitors whose language
+      // is neither English nor Indonesian.
+      languages: { en: "/", id: "/id", "x-default": "/" },
     },
     openGraph: {
       type: "website",
-      url: locale === routing.defaultLocale ? SITE_URL : `${SITE_URL}/${locale}`,
+      url:
+        locale === routing.defaultLocale ? SITE_URL : `${SITE_URL}/${locale}`,
       siteName: SITE_NAME,
       title: t("title"),
       description: t("description"),
@@ -58,6 +68,15 @@ export async function generateMetadata({
       title: t("title"),
       description: t("description"),
     },
+    // Static files under public/ rather than generated routes: a generated
+    // /apple-icon has no dot in its path, so the middleware matcher would
+    // catch it and rewrite it into the [locale] segment, where it does not
+    // exist.
+    icons: {
+      icon: "/favicon.ico",
+      apple: "/apple-icon.png",
+    },
+    manifest: "/manifest.webmanifest",
     robots: {
       index: true,
       follow: true,
@@ -65,6 +84,15 @@ export async function generateMetadata({
     },
   };
 }
+
+// Colours the browser chrome on mobile to match the page it is framing.
+// Separate from generateMetadata because Next wants viewport in its own export.
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#100e16" },
+  ],
+};
 
 export default async function LocaleLayout({
   children,
@@ -86,6 +114,10 @@ export default async function LocaleLayout({
   const stored = (await cookies()).get(THEME_COOKIE)?.value;
   const theme = isTheme(stored) ? stored : undefined;
 
+  // Same description the meta tags carry, so the two never disagree.
+  const t = await getTranslations({ locale, namespace: "meta" });
+  const jsonLd = homeJsonLd(locale, t("description"));
+
   return (
     <html
       lang={locale}
@@ -96,6 +128,11 @@ export default async function LocaleLayout({
       <head>
         {/* Only fills in for a first visit with no cookie yet */}
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+        {/* Person / WebSite / ProfilePage graph — see lib/structured-data.ts */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className="antialiased">
         {/* Hands the message file to every client component below it */}
