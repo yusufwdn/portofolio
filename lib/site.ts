@@ -21,8 +21,11 @@ export const SITE_URL =
 
 export const SITE_NAME = "Yusuf Wandana";
 export const SITE_TAGLINE = "Software Engineer & Full-Stack Developer";
+// Kept in step with meta.description in messages/en.json: this is the copy
+// the web app manifest carries, and the two describing the site differently
+// reads as two different sites.
 export const SITE_DESCRIPTION =
-  "Backend-leaning full stack engineer from Indonesia. Laravel, Node.js, Next.js and Go — schemas, queues, API contracts, and the systems behind them.";
+  "Software engineer from Indonesia with over five years on backend systems and complex business workflows. Laravel, Nest.js, Next.js, and the services behind them.";
 
 /* ------------------------------------------------------------------ */
 /* Availability                                                        */
