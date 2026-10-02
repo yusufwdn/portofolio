@@ -6,7 +6,9 @@ Live site: [https://itswandana.netlify.app](https://itswandana.netlify.app)
 
 ## Features
 
-- Bilingual (English / Indonesian) via `next-intl`, switchable from the header
+- Twelve languages (English, Indonesian, Malay, Japanese, Simplified Chinese,
+  Thai, Vietnamese, Khmer, Arabic, Russian, Spanish, Brazilian Portuguese) via
+  `next-intl`, switchable from the header; Arabic renders right-to-left
 - Interactive terminal in the hero — visitors can run `help`, `ls`, `cat about.md`, `skills`, `projects`
 - Light/dark theme, persisted in `localStorage`, applied before first paint
 - Scroll-linked experience timeline, pointer-tracked project and capability cards
@@ -27,7 +29,8 @@ npm install
 npm run dev
 ```
 
-Runs at [http://localhost:3000](http://localhost:3000). Indonesian is at `/id`.
+Runs at [http://localhost:3000](http://localhost:3000). The other languages live under their code: `/id`, `/ms`, `/ja`, `/zh`,
+`/th`, `/vi`, `/km`, `/ar`, `/ru`, `/es` and `/pt`.
 
 Other scripts: `npm run build`, `npm run start`, `npm run lint`.
 
@@ -39,7 +42,7 @@ app/globals.css      # Design tokens and global styles
 components/          # Terminal, reveal/spotlight primitives, hooks
 components/sections/ # One file per section of the page
 i18n/                # next-intl routing, request config and navigation helpers
-messages/            # en.json and id.json — every sentence on the site
+messages/            # One file per language — every sentence on the site
 lib/static-data.tsx  # Structure only: links, images, dates, tech names
 lib/site.ts          # Site constants, socials, availability mode
 middleware.ts        # Locale detection and routing
@@ -49,12 +52,17 @@ middleware.ts        # Locale detection and routing
 
 Two places, on purpose:
 
-- **`messages/en.json` and `messages/id.json`** hold everything a reader sees
-  as a sentence. Both files share the same key structure.
+- **`messages/*.json`**, one per language, hold everything a reader sees as
+  a sentence. They all share the same key structure.
 - **`lib/static-data.tsx`** holds what is identical in every language: links,
   images, dates, and the names of technologies, companies and certificates.
 
-Items are matched between the two by their `id`.
+Items are matched between them by their `id`.
+
+Because Arabic flips the page, use logical utilities in components:
+`ps-*`/`pe-*`, `ms-*`/`me-*`, `start-*`/`end-*`, `border-s`, `text-start`.
+`pl-*`, `left-*` and friends stay put in right-to-left and break the layout.
+Arrows that point "forward" get `rtl:-scale-x-100`.
 
 ## Design tokens
 
@@ -75,8 +83,14 @@ Copy for each mode lives under `availability` in the message files.
 
 ## Versioning
 
-Major iterations are tagged (`v1.0.0`, `v2.0.0`, ...) so older designs stay
-reachable while `main` keeps moving.
+Releases are tagged on `main` after the merge, so older versions stay
+reachable while `main` keeps moving:
+
+- **Major** (`v3.0.0`): a redesign — new layout or visual direction.
+- **Minor** (`v2.1.0`): a new feature on the current design, such as more
+  languages or a new section.
+- **Patch** (`v2.1.1`): fixes and content updates. Tag these only when worth
+  pointing back to; most can ship untagged.
 
 ## Contact
 

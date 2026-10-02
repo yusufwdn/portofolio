@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "title": "Yusuf Wandana | Engenheiro de Software e Desenvolvedor Full-Stack",
+    "description": "Engenheiro de software da Indonésia com mais de cinco anos construindo sistemas corporativos cheios de regras de negócio, do backend ao frontend. NestJS, Laravel, Next.js e os serviços por trás deles."
+  },
+  "nav": {
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "experiences": "Experiência",
+    "projects": "Projetos",
+    "educations": "Formação",
+    "contact": "Contato",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "toggleTheme": "Alternar tema",
+    "language": "Idioma",
+    "switchTo": "Mudar para {language}"
+  },
+  "hero": {
+    "eyebrow": "Engenheiro de Software · Indonésia",
+    "headlineBefore": "Desmonte os",
+    "headlineAccent": "problemas.",
+    "headlineAfter": "Construa os sistemas.",
+    "pitch": "Mais de cinco anos construindo aplicações web do backend ao frontend, principalmente sistemas corporativos cheios de regras de negócio: motores de aprovação multinível, controle de acesso por campo, onboarding com várias partes e cálculos financeiros.",
+    "viewProjects": "Ver projetos",
+    "getInTouch": "Fale comigo"
+  },
+  "availability": {
+    "open": {
+      "pill": "Aberto a novas oportunidades",
+      "cta": "Fale comigo"
+    },
+    "freelance": {
+      "pill": "Disponível para freelance",
+      "cta": "Começar um projeto"
+    },
+    "employed": {
+      "pill": "Focado no trabalho atual",
+      "cta": "Enviar mensagem"
+    }
+  },
+  "capabilities": {
+    "eyebrow": "O que eu faço",
+    "title": "As três coisas que mais me pedem",
+    "backend": {
+      "kicker": "Arquitetura",
+      "title": "Sistemas limpos e fáceis de manter",
+      "body": "Tenho experiência construindo de monólitos a microsserviços, tanto do zero quanto assumindo sistemas existentes. Normalmente defino os limites entre os serviços para que cada parte possa ser trabalhada sem interferir nas outras."
+    },
+    "product": {
+      "kicker": "Lógica de negócio",
+      "title": "Regras de negócio que mudam o tempo todo",
+      "body": "Estou acostumado com requisitos de fluxos de negócio complexos e dinâmicos. Por isso construo sistemas fáceis de alterar, sem precisar refazê-los do zero."
+    },
+    "systems": {
+      "kicker": "Entrega",
+      "title": "Da análise de requisitos ao lançamento",
+      "body": "Sempre participo das conversas de requisitos com os clientes e do design do sistema e do banco de dados. Se precisar, também cuido do frontend e dos testes."
+    }
+  },
+  "stack": {
+    "eyebrow": "Tecnologias",
+    "title": "O que eu uso de verdade",
+    "lead": "O que eu realmente uso, não tudo o que já experimentei.",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Ferramentas",
+      "soft": "Soft skills"
+    },
+    "notes": {
+      "frontend": "A parte que os usuários veem e com que interagem",
+      "backend": "A parte que executa a lógica de negócio e guarda os dados",
+      "tools": "A parte que torna o trabalho mais fácil, rápido e confiável",
+      "soft": "A parte que torna o trabalho mais eficaz e o time mais produtivo"
+    }
+  },
+  "experience": {
+    "eyebrow": "Experiência",
+    "title": "Onde trabalhei e o que fiz",
+    "items": {
+      "elistec": {
+        "span": "Nov 2023 - Atual",
+        "type": "Tempo integral",
+        "roles": {
+          "softwareEngineer": {
+            "role": "Software Engineer",
+            "period": "Nov 2023 - Atual",
+            "location": "Kemayoran, Jacarta · Híbrido",
+            "points": [
+              "Co-líder e consultor técnico nos projetos de CRM corporativo e de seguros, ajudando a definir o design do sistema e o esquema do banco de dados, e revisando o código do time.",
+              "Responsável por módulos de backend de ponta a ponta em arquiteturas monolíticas e de microsserviços, da modelagem de dados e contratos de API até a entrada em produção e a manutenção pós-lançamento.",
+              "Contribuo no frontend quando necessário, levando funcionalidades do backend até a interface do usuário.",
+              "Participo dos testes dos módulos do time antes do lançamento, garantindo que fluxos de negócio e casos extremos funcionem como exigido.",
+              "Elaborei documentação técnica e entregáveis de go-live: especificações técnicas, relatórios de prontidão, guias de rollback e relatórios de migração de dados."
+            ]
+          },
+          "k2Developer": {
+            "role": "K2 Developer",
+            "period": "Nov 2023 - Mar 2025",
+            "location": "Bandung, Java Ocidental · No cliente",
+            "points": [
+              "Alocado no cliente para projetar e construir fluxos de aprovação corporativos com Nintex K2 e Microsoft SQL Server, da análise de requisitos e design do sistema até a implementação.",
+              "Atuei como co-líder e consultor técnico, opinando sobre o design do sistema e a estrutura do banco de dados quando necessário.",
+              "Liderei os módulos de maior complexidade e trabalhei direto com as áreas de negócio para transformar políticas de aprovação em regras de roteamento configuráveis."
+            ]
+          }
+        }
+      },
+      "wan": {
+        "span": "Set 2021 - Nov 2023",
+        "type": "Tempo integral",
+        "roles": {
+          "backendDeveloper": {
+            "role": "Backend Developer",
+            "period": "Set 2021 - Nov 2023",
+            "location": "Bogor, Java Ocidental · Presencial",
+            "points": [
+              "Liderei times de 2 a 4 engenheiros em projetos de clientes: plataformas de e-commerce, um marketplace de produtos agrícolas, um sistema contábil, um sistema de gestão de produção e uma plataforma de gestão imobiliária para uma incorporadora, assumindo a liderança de time no início da carreira.",
+              "Desenvolvi e mantive aplicações web e APIs para web e mobile com Laravel e Livewire.",
+              "Integrei serviços de terceiros, incluindo APIs de transportadoras, gateways de pagamento e um provedor PPOB para pagamento de contas e recargas.",
+              "Atuei como consultor técnico direto dos clientes, da análise de requisitos e apresentações presenciais até a manutenção pós-deploy, gerenciando mudanças de escopo conforme os requisitos mudavam."
+            ]
+          }
+        }
+      },
+      "madani": {
+        "span": "Set 2020 - Ago 2021",
+        "type": "Contrato",
+        "roles": {
+          "etlDeveloper": {
+            "role": "ETL Developer",
+            "period": "Set 2020 - Ago 2021",
+            "location": "Tanah Abang, Jacarta · Presencial",
+            "points": [
+              "Projetei e desenvolvi fluxos ETL com Microsoft SSIS, processando dados financeiros de bancos e financeiras para relatórios regulatórios.",
+              "Desenvolvi aplicações de relatórios financeiros mensais para o Bank Fama International e o Bank Woori Saudara.",
+              "Mantive e evoluí a aplicação de relatórios SLIK existente: correção de bugs, novas funcionalidades e melhorias de desempenho."
+            ]
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Projetos",
+    "title": "O que eu já entreguei",
+    "types": {
+      "professional": "Profissionais",
+      "personal": "Pessoais"
+    },
+    "visit": "Visitar {name}",
+    "empty": "Nada por aqui ainda.",
+    "screenshotAlt": "Captura de tela de {name}",
+    "items": {
+      "bundapedia": {
+        "title": "Bundapedia",
+        "description": "Uma plataforma com conteúdo educativo e produtos sobre gravidez, parto e primeira infância."
+      },
+      "sinIndonesia": {
+        "title": "SIN Indonesia",
+        "description": "Um app de loja online para celular, criado especificamente para vender os produtos da SIN Indonesia."
+      },
+      "pepiSiakad": {
+        "title": "PEPI SIAKAD",
+        "description": "Um sistema web de gestão acadêmica e de aprendizagem para professores e alunos da Politeknik Enjiniring Pertanian Indonesia."
+      },
+      "beliyuu": {
+        "title": "Beliyuu",
+        "description": "Um marketplace web e mobile para vender produtos de pequenos e médios empreendedores locais."
+      },
+      "bumdesKita": {
+        "title": "BUMDES KITA",
+        "description": "Um marketplace para vender produtos e alugar serviços de agricultura, plantações e pecuária, feito para agricultores e empreendedores do setor."
+      },
+      "jadipintar": {
+        "title": "jadipintar",
+        "description": "Um app de quiz interativo com perguntas de várias categorias. Escolha uma categoria, responda uma a uma e veja sua pontuação final. Feito com Next.js e Tailwind sobre JSON estático, com um backend em Go em desenvolvimento para dados dinâmicos."
+      },
+      "miniStore": {
+        "title": "Mini Store",
+        "description": "Uma loja online simples feita num curso prático em 2021. Acesso por perfil para administradores e clientes, gestão de produtos, processamento de pedidos e pagamentos via Midtrans; foi onde me acostumei com Laravel e integração de serviços de terceiros."
+      },
+      "enterpriseCrm": {
+        "title": "Enterprise CRM",
+        "description": "Um CRM corporativo para o CTI Group. Sou responsável pelo módulo de onboarding KYC/KYS com um motor de aprovação configurável por entidade e região, construí o serviço de pipeline de vendas com reconhecimento de receita plurianual e previsões, e projetei o sistema de RBAC aplicado até o nível de campo. Único engenheiro mantendo o sistema em produção desde o go-live."
+      },
+      "tces": {
+        "title": "Digital Insurance Platform",
+        "description": "Uma plataforma de seguros digitais para a Tugu Insurance. Construí e documentei de ponta a ponta o sistema de processamento de sinistros para 10 linhas de produto, cada uma com suas regras de negócio, e projetei os limites de serviço e os modelos de dados para autenticação, pedidos, pagamentos e sinistros."
+      },
+      "eigerEcm": {
+        "title": "Enterprise Content Management",
+        "description": "Um ECM para a Eigerindo MPI construído sobre Nintex K2. Projetei o motor de aprovação dinâmico multinível adotado em todos os módulos, com roteamento por valor da transação e regras de cada módulo, e liderei os módulos Payment Request e Audit Request do design do sistema à implementação."
+      }
+    },
+    "internal": "Projeto interno",
+    "pagination": "Paginação de projetos",
+    "previous": "Página anterior",
+    "next": "Próxima página",
+    "goToPage": "Ir para a página {page}"
+  },
+  "credentials": {
+    "eyebrow": "Formação e certificados",
+    "title": "De onde vieram as bases",
+    "lead": "Cada certificado abaixo leva ao documento original.",
+    "education": "Formação",
+    "certificates": "Certificados",
+    "items": {
+      "swadharma": {
+        "degree": "Bacharelado em Ciência da Computação (S.Kom.), Engenharia de Informática",
+        "period": "Set 2022 - Set 2026",
+        "description": "Formado com média 3,86 de 4,00, trabalhando em tempo integral. TCC: detecção de comentários de spam no YouTube com Linear SVM e TF-IDF, implementada como extensão do Chrome com um serviço em Python FastAPI."
+      },
+      "wikrama": {
+        "degree": "Ensino médio técnico, Engenharia de Software",
+        "period": "Jul 2017 - Jul 2020",
+        "description": "Três anos aprendendo a construir software do zero até o nível profissional: fundamentos de programação, várias linguagens, modelagem de banco de dados e aplicações web e desktop."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contato",
+    "title": "Conte o que você está construindo",
+    "lead": "Uma ideia geral já basta para começar. Costumo responder em até um dia.",
+    "name": "Nome",
+    "namePlaceholder": "Seu nome",
+    "email": "Email",
+    "emailPlaceholder": "voce@empresa.com",
+    "subject": "Assunto",
+    "subjectPlaceholder": "Sobre o que é?",
+    "message": "Mensagem",
+    "messagePlaceholder": "Algumas linhas sobre o projeto, o prazo e o que você precisa de mim.",
+    "submit": "Abrir no meu app de email",
+    "disclaimer": "Isso cria um rascunho no seu próprio app de email. Nada é enviado por este site.",
+    "copyEmail": "Copiar endereço de email",
+    "channels": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "terminalHintBefore": "Prefere o teclado? Volte para o topo e rode",
+    "terminalHintAfter": "no terminal."
+  },
+  "footer": {
+    "tagline": "Engenheiro de Software e Desenvolvedor Full-Stack",
+    "rights": "© {year} Yusuf Wandana.",
+    "iconsBy": "Ícones por"
+  },
+  "terminal": {
+    "windowTitle": "yusuf@portfolio : zsh",
+    "placeholder": "digite um comando…",
+    "inputLabel": "Entrada do terminal: digite um comando e pressione Enter",
+    "outputLabel": "Saída do terminal",
+    "complete": "completar",
+    "history": "histórico",
+    "live": "ao vivo, digite qualquer coisa",
+    "hint": "Tente: ls · cat about.md · skills backend · projects · coffee",
+    "help": [
+      "whoami            quem está por trás deste site",
+      "ls                listar arquivos",
+      "cat <file>        ler um arquivo",
+      "skills [group]    frontend · backend · tools · soft",
+      "projects          o que eu já entreguei",
+      "contact           como falar comigo",
+      "theme             claro / escuro",
+      "clear             limpar a tela"
+    ],
+    "whoami": [
+      "Yusuf Wandana, engenheiro de software, Indonésia.",
+      "Mais de cinco anos transformando fluxos de negócio em sistemas que funcionam."
+    ],
+    "about": [
+      "# Yusuf Wandana",
+      "",
+      "Engenheiro de software com mais de cinco anos construindo sistemas",
+      "corporativos cheios de regras: motores de aprovação, controle de",
+      "acesso por campo, fluxos de onboarding, reconhecimento de receita",
+      "plurianual. Seguros, varejo, CRM, e-commerce e relatórios",
+      "regulatórios bancários.",
+      "",
+      "Costumo entrar no design do sistema e do banco de dados e ficar até",
+      "o go-live. TypeScript e NestJS no dia a dia, Laravel foi onde comecei",
+      "e Next.js cuida do frontend."
+    ],
+    "coffee": [
+      "Preto, sem açúcar. Reabasteço lá pelas 2 da tarde, que é",
+      "justamente quando aparecem os bugs interessantes."
+    ],
+    "contact": [
+      "email      yusuf.wandana1@gmail.com",
+      "github     github.com/yusufwdn",
+      "linkedin   linkedin.com/in/yusuf-wandana"
+    ],
+    "contactHint": "Ou use o formulário mais abaixo na página.",
+    "themeFlipped": "Tema alternado.",
+    "catMissing": "cat: falta o nome do arquivo. Rode `ls` para ver o que existe.",
+    "catNoFile": "cat: {name}: arquivo não encontrado",
+    "skillsUnknown": "skills: grupo desconhecido \"{group}\". {groups}",
+    "notFound": "comando não encontrado: {cmd}",
+    "didYouMean": "Você quis dizer `{guess}`?",
+    "runHelp": "Rode `help` para ver a lista.",
+    "sudo": "yusuf não está no arquivo sudoers. Este incidente será reportado. ☕"
+  }
+}

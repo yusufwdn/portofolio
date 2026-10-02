@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "title": "Yusuf Wandana | Software Engineer & Full-Stack Developer",
+    "description": "Kỹ sư phần mềm đến từ Indonesia với hơn năm năm xây dựng các hệ thống doanh nghiệp nhiều quy tắc nghiệp vụ, cả backend lẫn frontend. NestJS, Laravel, Next.js và các service phía sau chúng."
+  },
+  "nav": {
+    "about": "Giới thiệu",
+    "skills": "Kỹ năng",
+    "experiences": "Kinh nghiệm",
+    "projects": "Dự án",
+    "educations": "Học vấn",
+    "contact": "Liên hệ",
+    "openMenu": "Mở menu",
+    "closeMenu": "Đóng menu",
+    "toggleTheme": "Đổi giao diện sáng/tối",
+    "language": "Ngôn ngữ",
+    "switchTo": "Chuyển sang {language}"
+  },
+  "hero": {
+    "eyebrow": "Software Engineer · Indonesia",
+    "headlineBefore": "Mổ xẻ",
+    "headlineAccent": "vấn đề.",
+    "headlineAfter": "Xây dựng hệ thống.",
+    "pitch": "Hơn năm năm xây dựng ứng dụng web, cả backend lẫn frontend, chủ yếu là các hệ thống doanh nghiệp nhiều quy tắc nghiệp vụ: engine phê duyệt nhiều cấp, phân quyền truy cập đến từng trường dữ liệu, onboarding nhiều bên và các phép tính tài chính.",
+    "viewProjects": "Xem dự án",
+    "getInTouch": "Liên hệ với tôi"
+  },
+  "availability": {
+    "open": {
+      "pill": "Sẵn sàng cho vị trí mới",
+      "cta": "Liên hệ với tôi"
+    },
+    "freelance": {
+      "pill": "Nhận dự án freelance",
+      "cta": "Bắt đầu dự án"
+    },
+    "employed": {
+      "pill": "Đang tập trung cho công việc hiện tại",
+      "cta": "Gửi tin nhắn"
+    }
+  },
+  "capabilities": {
+    "eyebrow": "Tôi làm gì",
+    "title": "Ba việc tôi thường được nhờ đến nhất",
+    "backend": {
+      "kicker": "Kiến trúc",
+      "title": "Xây dựng hệ thống gọn gàng và dễ bảo trì",
+      "body": "Tôi có kinh nghiệm xây dựng hệ thống từ monolith đến microservices, cả làm mới từ đầu lẫn tiếp quản hệ thống có sẵn. Tôi thường là người xác định ranh giới giữa các service để mỗi phần có thể được phát triển mà không ảnh hưởng đến các phần khác."
+    },
+    "product": {
+      "kicker": "Logic nghiệp vụ",
+      "title": "Quy tắc nghiệp vụ thay đổi liên tục",
+      "body": "Tôi quen xử lý các yêu cầu quy trình nghiệp vụ phức tạp và thường xuyên thay đổi. Vì vậy, tôi xây dựng hệ thống sao cho dễ điều chỉnh mà không phải làm lại từ đầu."
+    },
+    "systems": {
+      "kicker": "Triển khai",
+      "title": "Từ phân tích yêu cầu đến phát hành",
+      "body": "Tôi luôn tham gia các buổi trao đổi yêu cầu với khách hàng, cũng như thiết kế hệ thống và cơ sở dữ liệu. Khi cần, tôi cũng có thể đảm nhận phần frontend và kiểm thử."
+    }
+  },
+  "stack": {
+    "eyebrow": "Tech Stack",
+    "title": "Công cụ tôi dùng",
+    "lead": "Những thứ tôi thực sự dùng hằng ngày, không phải mọi thứ tôi từng chạm qua.",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Công cụ",
+      "soft": "Kỹ năng mềm"
+    },
+    "notes": {
+      "frontend": "Phần người dùng nhìn thấy và tương tác",
+      "backend": "Phần chạy logic nghiệp vụ và lưu trữ dữ liệu",
+      "tools": "Phần giúp công việc dễ dàng, nhanh chóng và đáng tin cậy hơn",
+      "soft": "Phần giúp công việc hiệu quả hơn và đội ngũ làm việc năng suất hơn"
+    }
+  },
+  "experience": {
+    "eyebrow": "Kinh nghiệm",
+    "title": "Nơi tôi đã làm việc và những gì tôi đã làm",
+    "items": {
+      "elistec": {
+        "span": "Th11 2023 - Hiện tại",
+        "type": "Toàn thời gian",
+        "roles": {
+          "softwareEngineer": {
+            "role": "Software Engineer",
+            "period": "Th11 2023 - Hiện tại",
+            "location": "Kemayoran, Jakarta · Hybrid",
+            "points": [
+              "Đồng trưởng nhóm và cố vấn kỹ thuật cho các dự án CRM doanh nghiệp và bảo hiểm, góp phần định hình thiết kế hệ thống và lược đồ cơ sở dữ liệu, đồng thời code review cho các thành viên trong nhóm.",
+              "Phụ trách trọn vẹn các module backend trên cả kiến trúc monolith và microservices, từ mô hình hóa dữ liệu và API contract cho đến go-live trên production và bảo trì sau khi ra mắt.",
+              "Tham gia phát triển frontend khi cần, đưa tính năng từ backend đến tận giao diện người dùng.",
+              "Tham gia kiểm thử các module do nhóm xây dựng trước khi phát hành, đảm bảo luồng nghiệp vụ và các trường hợp biên hoạt động đúng yêu cầu.",
+              "Biên soạn tài liệu kỹ thuật và các tài liệu bàn giao go-live: đặc tả kỹ thuật, báo cáo sẵn sàng, hướng dẫn rollback và báo cáo chuyển đổi dữ liệu."
+            ]
+          },
+          "k2Developer": {
+            "role": "K2 Developer",
+            "period": "Th11 2023 - Th3 2025",
+            "location": "Bandung, Tây Java · Tại văn phòng",
+            "points": [
+              "Làm việc trực tiếp tại văn phòng khách hàng để thiết kế và xây dựng các quy trình phê duyệt doanh nghiệp trên Nintex K2 và Microsoft SQL Server, từ phân tích yêu cầu, thiết kế hệ thống đến triển khai.",
+              "Giữ vai trò đồng trưởng nhóm và cố vấn kỹ thuật, góp ý về thiết kế hệ thống và cấu trúc cơ sở dữ liệu khi cần.",
+              "Dẫn dắt các module có độ phức tạp cao và làm việc trực tiếp với các bên liên quan phía nghiệp vụ để chuyển chính sách phê duyệt thành các quy tắc điều hướng có thể cấu hình."
+            ]
+          }
+        }
+      },
+      "wan": {
+        "span": "Th9 2021 - Th11 2023",
+        "type": "Toàn thời gian",
+        "roles": {
+          "backendDeveloper": {
+            "role": "Backend Developer",
+            "period": "Th9 2021 - Th11 2023",
+            "location": "Kota Bogor, Tây Java · Tại văn phòng",
+            "points": [
+              "Dẫn dắt nhóm từ 2 đến 4 kỹ sư trong các dự án cho khách hàng: nền tảng thương mại điện tử, sàn giao dịch nông sản, hệ thống kế toán, hệ thống quản lý sản xuất và nền tảng quản lý bất động sản cho một chủ đầu tư nhà ở, đảm nhận vai trò trưởng nhóm từ sớm trong sự nghiệp.",
+              "Xây dựng và bảo trì ứng dụng web và API cho nền tảng web và di động bằng Laravel và Livewire.",
+              "Tích hợp các dịch vụ bên thứ ba, bao gồm API đơn vị vận chuyển, cổng thanh toán và nhà cung cấp PPOB cho thanh toán hóa đơn và nạp tiền.",
+              "Làm tư vấn kỹ thuật trực tiếp cho khách hàng, từ phân tích yêu cầu và thuyết trình tại chỗ đến bảo trì sau khi deploy, đồng thời quản lý thay đổi phạm vi khi yêu cầu thay đổi."
+            ]
+          }
+        }
+      },
+      "madani": {
+        "span": "Th9 2020 - Th8 2021",
+        "type": "Hợp đồng",
+        "roles": {
+          "etlDeveloper": {
+            "role": "ETL Developer",
+            "period": "Th9 2020 - Th8 2021",
+            "location": "Tanah Abang, Jakarta · Tại văn phòng",
+            "points": [
+              "Thiết kế và phát triển các quy trình ETL trên Microsoft SSIS, xử lý dữ liệu tài chính từ ngân hàng và công ty tài chính phục vụ báo cáo theo quy định.",
+              "Phát triển ứng dụng báo cáo tài chính hằng tháng cho Bank Fama International và Bank Woori Saudara.",
+              "Bảo trì và cải tiến ứng dụng báo cáo SLIK hiện có: sửa lỗi, bổ sung tính năng và cải thiện hiệu năng."
+            ]
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Dự án",
+    "title": "Những gì tôi đã hoàn thành",
+    "types": {
+      "professional": "Công việc",
+      "personal": "Cá nhân"
+    },
+    "visit": "Truy cập {name}",
+    "empty": "Chưa có gì ở đây.",
+    "screenshotAlt": "Ảnh chụp màn hình {name}",
+    "items": {
+      "bundapedia": {
+        "title": "Bundapedia",
+        "description": "Nền tảng cung cấp nội dung giáo dục và sản phẩm cho giai đoạn mang thai, sinh nở và những năm đầu làm cha mẹ."
+      },
+      "sinIndonesia": {
+        "title": "SIN Indonesia",
+        "description": "Ứng dụng cửa hàng trực tuyến trên di động, được xây dựng riêng để bán sản phẩm của SIN Indonesia."
+      },
+      "pepiSiakad": {
+        "title": "PEPI SIAKAD",
+        "description": "Hệ thống quản lý đào tạo và học tập trên nền web, hỗ trợ giảng viên và sinh viên tại Politeknik Enjiniring Pertanian Indonesia."
+      },
+      "beliyuu": {
+        "title": "Beliyuu",
+        "description": "Sàn thương mại điện tử trên web và di động, xây dựng để bán sản phẩm của các doanh nghiệp siêu nhỏ và vừa tại địa phương."
+      },
+      "bumdesKita": {
+        "title": "BUMDES KITA",
+        "description": "Sàn thương mại bán sản phẩm và cho thuê dịch vụ trong lĩnh vực nông nghiệp, trồng trọt và chăn nuôi, xây dựng cho nông dân và các hộ kinh doanh tương tự."
+      },
+      "jadipintar": {
+        "title": "jadipintar",
+        "description": "Ứng dụng trắc nghiệm tương tác với câu hỏi thuộc nhiều chủ đề. Chọn một chủ đề, trả lời từng câu và xem điểm cuối cùng. Xây dựng bằng Next.js và Tailwind trên dữ liệu JSON tĩnh, backend Go cho dữ liệu động đang được phát triển."
+      },
+      "miniStore": {
+        "title": "Mini Store",
+        "description": "Cửa hàng trực tuyến đơn giản được xây dựng trong một khóa học thực hành năm 2021. Phân quyền theo vai trò cho quản trị viên và khách hàng, quản lý sản phẩm, xử lý đơn hàng và thanh toán qua Midtrans; đây là nơi tôi làm quen thành thạo với Laravel và tích hợp bên thứ ba."
+      },
+      "enterpriseCrm": {
+        "title": "Enterprise CRM",
+        "description": "Hệ thống CRM doanh nghiệp cho CTI Group, nơi tôi phụ trách module onboarding KYC/KYS với engine phê duyệt có thể cấu hình theo pháp nhân và khu vực, xây dựng service quản lý sales pipeline với ghi nhận doanh thu và dự báo nhiều năm, đồng thời thiết kế hệ thống RBAC áp dụng đến từng trường dữ liệu. Là kỹ sư duy nhất bảo trì hệ thống trên production kể từ khi go-live."
+      },
+      "tces": {
+        "title": "Digital Insurance Platform",
+        "description": "Nền tảng bảo hiểm số cho Tugu Insurance. Tôi xây dựng và viết tài liệu trọn vẹn cho hệ thống xử lý bồi thường trên 10 dòng sản phẩm, mỗi dòng có quy tắc nghiệp vụ riêng, đồng thời thiết kế ranh giới service và mô hình dữ liệu cho xác thực, đặt hàng, thanh toán và bồi thường."
+      },
+      "eigerEcm": {
+        "title": "Enterprise Content Management",
+        "description": "Hệ thống ECM cho Eigerindo MPI xây dựng trên Nintex K2. Tôi thiết kế engine phê duyệt động nhiều cấp được áp dụng cho mọi module, điều hướng theo giá trị giao dịch và quy tắc riêng của từng module, đồng thời dẫn dắt module Payment Request và Audit Request từ thiết kế hệ thống đến triển khai."
+      }
+    },
+    "internal": "Dự án nội bộ",
+    "pagination": "Phân trang dự án",
+    "previous": "Trang trước",
+    "next": "Trang sau",
+    "goToPage": "Đến trang {page}"
+  },
+  "credentials": {
+    "eyebrow": "Học vấn & Chứng chỉ",
+    "title": "Nền tảng của tôi đến từ đâu",
+    "lead": "Mỗi chứng chỉ bên dưới đều dẫn đến tài liệu gốc.",
+    "education": "Học vấn",
+    "certificates": "Chứng chỉ",
+    "items": {
+      "swadharma": {
+        "degree": "Cử nhân Khoa học Máy tính (S.Kom.), Kỹ thuật Tin học",
+        "period": "Th9 2022 - Th9 2026",
+        "description": "Tốt nghiệp với GPA 3,86/4,00, vừa học vừa làm toàn thời gian. Khóa luận: phát hiện bình luận spam trên YouTube bằng Linear SVM và TF-IDF, triển khai dưới dạng tiện ích Chrome chạy trên service Python FastAPI."
+      },
+      "wikrama": {
+        "degree": "Trung học nghề, Kỹ thuật Phần mềm",
+        "period": "Th7 2017 - Th7 2020",
+        "description": "Ba năm học xây dựng phần mềm từ nền tảng đến chuẩn chuyên nghiệp: kiến thức lập trình cơ bản, nhiều ngôn ngữ lập trình, thiết kế cơ sở dữ liệu, cùng ứng dụng web và desktop."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Liên hệ",
+    "title": "Hãy cho tôi biết bạn đang xây dựng gì",
+    "lead": "Chỉ cần một ý tưởng sơ bộ là đủ để bắt đầu. Tôi thường phản hồi trong vòng một ngày.",
+    "name": "Họ tên",
+    "namePlaceholder": "Tên của bạn",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "subject": "Tiêu đề",
+    "subjectPlaceholder": "Bạn muốn trao đổi về điều gì?",
+    "message": "Nội dung",
+    "messagePlaceholder": "Vài dòng về dự án, thời gian dự kiến và bạn cần tôi hỗ trợ gì.",
+    "submit": "Mở trong ứng dụng email",
+    "disclaimer": "Thao tác này soạn sẵn thư trong ứng dụng email của bạn. Không có gì được gửi qua trang web này.",
+    "copyEmail": "Sao chép địa chỉ email",
+    "channels": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "terminalHintBefore": "Thích dùng bàn phím hơn? Cuộn lên trên và chạy",
+    "terminalHintAfter": "trong terminal."
+  },
+  "footer": {
+    "tagline": "Software Engineer & Full-Stack Developer",
+    "rights": "© {year} Yusuf Wandana.",
+    "iconsBy": "Biểu tượng bởi"
+  },
+  "terminal": {
+    "windowTitle": "yusuf@portfolio : zsh",
+    "placeholder": "nhập lệnh…",
+    "inputLabel": "Ô nhập terminal, gõ lệnh rồi nhấn Enter",
+    "outputLabel": "Kết quả terminal",
+    "complete": "hoàn tất",
+    "history": "lịch sử",
+    "live": "trực tiếp, gõ gì cũng được",
+    "hint": "Thử: ls · cat about.md · skills backend · projects · coffee",
+    "help": [
+      "whoami            ai đứng sau trang web này",
+      "ls                liệt kê tệp",
+      "cat <file>        đọc một tệp",
+      "skills [group]    frontend · backend · tools · soft",
+      "projects          những gì tôi đã hoàn thành",
+      "contact           cách liên hệ với tôi",
+      "theme             đổi sáng / tối",
+      "clear             xóa màn hình"
+    ],
+    "whoami": [
+      "Yusuf Wandana, kỹ sư phần mềm, Indonesia.",
+      "Hơn năm năm kinh nghiệm biến quy trình nghiệp vụ thành hệ thống chạy thật."
+    ],
+    "about": [
+      "# Yusuf Wandana",
+      "",
+      "Kỹ sư phần mềm với hơn năm năm xây dựng các hệ thống doanh nghiệp",
+      "nhiều quy tắc nghiệp vụ: engine phê duyệt, phân quyền đến từng",
+      "trường dữ liệu, luồng onboarding, ghi nhận doanh thu nhiều năm.",
+      "Bảo hiểm, bán lẻ, CRM, thương mại điện tử và báo cáo theo quy định",
+      "ngân hàng.",
+      "",
+      "Tôi thường tham gia từ khâu thiết kế hệ thống và cơ sở dữ liệu và",
+      "đồng hành đến khi go-live. TypeScript và NestJS là việc hằng ngày,",
+      "Laravel là nơi tôi bắt đầu, còn Next.js đảm nhận phần frontend."
+    ],
+    "coffee": [
+      "Cà phê đen, không đường. Châm thêm khoảng 2 giờ chiều, đúng lúc",
+      "những con bug thú vị thường xuất hiện."
+    ],
+    "contact": [
+      "email      yusuf.wandana1@gmail.com",
+      "github     github.com/yusufwdn",
+      "linkedin   linkedin.com/in/yusuf-wandana"
+    ],
+    "contactHint": "Hoặc dùng biểu mẫu ở phía dưới trang.",
+    "themeFlipped": "Đã đổi giao diện.",
+    "catMissing": "cat: thiếu tên tệp. Chạy `ls` để xem các tệp hiện có.",
+    "catNoFile": "cat: {name}: không tìm thấy tệp",
+    "skillsUnknown": "skills: không có nhóm \"{group}\". {groups}",
+    "notFound": "không tìm thấy lệnh: {cmd}",
+    "didYouMean": "Có phải ý bạn là `{guess}`?",
+    "runHelp": "Chạy `help` để xem danh sách lệnh.",
+    "sudo": "yusuf không có trong tệp sudoers. Sự việc này đã được báo cáo. ☕"
+  }
+}

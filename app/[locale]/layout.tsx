@@ -1,15 +1,34 @@
 import type { Metadata, Viewport } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Be_Vietnam_Pro } from "next/font/google";
 import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
+import {
+  hreflangs,
+  isRtl,
+  localePath,
+  ogLocales,
+  routing,
+  type Locale,
+} from "@/i18n/routing";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { homeJsonLd } from "@/lib/structured-data";
 import { isTheme, THEME_COOKIE, THEME_SCRIPT } from "@/lib/theme";
 import "../globals.css";
 
-// Pre-renders both locales at build time instead of on demand.
+// Vietnamese only: Poppins lacks ư, ơ, ệ and friends (see globals.css).
+// Self-hosted at build time and not preloaded, so the files are fetched only
+// by a page whose text actually uses the face — /vi — and never elsewhere.
+const beVietnamPro = Be_Vietnam_Pro({
+  subsets: ["vietnamese", "latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-vi",
+  display: "swap",
+  preload: false,
+});
+
+// Pre-renders every locale at build time instead of on demand.
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -46,13 +65,11 @@ export async function generateMetadata({
       "Indonesia",
       "portfolio",
     ],
-    // Tells search engines these two URLs are the same page in two languages
-    // rather than duplicate content.
+    // Tells search engines these URLs are the same page in different
+    // languages rather than duplicate content.
     alternates: {
-      canonical: locale === routing.defaultLocale ? "/" : `/${locale}`,
-      // x-default is the fallback a crawler serves to visitors whose language
-      // is neither English nor Indonesian.
-      languages: { en: "/", id: "/id", "x-default": "/" },
+      canonical: localePath(locale as Locale),
+      languages: hreflangs(),
     },
     openGraph: {
       type: "website",
@@ -61,7 +78,10 @@ export async function generateMetadata({
       siteName: SITE_NAME,
       title: t("title"),
       description: t("description"),
-      locale: locale === "id" ? "id_ID" : "en_US",
+      locale: ogLocales[locale as Locale],
+      alternateLocale: routing.locales
+        .filter((l) => l !== locale)
+        .map((l) => ogLocales[l]),
     },
     twitter: {
       card: "summary_large_image",
@@ -121,6 +141,9 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
+      // Arabic flips the whole page. Components use logical classes
+      // (ps-*, start-*, border-s) so they follow without per-locale code.
+      dir={isRtl(locale) ? "rtl" : "ltr"}
       className={theme}
       style={theme ? { colorScheme: theme } : undefined}
       suppressHydrationWarning
@@ -134,7 +157,10 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased">
+      {/* The font variable sits on body, not html: THEME_SCRIPT compares and
+          overwrites html's whole className. It only defines --font-vi, which
+          only html:lang(vi) reads. */}
+      <body className={`antialiased ${beVietnamPro.variable}`}>
         {/* Hands the message file to every client component below it */}
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

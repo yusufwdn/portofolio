@@ -117,6 +117,125 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
+
+  /* Poppins has no kana, hanzi, kanji, Thai, Khmer, Arabic or Cyrillic. It stays first so
+     Latin text (tech names, dates) keeps the site's face, and the browser
+     falls through to a system font for everything else — no extra download.
+     Russian needs no rule: the default stack already ends in system-ui,
+     which covers Cyrillic everywhere. */
+  html:lang(ja) body {
+    font-family: Poppins, "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+      "Yu Gothic UI", "Yu Gothic", Meiryo, "Noto Sans JP", system-ui, sans-serif;
+  }
+
+  html:lang(zh) body {
+    font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI",
+      "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+  }
+
+  html:lang(th) body {
+    font-family: Poppins, "Leelawadee UI", Thonburi, "Noto Sans Thai", Tahoma,
+      system-ui, sans-serif;
+  }
+
+  html:lang(km) body {
+    font-family: Poppins, "Leelawadee UI", "Khmer UI", "Khmer Sangam MN",
+      "Noto Sans Khmer", system-ui, sans-serif;
+  }
+
+  html:lang(ar) body {
+    font-family: Poppins, "Segoe UI", "Geeza Pro", "Noto Sans Arabic", Tahoma,
+      system-ui, sans-serif;
+  }
+
+  /* Vietnamese is the one Latin script Poppins only half covers: it has ă
+     and đ but not ư, ơ or ệ, so words came out in two fonts at once. Be
+     Vietnam Pro (loaded in the layout, only fetched on /vi) replaces it
+     wholesale — a geometric sans close enough to keep the look. */
+  html:lang(vi) body {
+    font-family: var(--font-vi), system-ui, sans-serif;
+  }
+
+  /* Monospace faces have no Arabic, Thai or Khmer, and the browser's own
+     fallback is a thin, cramped face. Point them at the same sans the body
+     uses; Latin in these labels (dates, tech names) still comes from the
+     mono fonts. */
+  html:lang(ar) .font-mono,
+  html:lang(th) .font-mono,
+  html:lang(km) .font-mono {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", "Cascadia Code",
+      Menlo, Consolas, "Segoe UI", "Geeza Pro", "Noto Sans Arabic",
+      "Leelawadee UI", Thonburi, "Noto Sans Thai", "Khmer UI",
+      "Khmer Sangam MN", "Noto Sans Khmer", Tahoma, monospace;
+  }
+
+  /* Arabic is joined script: any letter-spacing pulls the letters of a word
+     apart. Thai and Khmer stack vowels and subscripts on their base letter,
+     and spacing pries those off too. Higher specificity than a tracking-*
+     utility, so it wins. */
+  html:lang(ar) *,
+  html:lang(th) *,
+  html:lang(km) * {
+    letter-spacing: 0;
+  }
+
+  /* The display scale is tuned for Latin caps at 0.95 line-height. Kanji and
+     Arabic sit taller and would collide line to line; the negative tracking
+     crushes kanji together. */
+  html:lang(ja) .text-display,
+  html:lang(ja) .text-title,
+  html:lang(zh) .text-display,
+  html:lang(zh) .text-title {
+    letter-spacing: 0;
+    line-height: 1.3;
+    /* Japanese has no spaces, so the browser may break between any two
+       characters — it split 構築 from する. auto-phrase breaks only between
+       phrases (Chromium; elsewhere it falls back to the normal rules).
+       Chinese breaks anywhere by convention, and auto-phrase leaves it so. */
+    word-break: auto-phrase;
+  }
+
+  /* Kanji and hanzi are full-width: a Latin-sized display line runs into the
+     terminal beside it, and the accent phrase is nowrap, so it cannot wrap
+     away. */
+  html:lang(ja) .text-display,
+  html:lang(zh) .text-display {
+    font-size: clamp(2.25rem, 4.2vw, 3.25rem);
+    /* The hero headline is two short sentences joined by a space. keep-all
+       breaks only at that space, so each sentence stays whole — Chinese
+       otherwise split 构建系 from 统. Titles keep the rule above: they have
+       no space to break at and would overflow instead. */
+    word-break: keep-all;
+  }
+
+  html:lang(ar) .text-display,
+  html:lang(ar) .text-title,
+  html:lang(th) .text-display,
+  html:lang(th) .text-title {
+    line-height: 1.4;
+  }
+
+  /* Khmer subscript consonants hang well below the baseline, and its glyphs
+     run wide: at the Latin display size the second sentence split in two
+     beside the terminal. The CJK size keeps each sentence on one line. */
+  html:lang(km) .text-display,
+  html:lang(km) .text-title {
+    line-height: 1.5;
+  }
+
+  html:lang(km) .text-display {
+    font-size: clamp(2.25rem, 4.2vw, 3.25rem);
+  }
+
+  /* Vietnamese stacks a tone mark on top of a vowel mark (ấ, ề, ự). At the
+     0.95 Latin line-height those marks ran into the line above. */
+  html:lang(vi) .text-display {
+    line-height: 1.15;
+  }
+
+  html:lang(vi) .text-title {
+    line-height: 1.25;
+  }
 }
 
 /* Reveal-on-scroll used by the current page */

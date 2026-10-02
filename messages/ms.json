@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "title": "Yusuf Wandana | Software Engineer & Full-Stack Developer",
+    "description": "Jurutera perisian dari Indonesia dengan lebih lima tahun pengalaman membina sistem perusahaan yang sarat dengan peraturan perniagaan, merangkumi backend dan frontend. NestJS, Laravel, Next.js, serta perkhidmatan di sebaliknya."
+  },
+  "nav": {
+    "about": "Tentang",
+    "skills": "Kemahiran",
+    "experiences": "Pengalaman",
+    "projects": "Projek",
+    "educations": "Pendidikan",
+    "contact": "Hubungi",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu",
+    "toggleTheme": "Tukar tema",
+    "language": "Bahasa",
+    "switchTo": "Tukar ke {language}"
+  },
+  "hero": {
+    "eyebrow": "Software Engineer · Indonesia",
+    "headlineBefore": "Pecahkan",
+    "headlineAccent": "Masalahnya.",
+    "headlineAfter": "Bina Sistemnya.",
+    "pitch": "Lebih lima tahun membina aplikasi web merangkumi backend dan frontend, kebanyakannya sistem perusahaan yang sarat dengan peraturan: enjin kelulusan berbilang lapisan, kawalan akses hingga ke peringkat medan, onboarding pelbagai pihak, dan pengiraan kewangan.",
+    "viewProjects": "Lihat projek",
+    "getInTouch": "Hubungi saya"
+  },
+  "availability": {
+    "open": {
+      "pill": "Terbuka untuk peluang baharu",
+      "cta": "Hubungi saya"
+    },
+    "freelance": {
+      "pill": "Sedia untuk kerja bebas",
+      "cta": "Mulakan projek"
+    },
+    "employed": {
+      "pill": "Sedang fokus pada kerja semasa",
+      "cta": "Hantar mesej"
+    }
+  },
+  "capabilities": {
+    "eyebrow": "Apa yang saya lakukan",
+    "title": "Tiga perkara yang paling kerap diminta daripada saya",
+    "backend": {
+      "kicker": "Seni bina",
+      "title": "Membina sistem yang kemas dan mudah diselenggara",
+      "body": "Saya berpengalaman membina sistem daripada monolith hingga microservices, sama ada bermula dari kosong atau mengambil alih sistem sedia ada. Biasanya saya yang menentukan sempadan perkhidmatan supaya setiap bahagian boleh diusahakan tanpa mengganggu bahagian lain."
+    },
+    "product": {
+      "kicker": "Logik perniagaan",
+      "title": "Peraturan perniagaan yang kerap berubah",
+      "body": "Saya sudah biasa mengendalikan keperluan aliran kerja perniagaan yang kompleks dan dinamik. Oleh itu, saya membina sistem yang mudah diubah suai tanpa perlu membinanya semula dari awal."
+    },
+    "systems": {
+      "kicker": "Penyampaian",
+      "title": "Daripada analisis keperluan hingga keluaran",
+      "body": "Saya sentiasa terlibat dalam perbincangan keperluan bersama pelanggan, serta reka bentuk sistem dan pangkalan data. Jika perlu, saya juga boleh mengendalikan bahagian frontend dan pengujian."
+    }
+  },
+  "stack": {
+    "eyebrow": "Teknologi",
+    "title": "Apa yang saya gunakan",
+    "lead": "Perkara yang benar-benar saya gunakan, bukan semua yang pernah saya cuba.",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Alatan",
+      "soft": "Kemahiran Insaniah"
+    },
+    "notes": {
+      "frontend": "Bahagian yang dilihat dan digunakan oleh pengguna",
+      "backend": "Bahagian yang menjalankan logik perniagaan dan menyimpan data",
+      "tools": "Bahagian yang menjadikan kerja lebih mudah, pantas dan boleh diharap",
+      "soft": "Bahagian yang menjadikan kerja lebih berkesan dan pasukan lebih produktif"
+    }
+  },
+  "experience": {
+    "eyebrow": "Pengalaman",
+    "title": "Tempat saya bekerja dan apa yang telah saya lakukan",
+    "items": {
+      "elistec": {
+        "span": "Nov 2023 - Kini",
+        "type": "Sepenuh masa",
+        "roles": {
+          "softwareEngineer": {
+            "role": "Software Engineer",
+            "period": "Nov 2023 - Kini",
+            "location": "Kemayoran, Jakarta · Hibrid",
+            "points": [
+              "Ketua bersama dan penasihat teknikal bagi projek CRM perusahaan dan insurans, membantu membentuk reka bentuk sistem dan skema pangkalan data, serta menyemak kod ahli pasukan.",
+              "Memegang modul backend dari hujung ke hujung dalam seni bina monolith dan microservices, daripada pemodelan data dan kontrak API hingga go-live di production dan penyelenggaraan selepas pelancaran.",
+              "Turut menyumbang pada kerja frontend apabila diperlukan, membawa ciri dari backend hingga ke antara muka pengguna.",
+              "Terlibat dalam pengujian modul yang dibina oleh pasukan sebelum keluaran, memastikan aliran perniagaan dan kes-kes pinggir berfungsi seperti yang dikehendaki.",
+              "Menyediakan dokumentasi teknikal dan dokumen go-live: spesifikasi teknikal, laporan kesediaan, garis panduan rollback dan laporan migrasi data."
+            ]
+          },
+          "k2Developer": {
+            "role": "K2 Developer",
+            "period": "Nov 2023 - Mac 2025",
+            "location": "Bandung, Jawa Barat · Di lokasi",
+            "points": [
+              "Ditempatkan di premis pelanggan untuk mereka bentuk dan membina aliran kerja kelulusan perusahaan menggunakan Nintex K2 dan Microsoft SQL Server, daripada analisis keperluan dan reka bentuk sistem hingga pelaksanaan.",
+              "Berperanan sebagai ketua bersama dan penasihat teknikal, memberi input tentang reka bentuk sistem dan struktur pangkalan data apabila diperlukan.",
+              "Mengetuai modul berkerumitan tinggi dan bekerja secara langsung dengan pihak berkepentingan perniagaan untuk menterjemah dasar kelulusan kepada peraturan penghalaan yang boleh dikonfigurasi."
+            ]
+          }
+        }
+      },
+      "wan": {
+        "span": "Sep 2021 - Nov 2023",
+        "type": "Sepenuh masa",
+        "roles": {
+          "backendDeveloper": {
+            "role": "Backend Developer",
+            "period": "Sep 2021 - Nov 2023",
+            "location": "Kota Bogor, Jawa Barat · Di lokasi",
+            "points": [
+              "Mengetuai pasukan 2 hingga 4 jurutera dalam projek pelanggan: platform e-dagang, pasaran dalam talian untuk perdagangan hasil pertanian, sistem perakaunan, sistem pengurusan pengeluaran, dan platform pengurusan hartanah untuk pemaju perumahan, sekali gus memikul tanggungjawab memimpin pasukan sejak awal kerjaya.",
+              "Membina dan menyelenggara aplikasi web dan API untuk platform web dan mudah alih menggunakan Laravel dan Livewire.",
+              "Mengintegrasikan perkhidmatan pihak ketiga, termasuk API kurier, gerbang pembayaran, dan penyedia PPOB untuk pembayaran bil dan tambah nilai.",
+              "Bertindak sebagai perunding teknikal secara langsung kepada pelanggan, daripada analisis keperluan dan pembentangan di lokasi hingga penyelenggaraan selepas deployment, serta menguruskan perubahan skop apabila keperluan berubah."
+            ]
+          }
+        }
+      },
+      "madani": {
+        "span": "Sep 2020 - Ogo 2021",
+        "type": "Kontrak",
+        "roles": {
+          "etlDeveloper": {
+            "role": "ETL Developer",
+            "period": "Sep 2020 - Ogo 2021",
+            "location": "Tanah Abang, Jakarta · Di lokasi",
+            "points": [
+              "Mereka bentuk dan membangunkan aliran kerja ETL dalam Microsoft SSIS, memproses data kewangan daripada bank dan syarikat pembiayaan untuk pelaporan kawal selia.",
+              "Membangunkan aplikasi pelaporan untuk laporan kewangan bulanan di Bank Fama International dan Bank Woori Saudara.",
+              "Menyelenggara dan menambah baik aplikasi pelaporan SLIK sedia ada: pembaikan pepijat, penambahan ciri dan peningkatan prestasi."
+            ]
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Projek",
+    "title": "Hasil kerja yang telah saya siapkan",
+    "types": {
+      "professional": "Profesional",
+      "personal": "Peribadi"
+    },
+    "visit": "Lawati {name}",
+    "empty": "Belum ada apa-apa di sini.",
+    "screenshotAlt": "Tangkapan skrin {name}",
+    "items": {
+      "bundapedia": {
+        "title": "Bundapedia",
+        "description": "Platform yang menawarkan kandungan pendidikan dan produk berkaitan kehamilan, bersalin dan keibubapaan awal."
+      },
+      "sinIndonesia": {
+        "title": "SIN Indonesia",
+        "description": "Aplikasi kedai dalam talian berasaskan mudah alih yang dibina khusus untuk menjual produk SIN Indonesia."
+      },
+      "pepiSiakad": {
+        "title": "PEPI SIAKAD",
+        "description": "Sistem pengurusan akademik dan pembelajaran berasaskan web untuk menyokong pensyarah dan pelajar di Politeknik Enjiniring Pertanian Indonesia."
+      },
+      "beliyuu": {
+        "title": "Beliyuu",
+        "description": "Pasaran dalam talian web dan mudah alih yang dibina untuk menjual produk usahawan mikro dan sederhana tempatan."
+      },
+      "bumdesKita": {
+        "title": "BUMDES KITA",
+        "description": "Pasaran dalam talian untuk menjual produk dan menyewakan perkhidmatan dalam bidang pertanian, perladangan dan penternakan, dibina untuk petani dan usahawan seumpamanya."
+      },
+      "jadipintar": {
+        "title": "jadipintar",
+        "description": "Aplikasi kuiz interaktif dengan soalan merentas pelbagai kategori. Pilih kategori, jawab satu demi satu, dan lihat markah akhir anda. Dibina dengan Next.js dan Tailwind di atas JSON statik, dengan backend Go untuk data dinamik yang sedang dibangunkan."
+      },
+      "miniStore": {
+        "title": "Mini Store",
+        "description": "Kedai dalam talian ringkas yang dibina semasa kursus praktikal pada 2021. Akses berasaskan peranan untuk admin dan pelanggan, pengurusan produk, pemprosesan pesanan, dan pembayaran Midtrans. Di sinilah saya mula selesa dengan Laravel dan integrasi pihak ketiga."
+      },
+      "enterpriseCrm": {
+        "title": "Enterprise CRM",
+        "description": "CRM perusahaan untuk CTI Group, di mana saya memegang modul onboarding KYC/KYS dengan enjin kelulusan yang boleh dikonfigurasi mengikut entiti dan wilayah, membina perkhidmatan saluran jualan dengan pengiktirafan hasil berbilang tahun dan unjuran, serta mereka bentuk sistem RBAC yang dikuatkuasakan hingga ke peringkat medan. Satu-satunya jurutera yang menyelenggaranya di production sejak go-live."
+      },
+      "tces": {
+        "title": "Digital Insurance Platform",
+        "description": "Platform insurans digital untuk Tugu Insurance. Saya membina dan mendokumentasikan sistem pemprosesan tuntutan dari hujung ke hujung merangkumi 10 lini produk, masing-masing dengan peraturan perniagaannya sendiri, serta mereka bentuk sempadan perkhidmatan dan model data untuk pengesahan, pesanan, pembayaran dan tuntutan."
+      },
+      "eigerEcm": {
+        "title": "Enterprise Content Management",
+        "description": "ECM untuk Eigerindo MPI yang dibina di atas Nintex K2. Saya mereka bentuk enjin kelulusan dinamik berbilang lapisan yang diguna pakai dalam setiap modul, dengan penghalaan berdasarkan nilai transaksi dan peraturan khusus modul, serta mengetuai modul Payment Request dan Audit Request daripada reka bentuk sistem hingga pelaksanaan."
+      }
+    },
+    "internal": "Projek dalaman",
+    "pagination": "Penomboran halaman projek",
+    "previous": "Halaman sebelumnya",
+    "next": "Halaman seterusnya",
+    "goToPage": "Pergi ke halaman {page}"
+  },
+  "credentials": {
+    "eyebrow": "Pendidikan & Sijil",
+    "title": "Dari mana asasnya bermula",
+    "lead": "Setiap sijil di bawah dipautkan terus ke dokumen asalnya.",
+    "education": "Pendidikan",
+    "certificates": "Sijil",
+    "items": {
+      "swadharma": {
+        "degree": "Sarjana Muda Sains Komputer (S.Kom.), Kejuruteraan Informatik",
+        "period": "Sep 2022 - Sep 2026",
+        "description": "Bergraduat dengan PNGK 3.86 daripada 4.00, diperoleh sambil bekerja sepenuh masa. Tesis: pengesanan komen spam YouTube menggunakan Linear SVM dan TF-IDF, dihasilkan sebagai sambungan Chrome yang disokong oleh perkhidmatan Python FastAPI."
+      },
+      "wikrama": {
+        "degree": "Sekolah Menengah Vokasional, Kejuruteraan Perisian",
+        "period": "Jul 2017 - Jul 2020",
+        "description": "Tiga tahun belajar membina perisian dari asas hingga ke standard profesional: asas pengaturcaraan, beberapa bahasa, reka bentuk pangkalan data, serta aplikasi web dan desktop."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Hubungi",
+    "title": "Ceritakan apa yang anda sedang bina",
+    "lead": "Idea kasar pun sudah memadai untuk bermula. Biasanya saya membalas dalam masa sehari.",
+    "name": "Nama",
+    "namePlaceholder": "Nama anda",
+    "email": "E-mel",
+    "emailPlaceholder": "anda@syarikat.com",
+    "subject": "Subjek",
+    "subjectPlaceholder": "Tentang apa?",
+    "message": "Mesej",
+    "messagePlaceholder": "Beberapa baris tentang projek, jangka masanya, dan apa yang anda perlukan daripada saya.",
+    "submit": "Buka dalam aplikasi e-mel saya",
+    "disclaimer": "Ini akan mendrafkan mesej dalam aplikasi e-mel anda sendiri. Tiada apa-apa yang dihantar melalui laman ini.",
+    "copyEmail": "Salin alamat e-mel",
+    "channels": {
+      "email": "E-mel",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "terminalHintBefore": "Lebih suka papan kekunci? Tatal semula ke atas dan jalankan",
+    "terminalHintAfter": "dalam terminal."
+  },
+  "footer": {
+    "tagline": "Software Engineer & Full-Stack Developer",
+    "rights": "© {year} Yusuf Wandana.",
+    "iconsBy": "Ikon oleh"
+  },
+  "terminal": {
+    "windowTitle": "yusuf@portfolio : zsh",
+    "placeholder": "taip arahan…",
+    "inputLabel": "Input terminal, taip arahan dan tekan Enter",
+    "outputLabel": "Output terminal",
+    "complete": "lengkapkan",
+    "history": "sejarah",
+    "live": "aktif, taip apa sahaja",
+    "hint": "Cuba: ls · cat about.md · skills backend · projects · coffee",
+    "help": [
+      "whoami            siapa di sebalik laman ini",
+      "ls                senaraikan fail",
+      "cat <file>        baca fail",
+      "skills [group]    frontend · backend · tools · soft",
+      "projects          apa yang telah saya siapkan",
+      "contact           cara menghubungi saya",
+      "theme             tukar cerah / gelap",
+      "clear             kosongkan skrin"
+    ],
+    "whoami": [
+      "Yusuf Wandana, jurutera perisian, Indonesia.",
+      "Lebih lima tahun pengalaman menterjemah aliran kerja perniagaan kepada sistem yang berfungsi."
+    ],
+    "about": [
+      "# Yusuf Wandana",
+      "",
+      "Jurutera perisian dengan lebih lima tahun membina sistem perusahaan",
+      "yang sarat dengan peraturan: enjin kelulusan, kawalan akses peringkat",
+      "medan, aliran onboarding, pengiktirafan hasil berbilang tahun.",
+      "Insurans, runcit, CRM, e-dagang dan pelaporan kawal selia perbankan.",
+      "",
+      "Biasanya saya terlibat sejak reka bentuk sistem dan pangkalan data",
+      "hingga go-live. TypeScript dan NestJS setiap hari, Laravel tempat",
+      "saya bermula, dan Next.js untuk bahagian frontend."
+    ],
+    "coffee": [
+      "Kopi O kosong. Diisi semula sekitar pukul 2 petang, waktu",
+      "pepijat yang menarik biasanya mula muncul."
+    ],
+    "contact": [
+      "email      yusuf.wandana1@gmail.com",
+      "github     github.com/yusufwdn",
+      "linkedin   linkedin.com/in/yusuf-wandana"
+    ],
+    "contactHint": "Atau gunakan borang di bahagian bawah halaman.",
+    "themeFlipped": "Tema ditukar.",
+    "catMissing": "cat: nama fail tiada. Jalankan `ls` untuk melihat apa yang ada.",
+    "catNoFile": "cat: {name}: fail tidak wujud",
+    "skillsUnknown": "skills: kumpulan \"{group}\" tidak dikenali. {groups}",
+    "notFound": "arahan tidak dijumpai: {cmd}",
+    "didYouMean": "Adakah anda maksudkan `{guess}`?",
+    "runHelp": "Jalankan `help` untuk senarai arahan.",
+    "sudo": "yusuf tiada dalam fail sudoers. Kejadian ini telah dilaporkan. ☕"
+  }
+}

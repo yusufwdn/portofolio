@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "title": "Yusuf Wandana | ソフトウェアエンジニア・フルスタック開発者",
+    "description": "インドネシアのソフトウェアエンジニア。業務ルールの多いエンタープライズシステムを、バックエンドからフロントエンドまで5年以上開発しています。NestJS、Laravel、Next.js、そしてその裏側のサービス。"
+  },
+  "nav": {
+    "about": "概要",
+    "skills": "スキル",
+    "experiences": "職歴",
+    "projects": "プロジェクト",
+    "educations": "学歴",
+    "contact": "お問い合わせ",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる",
+    "toggleTheme": "テーマを切り替える",
+    "language": "言語",
+    "switchTo": "{language}に切り替える"
+  },
+  "hero": {
+    "eyebrow": "ソフトウェアエンジニア · インドネシア",
+    "headlineBefore": "",
+    "headlineAccent": "問題を分解する。",
+    "headlineAfter": "システムを構築する。",
+    "pitch": "バックエンドからフロントエンドまで、5年以上Webアプリケーションを開発してきました。主に業務ルールの多いエンタープライズシステムで、多段階の承認エンジン、フィールド単位のアクセス制御、複数当事者のオンボーディング、財務計算などを手がけています。",
+    "viewProjects": "プロジェクトを見る",
+    "getInTouch": "お問い合わせ"
+  },
+  "availability": {
+    "open": {
+      "pill": "新しいポジションを検討中",
+      "cta": "お問い合わせ"
+    },
+    "freelance": {
+      "pill": "フリーランス案件受付中",
+      "cta": "プロジェクトを相談する"
+    },
+    "employed": {
+      "pill": "現在の業務に集中しています",
+      "cta": "メッセージを送る"
+    }
+  },
+  "capabilities": {
+    "eyebrow": "できること",
+    "title": "よく依頼される3つのこと",
+    "backend": {
+      "kicker": "アーキテクチャ",
+      "title": "クリーンで保守しやすいシステムをつくる",
+      "body": "モノリスからマイクロサービスまで、ゼロからの構築も既存システムの引き継ぎも経験しています。それぞれの部分を互いに干渉せず開発できるよう、サービスの境界を設計するのが普段の役割です。"
+    },
+    "product": {
+      "kicker": "ビジネスロジック",
+      "title": "頻繁に変わる業務ルール",
+      "body": "複雑で変化の多い業務フローの要件に慣れています。だからこそ、作り直さずに変更できるシステムを設計します。"
+    },
+    "systems": {
+      "kicker": "デリバリー",
+      "title": "要件分析からリリースまで",
+      "body": "クライアントとの要件定義から、システム設計・データベース設計まで常に関わっています。必要であれば、フロントエンドやテストも担当します。"
+    }
+  },
+  "stack": {
+    "eyebrow": "技術スタック",
+    "title": "普段使っている技術",
+    "lead": "触ったことがあるものすべてではなく、実際に使っているものだけ。",
+    "groups": {
+      "frontend": "フロントエンド",
+      "backend": "バックエンド",
+      "tools": "ツール",
+      "soft": "ソフトスキル"
+    },
+    "notes": {
+      "frontend": "ユーザーが見て操作する部分",
+      "backend": "ビジネスロジックを動かし、データを保存する部分",
+      "tools": "仕事をより簡単に、速く、確実にする部分",
+      "soft": "仕事をより効果的にし、チームの生産性を高める部分"
+    }
+  },
+  "experience": {
+    "eyebrow": "職歴",
+    "title": "これまでの職場と仕事",
+    "items": {
+      "elistec": {
+        "span": "2023年11月 - 現在",
+        "type": "正社員",
+        "roles": {
+          "softwareEngineer": {
+            "role": "Software Engineer",
+            "period": "2023年11月 - 現在",
+            "location": "ジャカルタ（クマヨラン）· ハイブリッド",
+            "points": [
+              "エンタープライズCRMおよび保険プロジェクトのコリーダー兼テクニカルアドバイザーとして、システム設計とデータベーススキーマの策定に関わり、チームメンバーのコードレビューを担当。",
+              "モノリスとマイクロサービスの両アーキテクチャで、データモデリングとAPI設計から本番リリース、リリース後の保守まで、バックエンドモジュールをエンドツーエンドで担当。",
+              "必要に応じてフロントエンドも担当し、機能をバックエンドからユーザーインターフェースまで一貫して実装。",
+              "リリース前にチームが開発したモジュールのテストに参加し、業務フローとエッジケースが要件どおりに動作することを確認。",
+              "技術仕様書、リリース準備報告書、ロールバック手順書、データ移行報告書など、技術文書と本番リリース成果物を作成。"
+            ]
+          },
+          "k2Developer": {
+            "role": "K2 Developer",
+            "period": "2023年11月 - 2025年3月",
+            "location": "西ジャワ州バンドン · 客先常駐",
+            "points": [
+              "クライアント先に常駐し、Nintex K2とMicrosoft SQL Serverでエンタープライズ承認ワークフローを要件分析・システム設計から実装まで担当。",
+              "コリーダー兼テクニカルアドバイザーとして、必要に応じてシステム設計とデータベース構造について提言。",
+              "難易度の高いモジュールをリードし、業務部門と直接連携して承認ポリシーを設定可能なルーティングルールに落とし込んだ。"
+            ]
+          }
+        }
+      },
+      "wan": {
+        "span": "2021年9月 - 2023年11月",
+        "type": "正社員",
+        "roles": {
+          "backendDeveloper": {
+            "role": "Backend Developer",
+            "period": "2021年9月 - 2023年11月",
+            "location": "西ジャワ州ボゴール市 · 出社",
+            "points": [
+              "ECプラットフォーム、農産物取引マーケットプレイス、会計システム、生産管理システム、住宅開発会社向けの物件管理プラットフォームなどのクライアント案件で、2〜4名のエンジニアチームを率いた。キャリアの早い段階からチームリーダーを担当。",
+              "LaravelとLivewireで、Web・モバイル向けのWebアプリケーションとAPIを開発・保守。",
+              "配送業者API、決済ゲートウェイ、公共料金支払い・チャージ用のPPOBプロバイダーなど、外部サービスを連携。",
+              "クライアントの技術コンサルタントとして、要件分析や現地でのプレゼンテーションからデプロイ後の保守まで担当し、要件の変化に応じてスコープ変更を調整。"
+            ]
+          }
+        }
+      },
+      "madani": {
+        "span": "2020年9月 - 2021年8月",
+        "type": "契約社員",
+        "roles": {
+          "etlDeveloper": {
+            "role": "ETL Developer",
+            "period": "2020年9月 - 2021年8月",
+            "location": "ジャカルタ（タナアバン）· 出社",
+            "points": [
+              "Microsoft SSISでETLワークフローを設計・開発し、銀行や金融会社の財務データを規制当局向け報告のために処理。",
+              "Bank Fama InternationalとBank Woori Saudaraの月次財務報告用アプリケーションを開発。",
+              "既存のSLIK報告アプリケーションを保守・改善し、バグ修正、機能追加、パフォーマンス改善を実施。"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "プロジェクト",
+    "title": "これまでに手がけたもの",
+    "types": {
+      "professional": "業務",
+      "personal": "個人"
+    },
+    "visit": "{name}を見る",
+    "empty": "まだ何もありません。",
+    "screenshotAlt": "{name}のスクリーンショット",
+    "items": {
+      "bundapedia": {
+        "title": "Bundapedia",
+        "description": "妊娠・出産・乳幼児の子育てに関する教育コンテンツと商品を提供するプラットフォーム。"
+      },
+      "sinIndonesia": {
+        "title": "SIN Indonesia",
+        "description": "SIN Indonesiaの商品を販売するために開発した、モバイル向けオンラインストアアプリ。"
+      },
+      "pepiSiakad": {
+        "title": "PEPI SIAKAD",
+        "description": "Politeknik Enjiniring Pertanian Indonesiaの教員と学生のための、Webベースの教務・学習管理システム。"
+      },
+      "beliyuu": {
+        "title": "Beliyuu",
+        "description": "地元の小規模・中規模事業者の商品を販売する、Web・モバイル対応のマーケットプレイス。"
+      },
+      "bumdesKita": {
+        "title": "BUMDES KITA",
+        "description": "農業・プランテーション・畜産分野の商品販売とサービスのレンタルを扱う、農家や同業の事業者向けマーケットプレイス。"
+      },
+      "jadipintar": {
+        "title": "jadipintar",
+        "description": "さまざまなカテゴリの問題に挑戦できるインタラクティブなクイズアプリ。カテゴリを選び、1問ずつ答えて最終スコアを確認します。静的JSONをもとにNext.jsとTailwindで構築し、動的データ用のGoバックエンドを開発中。"
+      },
+      "miniStore": {
+        "title": "Mini Store",
+        "description": "2021年の実践講座で作ったシンプルなオンラインストア。管理者と顧客のロール別アクセス、商品管理、注文処理、Midtrans決済を実装し、Laravelと外部サービス連携に慣れるきっかけになりました。"
+      },
+      "enterpriseCrm": {
+        "title": "Enterprise CRM",
+        "description": "CTI Group向けのエンタープライズCRM。法人・地域ごとに設定可能な承認エンジンを備えたKYC/KYSオンボーディングモジュールを担当し、複数年の収益認識と予測機能を持つセールスパイプラインサービスを構築、フィールド単位まで制御するRBACシステムを設計しました。本番稼働以来、唯一の保守エンジニアです。"
+      },
+      "tces": {
+        "title": "Digital Insurance Platform",
+        "description": "Tugu Insurance向けのデジタル保険プラットフォーム。それぞれ独自の業務ルールを持つ10の商品ラインにわたって保険金請求処理システムをエンドツーエンドで構築・文書化し、認証・注文・決済・請求のサービス境界とデータモデルを設計しました。"
+      },
+      "eigerEcm": {
+        "title": "Enterprise Content Management",
+        "description": "Nintex K2で構築したEigerindo MPI向けのECM。取引金額とモジュールごとのルールでルーティングする多段階の動的承認エンジンを設計して全モジュールに採用され、Payment RequestとAudit Requestモジュールをシステム設計から実装までリードしました。"
+      }
+    },
+    "internal": "社内プロジェクト",
+    "pagination": "プロジェクトのページ送り",
+    "previous": "前のページ",
+    "next": "次のページ",
+    "goToPage": "{page}ページ目へ"
+  },
+  "credentials": {
+    "eyebrow": "学歴・資格",
+    "title": "基礎を学んだ場所",
+    "lead": "下の修了証はすべて原本にリンクしています。",
+    "education": "学歴",
+    "certificates": "修了証",
+    "items": {
+      "swadharma": {
+        "degree": "情報工学 学士（S.Kom.）",
+        "period": "2022年9月 - 2026年9月",
+        "description": "フルタイムで働きながら、GPA 3.86/4.00で卒業。卒業論文：Linear SVMとTF-IDFを用いたYouTubeのスパムコメント検出。Python FastAPIをバックエンドにしたChrome拡張機能として実装。"
+      },
+      "wikrama": {
+        "degree": "職業高等学校 ソフトウェア工学科",
+        "period": "2017年7月 - 2020年7月",
+        "description": "3年間、ソフトウェア開発を基礎から実務レベルまで学びました。プログラミングの基礎、複数の言語、データベース設計、そしてWebとデスクトップのアプリケーション開発。"
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "お問い合わせ",
+    "title": "何をつくっているか教えてください",
+    "lead": "ざっくりしたアイデアだけで十分です。通常1日以内に返信します。",
+    "name": "お名前",
+    "namePlaceholder": "お名前",
+    "email": "メールアドレス",
+    "emailPlaceholder": "you@company.com",
+    "subject": "件名",
+    "subjectPlaceholder": "ご用件は？",
+    "message": "メッセージ",
+    "messagePlaceholder": "プロジェクトの概要、スケジュール、依頼したい内容を数行で。",
+    "submit": "メールアプリで開く",
+    "disclaimer": "お使いのメールアプリで下書きを作成します。このサイトからは何も送信されません。",
+    "copyEmail": "メールアドレスをコピー",
+    "channels": {
+      "email": "メール",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "terminalHintBefore": "キーボード派ですか？上に戻って、ターミナルで",
+    "terminalHintAfter": "を実行してみてください。"
+  },
+  "footer": {
+    "tagline": "ソフトウェアエンジニア・フルスタック開発者",
+    "rights": "© {year} Yusuf Wandana.",
+    "iconsBy": "アイコン提供"
+  },
+  "terminal": {
+    "windowTitle": "yusuf@portfolio : zsh",
+    "placeholder": "コマンドを入力…",
+    "inputLabel": "ターミナル入力。コマンドを入力してEnterを押してください",
+    "outputLabel": "ターミナル出力",
+    "complete": "補完",
+    "history": "履歴",
+    "live": "稼働中、何か入力してみて",
+    "hint": "試してみて: ls · cat about.md · skills backend · projects · coffee",
+    "help": [
+      "whoami            このサイトの中の人",
+      "ls                ファイル一覧",
+      "cat <file>        ファイルを読む",
+      "skills [group]    frontend · backend · tools · soft",
+      "projects          手がけたもの",
+      "contact           連絡先",
+      "theme             ライト / ダークを切り替え",
+      "clear             画面をクリア"
+    ],
+    "whoami": [
+      "Yusuf Wandana、ソフトウェアエンジニア、インドネシア。",
+      "業務フローを動くシステムに落とし込んで5年以上。"
+    ],
+    "about": [
+      "# Yusuf Wandana",
+      "",
+      "業務ルールの多いエンタープライズシステムを5年以上開発してきた",
+      "ソフトウェアエンジニア。承認エンジン、フィールド単位のアクセス制御、",
+      "オンボーディングフロー、複数年の収益認識。保険、小売、CRM、",
+      "EC、銀行の規制報告。",
+      "",
+      "システム設計とデータベース設計から関わり、本番リリースまで担当する",
+      "ことが多いです。TypeScriptとNestJSが日常、Laravelが原点、",
+      "フロントエンドはNext.js。"
+    ],
+    "coffee": [
+      "ブラック、砂糖なし。おかわりは午後2時ごろ。",
+      "ちょうど面白いバグが出てくる時間です。"
+    ],
+    "contact": [
+      "email      yusuf.wandana1@gmail.com",
+      "github     github.com/yusufwdn",
+      "linkedin   linkedin.com/in/yusuf-wandana"
+    ],
+    "contactHint": "ページ下部のフォームからでもどうぞ。",
+    "themeFlipped": "テーマを切り替えました。",
+    "catMissing": "cat: ファイル名がありません。`ls` で一覧を確認してください。",
+    "catNoFile": "cat: {name}: そのようなファイルはありません",
+    "skillsUnknown": "skills: 不明なグループ「{group}」。{groups}",
+    "notFound": "コマンドが見つかりません: {cmd}",
+    "didYouMean": "もしかして `{guess}`？",
+    "runHelp": "`help` で一覧を表示します。",
+    "sudo": "yusuf は sudoers ファイルに含まれていません。この件は報告されます。☕"
+  }
+}

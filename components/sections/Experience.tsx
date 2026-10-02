@@ -27,12 +27,12 @@ export default function Experience() {
       <div ref={railRef} className="relative mt-14">
         <div
           aria-hidden
-          className="absolute bottom-1 left-0 top-1 w-px bg-line md:left-[200px]"
+          className="absolute bottom-1 start-0 top-1 w-px bg-line md:start-[200px]"
         />
         <motion.div
           aria-hidden
           style={{ scaleY: scrollYProgress }}
-          className="absolute bottom-1 left-0 top-1 w-px origin-top bg-primary md:left-[200px]"
+          className="absolute bottom-1 start-0 top-1 w-px origin-top bg-primary md:start-[200px]"
         />
 
         <div className="space-y-16">
@@ -42,7 +42,7 @@ export default function Experience() {
             return (
               <div
                 key={job.id}
-                className="relative pl-8 md:grid md:grid-cols-[200px_1fr] md:pl-0"
+                className="relative ps-8 md:grid md:grid-cols-[200px_1fr] md:ps-0"
               >
                 {/* Positioning lives on the wrapper. Motion animates `scale`
                     by writing an inline `transform`, which replaces any
@@ -50,7 +50,7 @@ export default function Experience() {
                     class here would simply be discarded. */}
                 <span
                   aria-hidden
-                  className="absolute left-0 top-[9px] translate-x-[calc(-50%+0.5px)] md:left-[200px]"
+                  className="absolute start-0 top-[9px] translate-x-[calc(-50%+0.5px)] rtl:translate-x-[calc(50%-0.5px)] md:start-[200px]"
                 >
                   <motion.span
                     initial={{ scale: 0 }}
@@ -63,7 +63,7 @@ export default function Experience() {
 
                 {/* The company's whole span sits in the left column, so two
                     titles at one employer read as one tenure. */}
-                <div className="md:pr-8 md:text-right">
+                <div className="md:pe-8 md:text-end">
                   <p className="whitespace-nowrap font-mono text-[13px] text-muted">
                     {t(`items.${job.id}.span`)}
                   </p>
@@ -72,14 +72,14 @@ export default function Experience() {
                   </p>
                 </div>
 
-                <Reveal className="md:pl-8">
+                <Reveal className="md:ps-8">
                   <h3 className="text-xl font-semibold leading-snug md:mt-[-3px]">
                     {job.company}
                   </h3>
 
                   <div
                     className={
-                      many ? "mt-6 space-y-8 border-l border-line pl-6" : "mt-5"
+                      many ? "mt-6 space-y-8 border-s border-line ps-6" : "mt-5"
                     }
                   >
                     {job.roles.map((role) => (
@@ -89,7 +89,7 @@ export default function Experience() {
                             aria-hidden
                             // The border sits at -25..-24, so its centre is
                             // -24.5. Anything else leaves the dot off the line.
-                            className="absolute left-[-24.5px] top-[11px] h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-line-strong ring-4 ring-background"
+                            className="absolute start-[-24.5px] top-[11px] h-1.5 w-1.5 -translate-x-1/2 rtl:translate-x-1/2 rounded-full bg-line-strong ring-4 ring-background"
                           />
                         )}
 
@@ -112,11 +112,11 @@ export default function Experience() {
                           ).map((desc, i) => (
                             <li
                               key={i}
-                              className="relative pl-5 text-[15px] leading-relaxed text-muted"
+                              className="relative ps-5 text-[15px] leading-relaxed text-muted"
                             >
                               <span
                                 aria-hidden
-                                className="absolute left-0 top-[9px] h-1 w-1 rounded-full bg-line-strong"
+                                className="absolute start-0 top-[9px] h-1 w-1 rounded-full bg-line-strong"
                               />
                               {desc}
                             </li>
