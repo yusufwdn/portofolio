@@ -37,9 +37,11 @@ export const skills: Record<SkillGroup, Skill[]> = {
   ],
   backend: [
     { name: "Node.js", icon: "/icons8/icons8-nodejs-96.png" },
+    { name: "NestJS", icon: "/icons8/icons8-nestjs-96.png" },
     { name: "Express.js", icon: "/icons8/icons8-express-js-96.png" },
     { name: "PHP", icon: "/icons8/icons8-php-96.png" },
     { name: "Laravel", icon: "/icons8/icons8-laravel-96.png" },
+    { name: "Python", icon: "/icons8/icons8-python-96.png" },
     { name: "Go", icon: "/icons8/icons8-golang-96.png" },
     { name: "Java", icon: "/icons8/icons8-java-96.png" },
     { name: "REST API", icon: "/icons8/icons8-api-64.png" },
@@ -54,7 +56,9 @@ export const skills: Record<SkillGroup, Skill[]> = {
     { name: "MySQL", icon: "/icons8/icons8-mysql-logo-96.png" },
     { name: "PostgreSQL", icon: "/icons8/icons8-postgresql-96.png" },
     { name: "Microsoft SQL Server", icon: "/icons8/icons8-microsoft-sql-server-96.png" },
-    { name: "Postman", icon: "/icons8/icons8-postman-inc-96.png" },
+    { name: "Redis", icon: "/icons8/icons8-redis-96.png" },
+    { name: "Prisma", icon: "/icons8/icons8-prisma-orm-96.png" },
+    { name: "Postman",icon: "/icons8/icons8-postman-inc-96.png" },
   ],
   // Left in English on purpose: this is how these are actually said in
   // Indonesian tech, and translating them ("Pemecahan Masalah") reads like a
@@ -94,18 +98,19 @@ export const workExperiences = [
       {
         id: "softwareEngineer",
         technologies: [
-          "Microservices",
-          "Nest.js",
-          "Next.js",
           "Typescript",
+          "NestJS",
+          "NATS",
+          "Prisma",
+          "PostgreSQL",
+          "React.js",
+          "Next.js",
           "Laravel",
           "PHP",
           "REST API",
-          "NATS",
+          "Microservices",
           "Redis",
           "Docker",
-          "PostgreSQL",
-          "Microsoft SQL Server",
         ],
       },
       {
@@ -158,47 +163,58 @@ export const workExperiences = [
 ];
 
 export const projects = [
+  // The first three have no image and no link: they are internal platforms
+  // with nothing public to point at. Projects.tsx renders a panel instead.
+  {
+    id: "enterpriseCrm",
+    type: "professional" as ProjectTypeCode,
+    technologies: ["NestJS", "NATS", "Prisma", "PostgreSQL", "React.js", "Docker"],
+  },
   {
     id: "tces",
     type: "professional" as ProjectTypeCode,
-    // No image and no link: it is an internal platform with nothing public
-    // to point at. Projects.tsx renders a panel instead of a screenshot.
-    technologies: ["Laravel", "PHP", "Microservices", "REST API"],
+    image: "/projects/tces.png",
+    technologies: ["Laravel", "Next.js", "PostgreSQL", "REST API", "Microservices", "Docker"],
+  },
+  {
+    id: "eigerEcm",
+    type: "professional" as ProjectTypeCode,
+    technologies: ["Nintex K2", "Microsoft SQL Server"],
   },
   {
     id: "bundapedia",
     type: "professional" as ProjectTypeCode,
     image: "/projects/bundapedia.19dae19c47d9b6563bb9.jpg",
     technologies: ["PHP", "Laravel", "Bootstrap", "Javascript", "JQuery", "MySQL"],
-    link: "https://bundapedia.co.id/",
+    // link: "https://bundapedia.co.id/",
   },
   {
     id: "sinIndonesia",
     type: "professional" as ProjectTypeCode,
     image: "/projects/sin-indonesia.34213054db1fbdae4a60.png",
     technologies: ["Lumen", "PHP", "REST API", "MySQL"],
-    link: "https://sinindonesia.co.id/",
+    // link: "https://sinindonesia.co.id/",
   },
   {
     id: "pepiSiakad",
     type: "professional" as ProjectTypeCode,
     image: "/projects/pepi-dashboard.a565ddcb6c580a6f607a.png",
     technologies: ["Laravel", "Livewire", "Bootstrap", "Javascript", "JQuery", "MySQL"],
-    link: "https://siakad.pepi.ac.id",
+    // link: "https://siakad.pepi.ac.id",
   },
   {
     id: "beliyuu",
     type: "professional" as ProjectTypeCode,
     image: "/projects/beliyuu.c5df70f3d958f8fda490.jpg",
     technologies: ["Lumen", "CodeIgniter", "MySQL", "REST API"],
-    link: "https://beliyuu.com",
+    // link: "https://beliyuu.com",
   },
   {
     id: "bumdesKita",
     type: "professional" as ProjectTypeCode,
     image: "/projects/bumdes.5d8d4793179c8587f7ad.jpg",
     technologies: ["PHP", "Laravel", "Lumen", "Bootstrap", "Javascript", "MySQL"],
-    link: "https://bumdeskita.com/",
+    // link: "https://bumdeskita.com/",
   },
   {
     id: "jadipintar",
