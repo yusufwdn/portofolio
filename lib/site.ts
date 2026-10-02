@@ -25,7 +25,7 @@ export const SITE_TAGLINE = "Software Engineer & Full-Stack Developer";
 // the web app manifest carries, and the two describing the site differently
 // reads as two different sites.
 export const SITE_DESCRIPTION =
-  "Software engineer from Indonesia with over five years on backend systems and complex business workflows. Laravel, Nest.js, Next.js, and the services behind them.";
+  "Software engineer from Indonesia with over five years building rule-heavy enterprise systems across backend and frontend. NestJS, Laravel, Next.js, and the services behind them.";
 
 /* ------------------------------------------------------------------ */
 /* Availability                                                        */

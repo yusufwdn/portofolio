@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Yusuf Wandana | Software Engineer & Full-Stack Developer",
-    "description": "Software engineer from Indonesia with over five years on backend systems and complex business workflows. Laravel, Nest.js, Next.js, and the services behind them."
+    "description": "Software engineer from Indonesia with over five years building rule-heavy enterprise systems across backend and frontend. NestJS, Laravel, Next.js, and the services behind them."
   },
   "nav": {
     "about": "About",
@@ -22,7 +22,7 @@
     "headlineBefore": "Break the",
     "headlineAccent": "Problems.",
     "headlineAfter": "Build the Systems.",
-    "pitch": "Over five years of experience as a Software Engineer. Skilled in delivering solutions tailored to business needs, ranging from simple to complex requirements.",
+    "pitch": "Over five years building web applications across backend and frontend, mostly rule-heavy enterprise systems: multi-layer approval engines, field-level access control, multi-party onboarding, and financial calculations.",
     "viewProjects": "View projects",
     "getInTouch": "Get in touch"
   },
@@ -89,13 +89,11 @@
             "period": "Nov 2023 - Present",
             "location": "Kemayoran, Jakarta · Hybrid",
             "points": [
-              "Designed and built microservice architectures from scratch, and took over existing ones, across authentication, ordering, payments and claims processing.",
-              "Engineered a digital insurance platform for a state owned enterprise subsidiary, turning dense business rules into working systems for digital sales, premium calculation and claims management over REST APIs.",
-              "Owned claim processing end to end, frontend, backend and testing, across 10 product lines, each with its own rules and edge cases.",
-              "Built core services for an enterprise wide internal system transformation, with inter service communication over RPC on NATS.",
-              "Designed database structures to fit the service boundaries: isolated stores for standalone services, shared relational models where consistency mattered more.",
-              "Flagged structural problems in a legacy database early and proposed a restructure. It was borne out later, when other developers hit the bottlenecks I had predicted.",
-              "Acted as technical advisor on the Insurance and CRM projects: system design, architecture decisions, and code reviews."
+              "Co-leader and technical advisor on the enterprise CRM and insurance projects, helping shape system design and database schema, and reviewing code from team members.",
+              "Own backend modules end to end across monolith and microservices architectures, from data modeling and API contracts through production go-live and post-launch maintenance.",
+              "Contribute to frontend work when needed, taking features from the backend through to the user interface.",
+              "Take part in testing modules built by the team before release, making sure business flows and edge cases behave as required.",
+              "Authored technical documentation and go-live deliverables: technical specifications, readiness reports, rollback guidelines and data migration reports."
             ]
           },
           "k2Developer": {
@@ -103,9 +101,9 @@
             "period": "Nov 2023 - Mar 2025",
             "location": "Bandung, West Java · On-site",
             "points": [
-              "Led the design and build of a dynamic approval system on Nintex K2, used across every module at Eiger, replacing manual sign off with automated multi layer routing based on transaction value and module specific rules.",
-              "Digitised internal enterprise forms end to end: Payment Request, legal approval, accommodation requests and the processes around them.",
-              "Led the technical implementation of the most complex modules, Payment Request and Audit Request, involved in system design, database schema and business logic from day one."
+              "Placed on site at a client to design and build enterprise approval workflows on Nintex K2 and Microsoft SQL Server, from requirements analysis and system design through implementation.",
+              "Served as co-leader and technical advisor, giving input on system design and database structure when needed.",
+              "Led the high-complexity modules and worked directly with business stakeholders to translate approval policies into configurable routing rules."
             ]
           }
         }
@@ -119,11 +117,10 @@
             "period": "Sep 2021 - Nov 2023",
             "location": "Kota Bogor, West Java · On-site",
             "points": [
-              "Led teams of 3 to 4 engineers across e-commerce platforms, an agricultural trade marketplace, an accounting system, and a property management platform for a well known housing developer in Bogor.",
-              "Given team leadership early, on the strength of delivery speed, client communication and consistent solution quality.",
-              "Built and maintained API services for web and mobile with Laravel, Livewire, Bootstrap and jQuery.",
-              "Integrated third party services, courier APIs and payment gateways, to close end to end business processes.",
-              "Acted as technical consultant directly to clients: on site presentations, requirement analysis and post deployment maintenance."
+              "Led teams of 2 to 4 engineers on client projects: e-commerce platforms, an agricultural trade marketplace, an accounting system, a production management system, and a property management platform for a housing developer, taking on team leadership early in my career.",
+              "Built and maintained web applications and APIs for web and mobile platforms with Laravel and Livewire.",
+              "Integrated third-party services, including courier APIs, payment gateways, and a PPOB provider for bill payments and top-ups.",
+              "Acted as technical consultant directly to clients, from requirement analysis and on-site presentations through post-deployment maintenance, and managed scope changes as requirements shifted."
             ]
           }
         }
@@ -137,9 +134,9 @@
             "period": "Sep 2020 - Aug 2021",
             "location": "Tanah Abang, Jakarta · On-site",
             "points": [
-              "Designed and built ETL workflows in Microsoft SSIS for financial reporting, processing data from banks and finance companies for regulatory submission to Bank Indonesia.",
-              "Built reporting applications for the monthly financial reports at Bank Fama International and Bank Woori Saudara.",
-              "Maintained and extended the SLiK reporting application: bug fixes, new features and performance work."
+              "Designed and developed ETL workflows in Microsoft SSIS, processing financial data from banks and finance companies for regulatory reporting.",
+              "Developed reporting applications for the monthly financial reports at Bank Fama International and Bank Woori Saudara.",
+              "Maintained and enhanced the existing SLIK reporting application: bug fixes, feature additions and performance improvements."
             ]
           }
         }
@@ -185,9 +182,17 @@
         "title": "Mini Store",
         "description": "A simple online store built during a hands-on course in 2021. Role-based access for admins and customers, product management, order processing, and Midtrans payments, where I got comfortable with Laravel and third-party integration."
       },
+      "enterpriseCrm": {
+        "title": "Enterprise CRM",
+        "description": "An enterprise CRM for CTI Group, where I own the KYC/KYS onboarding module with a configurable approval engine by entity and region, built the sales pipeline service with multi-year revenue recognition and forecasting, and designed the RBAC system enforced down to the field level. Sole engineer maintaining it in production since go-live."
+      },
       "tces": {
-        "title": "TCES",
-        "description": "A digital insurance platform for a state owned enterprise subsidiary, covering everything from buying a policy to filing and settling a claim. Ten product lines, each with its own rules and premium calculation."
+        "title": "Digital Insurance Platform",
+        "description": "A digital insurance platform for Tugu Insurance. I built and documented the claims processing system end to end across 10 product lines, each with its own business rules, and designed the service boundaries and data models for authentication, ordering, payments and claims."
+      },
+      "eigerEcm": {
+        "title": "Enterprise Content Management",
+        "description": "An ECM for Eigerindo MPI built on Nintex K2. I designed the multi-layer dynamic approval engine adopted across every module, routing by transaction value and module-specific rules, and led the Payment Request and Audit Request modules from system design through implementation."
       }
     },
     "internal": "Internal project",
@@ -204,9 +209,9 @@
     "certificates": "Certificates",
     "items": {
       "swadharma": {
-        "degree": "Bachelor of Engineering, Computer Software Engineering",
+        "degree": "Bachelor of Computer Science (S.Kom.), Informatics Engineering",
         "period": "Sep 2022 - Sep 2026",
-        "description": "Graduated with a 3.8 out of 4.0 GPA, earned alongside full time work."
+        "description": "Graduated with a 3.86 out of 4.00 GPA, earned alongside full-time work. Thesis: YouTube spam comment detection using Linear SVM and TF-IDF, delivered as a Chrome extension backed by a Python FastAPI service."
       },
       "wikrama": {
         "degree": "Vocational High School, Software Engineering",
@@ -269,13 +274,14 @@
     "about": [
       "# Yusuf Wandana",
       "",
-      "Software engineer with over five years building backend systems and",
-      "the business workflows that run on them: insurance, approval chains,",
-      "marketplaces, financial reporting.",
+      "Software engineer with over five years building rule-heavy enterprise",
+      "systems: approval engines, field-level access control, onboarding",
+      "flows, multi-year revenue recognition. Insurance, retail, CRM,",
+      "e-commerce and banking regulatory reporting.",
       "",
-      "I usually come in at requirement analysis and stay until it ships.",
-      "Laravel and PHP are home, Node and Next are daily, and Go is what I",
-      "build with on the side."
+      "I usually come in at system and database design and stay through",
+      "go-live. TypeScript and NestJS are daily, Laravel is where I started,",
+      "and Next.js covers the frontend."
     ],
     "coffee": [
       "Black, no sugar. Refilled around 2pm, which is when the",

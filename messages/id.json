@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Yusuf Wandana | Software Engineer & Full-Stack Developer",
-    "description": "Software engineer asal Indonesia dengan pengalaman lebih dari lima tahun di sistem backend dan alur bisnis yang rumit. Laravel, Nest.js, Next.js, dan layanan di baliknya."
+    "description": "Software engineer asal Indonesia dengan pengalaman lebih dari lima tahun membangun sistem enterprise yang sarat aturan bisnis, dari backend hingga frontend. NestJS, Laravel, Next.js, dan layanan di baliknya."
   },
   "nav": {
     "about": "Tentang",
@@ -22,7 +22,7 @@
     "headlineBefore": "Hancurkan",
     "headlineAccent": "masalahnya.",
     "headlineAfter": "Bangun sistemnya.",
-    "pitch": "Lebih dari lima tahun menjadi seorang Software Engineer. Memiliki pengalaman dalam memberikan solusi yang sesuai dengan kebutuhan bisnis, mulai dari kebutuhan bisnis yang sederhana hingga kompleks sekalipun.",
+    "pitch": "Lebih dari lima tahun membangun aplikasi web dari backend hingga frontend, terutama sistem enterprise yang sarat aturan bisnis: approval engine bertingkat, kontrol akses hingga level field, onboarding multi-pihak, dan perhitungan finansial.",
     "viewProjects": "Lihat proyek",
     "getInTouch": "Hubungi saya"
   },
@@ -89,13 +89,11 @@
             "period": "Nov 2023 - Sekarang",
             "location": "Kemayoran, Jakarta · Hybrid",
             "points": [
-              "Merancang dan membangun arsitektur microservices dari nol, sekaligus mengambil alih service yang sudah berjalan: autentikasi, order, pembayaran, dan klaim.",
-              "Membangun platform asuransi digital untuk anak perusahaan BUMN, menerjemahkan aturan bisnis yang padat menjadi sistem untuk penjualan digital, hitung premi, dan pengelolaan klaim lewat REST API.",
-              "Menangani seluruh proses klaim asuransi, dari frontend, backend, sampai testing, untuk sepuluh lini produk yang masing-masing punya aturan sendiri.",
-              "Membangun service inti untuk proyek transformasi sistem internal, dengan komunikasi antar service memakai RPC berbasis NATS.",
-              "Merancang struktur database menyesuaikan pembagian service: database sendiri untuk service yang berdiri sendiri, model relasional bersama kalau konsistensi datanya lebih penting.",
-              "Menemukan masalah struktural di database lama sejak awal proyek dan mengusulkan penataan ulang. Terbukti belakangan, saat developer lain menemui kendala yang sudah saya perkirakan.",
-              "Memiliki tanggung jawab sebagai penasihat teknis di proyek Insurance dan CRM: desain sistem, keputusan arsitektur, dan code review."
+              "Menjadi co-leader dan technical advisor di proyek CRM enterprise dan asuransi, ikut menentukan desain sistem dan skema database, serta melakukan code review atas pekerjaan anggota tim.",
+              "Memegang modul backend secara end-to-end di arsitektur monolith dan microservices, mulai dari pemodelan data dan kontrak API hingga go-live dan pemeliharaan pasca rilis.",
+              "Ikut mengerjakan sisi frontend saat dibutuhkan, sehingga dapat menangani dan memahami sebuah fitur dari belakang hingga depan.",
+              "Terlibat dalam pengujian modul yang dikerjakan tim sebelum rilis untuk memastikan alur bisnis dan edge case berjalan sesuai kebutuhan.",
+              "Menyusun dokumentasi teknis dan dokumen go-live, termasuk technical specification, readiness report, rollback guideline, dan laporan migrasi data."
             ]
           },
           "k2Developer": {
@@ -103,9 +101,9 @@
             "period": "Nov 2023 - Mar 2025",
             "location": "Bandung, Jawa Barat · Onsite",
             "points": [
-              "Memimpin desain dan pembangunan sistem approval dinamis di atas Nintex K2, dipakai di seluruh modul Eiger, menggantikan approval manual dengan alur berlapis otomatis sesuai nilai transaksi dan aturan tiap modul.",
-              "Mendigitalkan form internal perusahaan sampai tuntas: Payment Request, approval legal, permintaan akomodasi, dan proses enterprise lain di sekitarnya.",
-              "Memimpin implementasi teknis modul paling rumit, Payment Request dan Audit Request, terlibat dari desain sistem, skema database, sampai logika bisnisnya sejak awal."
+              "Ditempatkan langsung di klien untuk merancang dan membangun alur approval enterprise dengan Nintex K2 dan Microsoft SQL Server, mulai dari analisis kebutuhan dan desain sistem hingga implementasi.",
+              "Berperan sebagai co-leader dan technical advisor, memberi masukan soal desain sistem dan struktur database saat dibutuhkan.",
+              "Memimpin pengerjaan modul berkompleksitas tinggi dan bekerja langsung dengan stakeholder bisnis untuk menerjemahkan kebijakan approval menjadi aturan routing yang bisa dikonfigurasi."
             ]
           }
         }
@@ -119,11 +117,10 @@
             "period": "Sep 2021 - Nov 2023",
             "location": "Kota Bogor, Jawa Barat · Onsite",
             "points": [
-              "Memimpin tim 3 sampai 4 engineer di berbagai proyek klien: e-commerce, marketplace hasil tani, sistem akuntansi, dan platform manajemen properti untuk pengembang perumahan ternama di Bogor.",
-              "Dipercaya memimpin tim sejak awal karier karena kecepatan kerja, cara berkomunikasi dengan klien, dan kualitas solusi yang konsisten.",
-              "Membangun dan merawat API untuk web dan mobile dengan Laravel, Livewire, Bootstrap, dan jQuery.",
-              "Mengintegrasikan layanan pihak ketiga seperti API kurir dan payment gateway agar proses bisnisnya berjalan utuh.",
-              "Menjadi konsultan teknis yang berhadapan langsung dengan klien: presentasi di kantor mereka, analisis kebutuhan, dan perawatan setelah rilis."
+              "Memimpin tim berisi 2 hingga 4 engineer di berbagai proyek klien, antara lain platform e-commerce, marketplace hasil pertanian, sistem akuntansi, sistem manajemen produksi, dan platform manajemen properti untuk developer perumahan.",
+              "Membangun dan memelihara aplikasi web serta API untuk platform web dan mobile menggunakan Laravel dan Livewire.",
+              "Mengintegrasikan layanan pihak ketiga, termasuk API kurir, payment gateway, dan provider PPOB untuk pembayaran tagihan dan top-up.",
+              "Menjadi konsultan teknis langsung bagi klien, mulai dari analisis kebutuhan dan presentasi on-site hingga maintenance pasca deployment, termasuk mengelola perubahan scope bersama klien."
             ]
           }
         }
@@ -137,9 +134,9 @@
             "period": "Sep 2020 - Agu 2021",
             "location": "Tanah Abang, Jakarta · Onsite",
             "points": [
-              "Merancang dan membangun alur ETL dengan Microsoft SSIS untuk pelaporan keuangan, mengolah data bank dan perusahaan pembiayaan untuk laporan ke Bank Indonesia.",
-              "Membangun aplikasi pelaporan untuk laporan keuangan bulanan di Bank Fama International dan Bank Woori Saudara.",
-              "Merawat dan mengembangkan aplikasi pelaporan SLiK: perbaikan bug, fitur baru, dan peningkatan performa."
+              "Merancang dan mengembangkan alur ETL dengan Microsoft SSIS untuk mengolah data keuangan bank dan perusahaan pembiayaan untuk keperluan pelaporan regulasi.",
+              "Mengembangkan aplikasi pelaporan keuangan bulanan untuk Bank Fama International dan Bank Woori Saudara.",
+              "Memelihara dan mengembangkan aplikasi pelaporan SLIK yang sudah berjalan, mulai dari perbaikan bug, penambahan fitur, hingga peningkatan performa."
             ]
           }
         }
@@ -185,9 +182,17 @@
         "title": "Mini Store",
         "description": "Toko online sederhana dari kursus praktik tahun 2021. Ada hak akses per peran untuk admin dan pelanggan, manajemen produk, pemrosesan pesanan, dan pembayaran lewat Midtrans. Di sinilah saya mulai terbiasa dengan Laravel dan integrasi layanan pihak ketiga."
       },
+      "enterpriseCrm": {
+        "title": "Enterprise CRM",
+        "description": "CRM enterprise untuk CTI Group. Saya memegang modul onboarding KYC/KYS dengan approval engine yang bisa dikonfigurasi per entitas dan region, membangun service sales pipeline dengan pengakuan pendapatan multi-tahun dan forecasting, serta merancang sistem RBAC hingga level field. Satu-satunya engineer yang memeliharanya di production sejak go-live."
+      },
       "tces": {
-        "title": "TCES",
-        "description": "Platform asuransi digital untuk anak perusahaan BUMN, dari pembelian polis sampai pengajuan dan penyelesaian klaim. Sepuluh lini produk, dan tiap produk punya aturan serta perhitungan preminya sendiri."
+        "title": "Digital Insurance Platform",
+        "description": "Platform asuransi digital untuk Tugu Insurance. Saya membangun dan mendokumentasikan sistem pemrosesan klaim secara end-to-end untuk 10 lini produk dengan aturan bisnis masing-masing, serta merancang batas service dan model data untuk autentikasi, pemesanan, pembayaran, dan klaim."
+      },
+      "eigerEcm": {
+        "title": "Enterprise Content Management",
+        "description": "ECM untuk Eigerindo MPI di atas Nintex K2. Saya merancang approval engine dinamis bertingkat yang dipakai di seluruh modul, dengan routing berdasarkan nilai transaksi dan aturan tiap modul, serta memimpin modul Payment Request dan Audit Request dari desain sistem hingga implementasi."
       }
     },
     "internal": "Proyek internal",
@@ -204,9 +209,9 @@
     "certificates": "Sertifikat",
     "items": {
       "swadharma": {
-        "degree": "Sarjana Teknik Informatika",
+        "degree": "S1 Teknik Informatika (S.Kom.)",
         "period": "Sep 2022 - Sep 2026",
-        "description": "Kuliah sambil bekerja penuh waktu, lulus dengan IPK 3.8 dari 4.0."
+        "description": "Kuliah sambil bekerja penuh waktu, lulus dengan IPK 3,86 dari 4,00. Skripsi: deteksi komentar spam YouTube menggunakan Linear SVM dan TF-IDF, diimplementasikan sebagai Chrome extension dengan backend Python FastAPI."
       },
       "wikrama": {
         "degree": "SMK Rekayasa Perangkat Lunak",
@@ -269,11 +274,14 @@
     "about": [
       "# Yusuf Wandana",
       "",
-      "Software engineer, lebih dari lima tahun mengerjakan backend untuk",
-      "asuransi, approval, marketplace, sampai pelaporan keuangan.",
+      "Software engineer, lebih dari lima tahun membangun sistem enterprise",
+      "yang sarat aturan bisnis: approval engine, kontrol akses level field,",
+      "alur onboarding, pengakuan pendapatan multi-tahun. Asuransi, ritel,",
+      "CRM, e-commerce, sampai pelaporan regulasi perbankan.",
       "",
-      "Biasanya saya ikut dari analisis kebutuhan sampai rilis. Laravel dan",
-      "PHP rumah saya, Node dan Next keseharian, Go buat proyek sampingan."
+      "Biasanya saya ikut dari desain sistem dan database sampai go-live.",
+      "TypeScript dan NestJS keseharian, Laravel tempat saya mulai, dan",
+      "Next.js untuk sisi frontend."
     ],
     "coffee": [
       "Hitam, tanpa gula. Isi ulang sekitar jam 2 siang, yang kebetulan",
