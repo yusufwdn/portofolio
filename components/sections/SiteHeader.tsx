@@ -107,7 +107,7 @@ export default function SiteHeader() {
       <motion.div
         aria-hidden
         style={{ scaleX: scrollYProgress }}
-        className="absolute inset-x-0 bottom-0 h-px origin-left bg-primary"
+        className="absolute inset-x-0 bottom-0 h-px origin-left bg-primary rtl:origin-right"
       />
     </header>
   );

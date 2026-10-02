@@ -141,7 +141,7 @@ export default function Contact() {
               className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 text-[15px] font-medium text-primary-contrast transition-colors hover:bg-primary/90 sm:w-auto"
             >
               {t("submit")}
-              <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+              <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5" />
             </button>
             <p className="text-[13px] text-muted">{t("disclaimer")}</p>
           </form>

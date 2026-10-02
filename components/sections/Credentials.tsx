@@ -25,7 +25,7 @@ export default function Credentials() {
           <RevealGroup className="mt-7 space-y-9">
             {educations.map((edu) => (
               <RevealItem key={edu.id}>
-                <div className="border-l-2 border-line pl-5 transition-colors hover:border-primary">
+                <div className="border-s-2 border-line ps-5 transition-colors hover:border-primary">
                   {/* A grid, not flex-wrap: a long degree title used to push
                       the date onto its own line, so one entry showed the range
                       on the right and the next showed it underneath. */}
@@ -74,7 +74,7 @@ export default function Credentials() {
                         <span className="font-mono">{cert.date}</span>
                       </p>
                     </div>
-                    <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-muted transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
+                    <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-muted transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5" />
                   </a>
                 </li>
               ))}

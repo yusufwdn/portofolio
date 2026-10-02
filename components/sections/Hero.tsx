@@ -54,7 +54,7 @@ export default function Hero() {
                 aria-hidden
                 viewBox="0 0 200 12"
                 preserveAspectRatio="none"
-                className="absolute -bottom-1 left-0 h-2.5 w-full text-primary/35"
+                className="absolute -bottom-1 start-0 h-2.5 w-full text-primary/35"
               >
                 <path
                   d="M2,9 C50,2 150,2 198,8"
@@ -82,7 +82,7 @@ export default function Hero() {
               className="group inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-[15px] font-medium text-primary-contrast transition-colors hover:bg-primary/90"
             >
               {t("viewProjects")}
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5" />
             </Link>
             <Link
               href="#contact"

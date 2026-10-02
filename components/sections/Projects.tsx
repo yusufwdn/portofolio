@@ -93,7 +93,7 @@ export default function Projects() {
                     /* Internal work has nothing public to screenshot. A
                        deliberate panel reads better than a broken frame. */
                     <div className="dot-grid absolute inset-0 flex flex-col items-center justify-center gap-4 [mask-image:radial-gradient(ellipse_70%_70%_at_50%_50%,#000,transparent)]">
-                      <span className="font-mono text-3xl font-bold tracking-tight text-primary/70 sm:text-4xl">
+                      <span className="px-8 text-center font-mono text-3xl font-bold tracking-tight text-primary/70 sm:text-4xl">
                         {title}
                       </span>
                       <span className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 font-mono text-[13px] text-muted">
@@ -129,7 +129,7 @@ export default function Projects() {
                       className="mt-8 inline-flex items-center gap-1.5 border-b border-primary/30 pb-0.5 text-[15px] font-medium text-primary transition-colors hover:border-primary"
                     >
                       {t("visit", { name: title })}
-                      <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5" />
                     </a>
                   )}
                 </div>
@@ -151,7 +151,7 @@ export default function Projects() {
             aria-label={t("previous")}
             className="grid h-10 w-10 place-items-center rounded-md border border-control text-muted transition-colors hover:border-primary hover:text-primary disabled:pointer-events-none disabled:opacity-40"
           >
-            <ArrowLeft className="h-4 w-4" />
+            <ArrowLeft className="h-4 w-4 rtl:-scale-x-100" />
           </button>
 
           <div className="flex items-center gap-2">
@@ -178,7 +178,7 @@ export default function Projects() {
             aria-label={t("next")}
             className="grid h-10 w-10 place-items-center rounded-md border border-control text-muted transition-colors hover:border-primary hover:text-primary disabled:pointer-events-none disabled:opacity-40"
           >
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4 rtl:-scale-x-100" />
           </button>
         </nav>
       )}

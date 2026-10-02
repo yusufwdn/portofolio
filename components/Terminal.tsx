@@ -12,7 +12,7 @@ type Line = {
   text: string;
 };
 
-// Command names stay English in both locales — they are commands, not prose.
+// Command names stay English in every locale — they are commands, not prose.
 // Only what the terminal prints back gets translated.
 const COMMANDS = [
   "help",
@@ -28,13 +28,13 @@ const COMMANDS = [
 
 const FILE_NAMES = ["about.md", "stack.json", "coffee.txt"];
 
-// Literal in both languages: one is code, the other is a drawing.
+// Literal in every language: one is code, the other is a drawing.
 const STACK_JSON = [
   "{",
-  '  "backend":  ["PHP", "Laravel", "Node.js", "Express", "Go"],',
+  '  "backend":  ["NestJS", "Node.js", "Laravel", "PHP", "Express"],',
   '  "frontend": ["TypeScript", "React", "Next.js", "TailwindCSS"],',
-  '  "data":     ["MySQL", "PostgreSQL", "SQL Server"],',
-  '  "ops":      ["Docker", "Git", "Postman"]',
+  '  "data":     ["PostgreSQL", "SQL Server", "MySQL", "Prisma", "Redis"],',
+  '  "ops":      ["Docker", "NATS", "Git", "Postman"]',
   "}",
 ];
 
@@ -279,6 +279,10 @@ export default function Terminal({
 
   return (
     <div
+      // A terminal reads left to right in every locale: the prompt, commands
+      // and file names are code. Arabic output lines still right-align on
+      // their own through dir="auto" below.
+      dir="ltr"
       className="group/term relative overflow-hidden rounded-card border border-white/10 bg-term-bg shadow-lift"
       onClick={() => inputRef.current?.focus({ preventScroll: true })}
     >
@@ -310,6 +314,7 @@ export default function Terminal({
           ) : (
             <p
               key={line.id}
+              dir="auto"
               className={`whitespace-pre-wrap break-words ${toneFor[line.kind]}`}
             >
               {line.text || " "}

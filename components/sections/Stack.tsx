@@ -37,7 +37,7 @@ export default function Stack() {
                       {/* Sized down against the group label on the left: at
                           15px the chips out-shouted the heading they belong
                           to. */}
-                      <span className="inline-flex items-center gap-2 rounded-full border border-line bg-surface-sunken py-1.5 pl-1.5 pr-3.5 text-[14px] transition-colors hover:border-primary/40 hover:text-primary">
+                      <span className="inline-flex items-center gap-2 rounded-full border border-line bg-surface-sunken py-1.5 ps-1.5 pe-3.5 text-[14px] transition-colors hover:border-primary/40 hover:text-primary">
                         <Image
                           src={skill.icon}
                           alt=""

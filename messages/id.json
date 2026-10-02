@@ -14,8 +14,7 @@
     "closeMenu": "Tutup menu",
     "toggleTheme": "Ganti tema",
     "language": "Bahasa",
-    "switchToIndonesian": "Ganti ke Bahasa Indonesia",
-    "switchToEnglish": "Ganti ke Bahasa Inggris"
+    "switchTo": "Ganti ke {language}"
   },
   "hero": {
     "eyebrow": "Software Engineer · Indonesia",
