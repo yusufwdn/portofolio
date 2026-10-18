@@ -5,15 +5,25 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export const EMAIL = "yusuf.wandana1@gmail.com";
 
+// `id` keys the contact-section label in the message files; `handle` is how
+// the address reads on screen.
 export const SOCIALS = [
-  { label: "GitHub", href: "https://github.com/yusufwdn", Icon: Github },
   {
+    id: "github",
+    label: "GitHub",
+    handle: "github.com/yusufwdn",
+    href: "https://github.com/yusufwdn",
+    Icon: Github,
+  },
+  {
+    id: "linkedin",
     label: "LinkedIn",
+    handle: "linkedin.com/in/yusuf-wandana",
     href: "https://www.linkedin.com/in/yusuf-wandana/",
     Icon: Linkedin,
   },
-  { label: "Email", href: `mailto:${EMAIL}`, Icon: Mail },
-];
+  { id: "email", label: "Email", handle: EMAIL, href: `mailto:${EMAIL}`, Icon: Mail },
+] as const;
 
 // Overridable so a preview deploy can advertise its own origin.
 export const SITE_URL =
@@ -37,7 +47,7 @@ export type Availability = "open" | "freelance" | "employed" | "hidden";
 
 export const AVAILABILITY: Availability = "open";
 
-// Copy for each mode lives in messages/{en,id}.json under "availability",
+// Copy for each mode lives in messages/*.json under "availability",
 // so the pill and CTA speak whichever language the visitor picked.
 //
 // Takes a parameter rather than reading AVAILABILITY directly: TypeScript
