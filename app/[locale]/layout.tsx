@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Be_Vietnam_Pro } from "next/font/google";
+import localFont from "next/font/local";
 import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import {
@@ -16,6 +17,24 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { homeJsonLd } from "@/lib/structured-data";
 import { isTheme, THEME_COOKIE, THEME_SCRIPT } from "@/lib/theme";
 import "../globals.css";
+
+// Latin subset of Poppins as WOFF2 (about 11 KB a weight, against 150 KB of
+// TTF). The exposed variable is read by tailwind.config.ts and the per-language
+// stacks in globals.css. Bold is declared at 800 because that is where the
+// site has always mapped it. The TTFs stay in public/fonts for the OG image,
+// which Satori can only read as TTF.
+const poppins = localFont({
+  src: [
+    { path: "../fonts/Poppins-Light.woff2", weight: "200" },
+    { path: "../fonts/Poppins-Regular.woff2", weight: "400" },
+    { path: "../fonts/Poppins-Medium.woff2", weight: "500" },
+    { path: "../fonts/Poppins-SemiBold.woff2", weight: "600" },
+    { path: "../fonts/Poppins-Bold.woff2", weight: "800" },
+  ],
+  variable: "--font-poppins",
+  display: "swap",
+  fallback: ["ui-sans-serif", "system-ui", "sans-serif"],
+});
 
 // Vietnamese only: Poppins lacks ư, ơ, ệ and friends (see globals.css).
 // Self-hosted at build time and not preloaded, so the files are fetched only
@@ -158,9 +177,9 @@ export default async function LocaleLayout({
         />
       </head>
       {/* The font variable sits on body, not html: THEME_SCRIPT compares and
-          overwrites html's whole className. It only defines --font-vi, which
-          only html:lang(vi) reads. */}
-      <body className={`antialiased ${beVietnamPro.variable}`}>
+          overwrites html's whole className. They only define --font-poppins and
+          --font-vi, which the body font stacks read. */}
+      <body className={`antialiased ${poppins.variable} ${beVietnamPro.variable}`}>
         {/* Hands the message file to every client component below it */}
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
