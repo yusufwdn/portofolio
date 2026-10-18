@@ -13,6 +13,7 @@ import {
   routing,
   type Locale,
 } from "@/i18n/routing";
+import MotionProvider from "@/components/MotionProvider";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { homeJsonLd } from "@/lib/structured-data";
 import { isTheme, THEME_COOKIE, THEME_SCRIPT } from "@/lib/theme";
@@ -181,7 +182,9 @@ export default async function LocaleLayout({
           --font-vi, which the body font stacks read. */}
       <body className={`antialiased ${poppins.variable} ${beVietnamPro.variable}`}>
         {/* Hands the message file to every client component below it */}
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <MotionProvider>{children}</MotionProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

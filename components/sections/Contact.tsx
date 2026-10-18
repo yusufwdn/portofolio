@@ -66,11 +66,11 @@ export default function Contact() {
         lead={t("lead")}
       />
 
-      <div className="mt-14 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+      <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
         <Reveal>
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* sm:grid-cols-2, so these two stop being squeezed on a phone */}
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="space-y-2">
                 <label htmlFor="name" className="block text-[15px] font-medium">
                   {t("name")}

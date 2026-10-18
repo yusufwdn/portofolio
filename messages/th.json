@@ -13,6 +13,7 @@
     "openMenu": "เปิดเมนู",
     "closeMenu": "ปิดเมนู",
     "toggleTheme": "สลับธีม",
+    "skipToContent": "ข้ามไปยังเนื้อหา",
     "language": "ภาษา",
     "switchTo": "เปลี่ยนเป็น {language}"
   },

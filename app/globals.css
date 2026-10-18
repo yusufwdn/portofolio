@@ -168,6 +168,17 @@
     word-break: keep-all;
   }
 
+  /* keep-all means the longest sentence (ten full-width characters in
+     Japanese) is one unbreakable run, so on a phone it must fit the column:
+     36px of type is 360px of line against 328px of room at a 360px screen.
+     Scale with the viewport below the width where 36px fits. */
+  @media (max-width: 479px) {
+    html:lang(ja) .text-display,
+    html:lang(zh) .text-display {
+      font-size: clamp(1.625rem, 8.6vw, 2.25rem);
+    }
+  }
+
   html:lang(ar) .text-display,
   html:lang(ar) .text-title,
   html:lang(th) .text-display,

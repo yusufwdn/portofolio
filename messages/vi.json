@@ -13,6 +13,7 @@
     "openMenu": "Mở menu",
     "closeMenu": "Đóng menu",
     "toggleTheme": "Đổi giao diện sáng/tối",
+    "skipToContent": "Chuyển đến nội dung",
     "language": "Ngôn ngữ",
     "switchTo": "Chuyển sang {language}"
   },

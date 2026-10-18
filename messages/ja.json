@@ -13,6 +13,7 @@
     "openMenu": "メニューを開く",
     "closeMenu": "メニューを閉じる",
     "toggleTheme": "テーマを切り替える",
+    "skipToContent": "コンテンツへスキップ",
     "language": "言語",
     "switchTo": "{language}に切り替える"
   },
