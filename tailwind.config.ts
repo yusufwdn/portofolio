@@ -45,7 +45,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["var(--font-poppins)", "ui-sans-serif", "system-ui", "sans-serif"],
         mono: [
           "ui-monospace",
           "SFMono-Regular",
