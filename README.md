@@ -32,7 +32,10 @@ npm run dev
 Runs at [http://localhost:3000](http://localhost:3000). The other languages live under their code: `/id`, `/ms`, `/ja`, `/zh`,
 `/th`, `/vi`, `/km`, `/ar`, `/ru`, `/es` and `/pt`.
 
-Other scripts: `npm run build`, `npm run start`, `npm run lint`.
+Other scripts: `npm run build`, `npm run start`, `npm run lint`,
+`npm run typecheck`, and `npm run check:messages`. `npm run check` runs lint,
+typecheck and the message check together; CI (`.github/workflows/ci.yml`) runs
+it and a build on every pull request.
 
 ## Project Structure
 
@@ -46,6 +49,7 @@ messages/            # One file per language — every sentence on the site
 lib/static-data.tsx  # Structure only: links, images, dates, tech names
 lib/site.ts          # Site constants, socials, availability mode
 middleware.ts        # Locale detection and routing
+scripts/             # check-messages.mjs: every language must match en.json's keys
 ```
 
 ## Editing content
@@ -53,7 +57,7 @@ middleware.ts        # Locale detection and routing
 Two places, on purpose:
 
 - **`messages/*.json`**, one per language, hold everything a reader sees as
-  a sentence. They all share the same key structure.
+  a sentence. They all share the same key structure, which `npm run check:messages` enforces.
 - **`lib/static-data.tsx`** holds what is identical in every language: links,
   images, dates, and the names of technologies, companies and certificates.
 

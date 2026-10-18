@@ -3,7 +3,7 @@ import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 
 // Served at /manifest.webmanifest — the dot in the filename keeps it out of
 // the middleware matcher, so it is never locale-rewritten. One manifest covers
-// both locales: it describes the app, not the page a visitor happens to be on.
+// every language: it describes the app, not the page a visitor happens to be on.
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: `${SITE_NAME} — ${SITE_TAGLINE}`,

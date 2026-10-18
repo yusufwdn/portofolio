@@ -1,11 +1,9 @@
-import { Brain, Code, LampDesk, Palette, PersonStanding, Server } from "lucide-react";
-import { JSX } from "react";
 import type { ProjectTypeCode, Skill, SkillGroup } from "@/types/types";
 
 /* -------------------------------------------------------------------------
  * Structure only.
  *
- * Anything a reader sees as a sentence lives in messages/{en,id}.json and is
+ * Anything a reader sees as a sentence lives in messages/*.json and is
  * looked up by the `id` fields below. What stays here is the stuff that is
  * the same in every language: links, images, dates, icons, and the names of
  * technologies, companies and certificates, which are proper nouns.
@@ -62,7 +60,7 @@ export const skills: Record<SkillGroup, Skill[]> = {
   ],
   // Left in English on purpose: this is how these are actually said in
   // Indonesian tech, and translating them ("Pemecahan Masalah") reads like a
-  // school report card. Identical in both locales, so they stay in the data.
+  // school report card. Identical in every language, so they stay in the data.
   soft: [
     { name: "Problem Solving", icon: "/icons8/icons8-problem-solving-skills-100.png" },
     { name: "Communication", icon: "/icons8/icons8-communication-100.png" },
@@ -75,20 +73,8 @@ export const skills: Record<SkillGroup, Skill[]> = {
   ],
 };
 
-export const skillIcons: Record<SkillGroup, JSX.Element> = {
-  frontend: <Code className="h-5 w-5" />,
-  backend: <Server className="h-5 w-5" />,
-  tools: <Palette className="h-5 w-5" />,
-  soft: <Brain className="h-5 w-5" />,
-};
-
 // Professional first — it is the work that carries the most weight.
 export const projectTypes: ProjectTypeCode[] = ["professional", "personal"];
-
-export const projectTypeIcons: Record<ProjectTypeCode, JSX.Element> = {
-  professional: <LampDesk className="h-5 w-5" />,
-  personal: <PersonStanding className="h-5 w-5" />,
-};
 
 export const workExperiences = [
   {

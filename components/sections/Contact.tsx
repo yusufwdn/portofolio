@@ -1,27 +1,18 @@
 "use client";
 
-import { Check, Copy, Github, Linkedin, Mail, Send } from "lucide-react";
+import { Check, Copy, Send } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/Reveal";
-import { EMAIL } from "@/lib/site";
+import { EMAIL, SOCIALS } from "@/lib/site";
 import SectionHeading from "./SectionHeading";
 
-const CHANNELS = [
-  { id: "email", Icon: Mail, value: EMAIL, href: `mailto:${EMAIL}` },
-  {
-    id: "linkedin",
-    Icon: Linkedin,
-    value: "linkedin.com/in/yusuf-wandana",
-    href: "https://www.linkedin.com/in/yusuf-wandana/",
-  },
-  {
-    id: "github",
-    Icon: Github,
-    value: "github.com/yusufwdn",
-    href: "https://github.com/yusufwdn",
-  },
-];
+// Email first: it is the channel with a copy button. The rest of each row
+// comes from SOCIALS so the addresses live in one place.
+const CHANNELS = (["email", "linkedin", "github"] as const).map((id) => {
+  const { Icon, handle, href } = SOCIALS.find((s) => s.id === id)!;
+  return { id, Icon, value: handle, href };
+});
 
 const fieldClass =
   "w-full rounded-md border border-control bg-surface-sunken px-4 py-3 text-[15px] outline-none transition-colors placeholder:text-muted/70 focus:border-primary";
