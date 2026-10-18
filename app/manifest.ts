@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE } from "@/lib/site";
+import en from "@/messages/en.json";
+import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 
 // Served at /manifest.webmanifest — the dot in the filename keeps it out of
 // the middleware matcher, so it is never locale-rewritten. One manifest covers
@@ -8,7 +9,10 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: `${SITE_NAME} — ${SITE_TAGLINE}`,
     short_name: SITE_NAME,
-    description: SITE_DESCRIPTION,
+    // The English meta description, so the manifest and the meta tags are the
+    // same sentence by construction. Imported here, not in lib/site.ts, which
+    // client components import and would drag the message file along.
+    description: en.meta.description,
     start_url: "/",
     display: "standalone",
     background_color: "#100e16",

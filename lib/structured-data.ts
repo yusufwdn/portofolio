@@ -1,5 +1,12 @@
 import { routing } from "@/i18n/routing";
-import { EMAIL, SITE_NAME, SITE_TAGLINE, SITE_URL, SOCIALS } from "@/lib/site";
+import {
+  EMAIL,
+  SITE_NAME,
+  SITE_TAGLINE,
+  SITE_URL,
+  SOCIALS,
+  SPOKEN_LANGUAGES,
+} from "@/lib/site";
 import { educations, skills, workExperiences } from "@/lib/static-data";
 
 /**
@@ -41,10 +48,11 @@ export function homeJsonLd(locale: string, description: string) {
     image: `${SITE_URL}/${locale}/opengraph-image`,
     sameAs: profiles,
     knowsAbout: topics,
-    knowsLanguage: [
-      { "@type": "Language", name: "Indonesian", alternateName: "id" },
-      { "@type": "Language", name: "English", alternateName: "en" },
-    ],
+    knowsLanguage: SPOKEN_LANGUAGES.map(({ name, code }) => ({
+      "@type": "Language",
+      name,
+      alternateName: code,
+    })),
     address: { "@type": "PostalAddress", addressCountry: "ID" },
     // The current employer is the first entry; the rest of the history is on
     // the page for humans and does not belong in the graph.

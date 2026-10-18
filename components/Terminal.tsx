@@ -28,13 +28,17 @@ const COMMANDS = [
 
 const FILE_NAMES = ["about.md", "stack.json", "coffee.txt"];
 
-// Literal in every language: one is code, the other is a drawing.
+// Built from the same data as the Stack section, so `cat stack.json` cannot
+// drift from the page. Literal in every language: it is code. The soft skills
+// are left out, as they are in the structured data.
 const STACK_JSON = [
   "{",
-  '  "backend":  ["NestJS", "Node.js", "Laravel", "PHP", "Express"],',
-  '  "frontend": ["TypeScript", "React", "Next.js", "TailwindCSS"],',
-  '  "data":     ["PostgreSQL", "SQL Server", "MySQL", "Prisma", "Redis"],',
-  '  "ops":      ["Docker", "NATS", "Git", "Postman"]',
+  ...(["frontend", "backend", "tools"] as const).map(
+    (group, i, all) =>
+      `  ${JSON.stringify(group)}: ${JSON.stringify(
+        skills[group].map((s) => s.name),
+      )}${i < all.length - 1 ? "," : ""}`,
+  ),
   "}",
 ];
 
