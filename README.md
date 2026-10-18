@@ -85,6 +85,28 @@ Set `AVAILABILITY` in `lib/site.ts` to `open`, `freelance`, `employed` or
 `hidden`. The hero pill and the contact CTA follow; `hidden` removes the pill.
 Copy for each mode lives under `availability` in the message files.
 
+## Environment variables
+
+Both are optional. Copy `.env.example` to `.env.local` and fill in what you
+need; on the host (Netlify), set the same names under Environment variables.
+`NEXT_PUBLIC_*` values are inlined at build time, so changing one needs a
+redeploy.
+
+| Variable | Used for | When unset |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Canonical URL, hreflang, sitemap, OG and JSON-LD | `https://itswandana.netlify.app` |
+| `NEXT_PUBLIC_CF_ANALYTICS_TOKEN` | Cloudflare Web Analytics | Analytics off |
+
+## Analytics
+
+Cloudflare Web Analytics: cookieless, so no consent banner. It is off unless
+`NEXT_PUBLIC_CF_ANALYTICS_TOKEN` is set, and only loads in a production build,
+so local development never counts. Set the token in the host's environment
+variables (Netlify: Site configuration → Environment variables, scoped to
+Production so deploy previews stay out of the numbers) and redeploy, since
+`NEXT_PUBLIC_*` values are read at build time. Get the token from Cloudflare →
+Web Analytics → Add a site; the dashboard shows it in the snippet.
+
 ## Versioning
 
 Releases are tagged on `main` after the merge, so older versions stay

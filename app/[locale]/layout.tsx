@@ -13,6 +13,7 @@ import {
   routing,
   type Locale,
 } from "@/i18n/routing";
+import Analytics from "@/components/Analytics";
 import MotionProvider from "@/components/MotionProvider";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { homeJsonLd } from "@/lib/structured-data";
@@ -185,6 +186,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <MotionProvider>{children}</MotionProvider>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
