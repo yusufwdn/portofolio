@@ -75,7 +75,7 @@ export default function Projects() {
 
           return (
             <RevealItem key={project.id}>
-              <article className="group grid items-center gap-8 md:grid-cols-2 md:gap-14">
+              <article className="group grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-14">
                 <div
                   className={`relative aspect-[16/10] overflow-hidden rounded-card border border-line bg-surface-sunken ${
                     flip ? "md:order-2" : ""

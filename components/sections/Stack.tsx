@@ -19,7 +19,7 @@ export default function Stack() {
       <div className="mt-12 space-y-px overflow-hidden rounded-card border border-line bg-line">
         {skillGroups.map((group) => (
           <Reveal key={group}>
-            <div className="grid gap-4 bg-surface p-6 md:grid-cols-[180px_1fr] md:items-baseline md:gap-8 md:p-7">
+            <div className="grid grid-cols-1 gap-4 bg-surface p-6 md:grid-cols-[180px_1fr] md:items-baseline md:gap-8 md:p-7">
               <div>
                 <h3 className="font-mono text-eyebrow uppercase text-primary">
                   {t(`groups.${group}`)}

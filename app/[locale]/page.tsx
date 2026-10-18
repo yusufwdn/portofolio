@@ -1,4 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Capabilities from "@/components/sections/Capabilities";
 import Contact from "@/components/sections/Contact";
 import Credentials from "@/components/sections/Credentials";
@@ -17,6 +17,7 @@ export default async function Home({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("nav");
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -31,9 +32,18 @@ export default async function Home({
         <div className="absolute bottom-[-15%] left-[-10%] h-[440px] w-[440px] rounded-full bg-coffee/[0.07] blur-[120px]" />
       </div>
 
+      {/* First tab stop on the page: lets keyboard and screen-reader users jump
+          past the header and its nav. Hidden until focused. */}
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-primary-contrast"
+      >
+        {t("skipToContent")}
+      </a>
+
       <SiteHeader />
 
-      <main className="container mx-auto px-4">
+      <main id="main" tabIndex={-1} className="container mx-auto px-4 focus:outline-none">
         <Hero />
         <Capabilities />
         <Stack />

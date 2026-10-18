@@ -8,31 +8,6 @@ export type Skill = {
   icon: string;
 };
 
-export type Project = {
-  id: string;
-  type: ProjectTypeCode;
-  /** Internal work often has nothing public to show, so this is optional. */
-  image?: string;
-  technologies: string[];
-  /** Absent when the project has no public URL. */
-  link?: string;
-};
-
-export type Role = {
-  id: string;
-  technologies: string[];
-};
-
-/**
- * Grouped by employer, not by role. Two titles at the same company is a
- * promotion, and flattening them would read as job hopping.
- */
-export type WorkExperience = {
-  id: string;
-  company: string;
-  roles: Role[];
-};
-
 export type Education = {
   id: string;
   institution: string;

@@ -20,7 +20,7 @@ export default function Capabilities() {
     <section className="border-t border-line py-20">
       <SectionHeading eyebrow={t("eyebrow")} title={t("title")} />
 
-      <RevealGroup className="mt-12 grid gap-5 md:grid-cols-3">
+      <RevealGroup className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
         {CAPABILITIES.map((cap) => (
           <RevealItem key={cap.id}>
             <SpotlightCard className="h-full">

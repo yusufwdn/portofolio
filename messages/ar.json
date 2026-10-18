@@ -13,6 +13,7 @@
     "openMenu": "فتح القائمة",
     "closeMenu": "إغلاق القائمة",
     "toggleTheme": "تبديل السمة",
+    "skipToContent": "تخطَّ إلى المحتوى",
     "language": "اللغة",
     "switchTo": "التبديل إلى {language}"
   },

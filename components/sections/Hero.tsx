@@ -19,7 +19,7 @@ export default function Hero() {
   return (
     <section
       id="about"
-      className="grid items-center gap-12 py-section lg:grid-cols-12 lg:gap-14"
+      className="grid grid-cols-1 items-center gap-12 py-section lg:grid-cols-12 lg:gap-14"
     >
       <div className="lg:col-span-5">
         <Reveal>

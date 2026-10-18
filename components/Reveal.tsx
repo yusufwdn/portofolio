@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 /**
  * Scroll reveal, done with motion instead of the hand-rolled
  * IntersectionObserver + `opacity-0` class pair. `once` means it settles and
- * stays settled, and motion drops the animation on prefers-reduced-motion.
+ * stays settled. Reduced motion is handled by MotionProvider in the layout.
  */
 export function Reveal({
   children,

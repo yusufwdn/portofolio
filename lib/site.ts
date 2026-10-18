@@ -25,18 +25,19 @@ export const SOCIALS = [
   { id: "email", label: "Email", handle: EMAIL, href: `mailto:${EMAIL}`, Icon: Mail },
 ] as const;
 
+// Languages the person speaks, for the structured data. Not the site's
+// translations: those are routing.locales.
+export const SPOKEN_LANGUAGES = [
+  { name: "Indonesian", code: "id" },
+  { name: "English", code: "en" },
+] as const;
+
 // Overridable so a preview deploy can advertise its own origin.
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://itswandana.netlify.app";
 
 export const SITE_NAME = "Yusuf Wandana";
 export const SITE_TAGLINE = "Software Engineer & Full-Stack Developer";
-// Kept in step with meta.description in messages/en.json: this is the copy
-// the web app manifest carries, and the two describing the site differently
-// reads as two different sites.
-export const SITE_DESCRIPTION =
-  "Software engineer from Indonesia with over five years building rule-heavy enterprise systems across backend and frontend. NestJS, Laravel, Next.js, and the services behind them.";
-
 /* ------------------------------------------------------------------ */
 /* Availability                                                        */
 /* Flip AVAILABILITY and the hero pill + contact CTA follow. Nothing   */

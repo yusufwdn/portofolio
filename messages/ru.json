@@ -13,6 +13,7 @@
     "openMenu": "Открыть меню",
     "closeMenu": "Закрыть меню",
     "toggleTheme": "Сменить тему",
+    "skipToContent": "Перейти к содержимому",
     "language": "Язык",
     "switchTo": "Переключить на {language}"
   },

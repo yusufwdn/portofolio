@@ -16,7 +16,7 @@ export default function Credentials() {
         lead={t("lead")}
       />
 
-      <div className="mt-14 grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
+      <div className="mt-14 grid grid-cols-1 gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
         {/* Education — kept borderless so it reads as prose, not more cards */}
         <div>
           <h3 className="font-mono text-eyebrow uppercase text-muted">
@@ -29,7 +29,7 @@ export default function Credentials() {
                   {/* A grid, not flex-wrap: a long degree title used to push
                       the date onto its own line, so one entry showed the range
                       on the right and the next showed it underneath. */}
-                  <div className="grid gap-x-4 gap-y-1 sm:grid-cols-[1fr_auto] sm:items-baseline">
+                  <div className="grid grid-cols-1 gap-x-4 gap-y-1 sm:grid-cols-[1fr_auto] sm:items-baseline">
                     <h4 className="text-[17px] font-semibold leading-snug">
                       {t(`items.${edu.id}.degree`)}
                     </h4>
